@@ -1,0 +1,36 @@
+:root{
+  --Amarillo: 	#feb60c;
+  --Azulmarino: 	#231d89;
+  --Verdeoscuro:	#156171;
+  --Verdeclaro: 	#156171;
+  --Negro: 		#060606;
+  --blanco: #fff;
+  --azulfuerteclaro: #1563AC;
+  --aqua: #00A1A1;
+}
+
+.cont{
+ text-align: left;
+ width: 100%;
+ margin: auto;
+}
+
+.texto {
+ width: auto;
+ float:left;
+}
+#content_mapa {
+ width: auto;
+ float: left;
+ background-color: #FFFFFF;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.uk-tooltip{
+  border: solid black 2px;
+  background-color:var(--aqua) ;
+}

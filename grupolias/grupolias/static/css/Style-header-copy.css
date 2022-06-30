@@ -1,0 +1,378 @@
+:root{
+    --Amarillo: 	#feb60c;
+    --Azulmarino: 	#231d89;
+    --Verdeoscuro:	#156171;
+    --Verdeclaro: 	#156171;
+    --Negro: 		#060606;
+    --blanco: #fff;
+    --azulfuerteclaro: #1563AC;
+    --aqua: #00A1A1;
+}
+
+
+/* Zona de prueba de media queries */
+/* Intentare empezar generando una configuracion global para una pantalla grande */
+/* Despues seguire reduciendo la resolucion para una pantalla de escritorio */
+/* Despues seguire reduciendo la resolucion para una pantalla de laptop */
+/* Despues continuare para una pantalla de tablet */
+/* Y por ultimo seria la resolucion minima para dispositivos moviles */
+
+
+/*
+    Resoluciones a utilizar en cada breakpoint
+    Desde: 1201px Hasta: Max
+    Desde: 1025px Hasta: 1200px
+    Desde: 769px Hasta: 1024px
+    Desde: 481px Hasta: 768px
+    Desde: 320px Hasta: 480px
+
+
+    Resoluciones de prueba dentro del navegador:
+    T1: 1920X1080
+    T2: 1200X675
+    T3: 1024X576
+    T4: 540X960
+    T5: 360X640
+*/
+
+
+/* Pantalla grande T1*/
+@media screen and (min-width: 1201px) {
+    .logoH{
+        height: auto;
+        width: 12vh;
+        /* border: dashed 3px red; */
+    }
+
+    .header{
+        height: 15vh;
+        /* background-color: var(--azulfuerteclaro); Color anterior */
+        background-color: var(--blanco);
+        background-position: center center;
+        display: flex;
+        margin: 0 2%;
+        flex-direction: column;
+        justify-content: center;
+        /* border: 3px dotted orange; */
+        border-bottom: var(--azulfuerteclaro) 10px double;
+
+    }
+
+    .nav {
+        /* color: var(--blanco);  */
+        color: var(--azulfuerteclaro);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        /* border: 3px dotted green; */
+     }
+
+     .nav-link ul {
+        /* border: dashed 3px #55f1ff; */
+        list-style: none;
+        flex-wrap: wrap;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-link a {
+        /* border: dashed 3px purple; */
+        text-decoration: none;
+        margin: 0 1vw;
+        font-size: 3vh;
+        font-weight: bold;
+        color: var(--azulfuerteclaro);
+    }
+
+
+    li a{
+        display: block;
+        padding:0  1vw;
+        text-decoration: none;
+
+    }
+
+    li a:hover:not(active){
+        color:var(--Azulmarino);
+    }
+}
+
+/* Pantalla de escritorio T2*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .logoH{
+        height: auto;
+        width: 10vh;
+        /* border: dashed 3px red; */
+    }
+
+    .header{
+        height: 13vh;
+        /* background-color: var(--azulfuerteclaro); Color anterior */
+        background-color: var(--blanco);
+        background-position: center center;
+        display: flex;
+        margin: 0 2%;
+        flex-direction: column;
+        justify-content: center;
+        /* border: 3px dotted orange; */
+        border-bottom: var(--azulfuerteclaro) 10px double;
+    }
+
+    .nav {
+        /* color: var(--blanco);  */
+        color: var(--azulfuerteclaro);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        /* border: 3px dotted green; */
+     }
+
+     .nav-link ul {
+        /* border: dashed 3px #55f1ff; */
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-link a {
+        /* border: dashed 3px purple; */
+        text-decoration: none;
+        margin: 0 1vw;
+        font-size: 2.5vh;
+        font-weight: bold;
+        color: var(--azulfuerteclaro);
+    }
+
+
+    li a{
+        display: block;
+        padding: 1vw;
+        text-decoration: none;
+
+    }
+
+
+    li a:hover:not(active){
+        color:var(--Azulmarino);
+    }
+}
+
+/* Pantalla de laptop T3*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .logoH{
+        height: auto;
+        width: 6vh;
+        /* border: dashed 3px red; */
+    }
+
+    .header{
+        height: 11vh;
+        /* background-color: var(--azulfuerteclaro); Color anterior */
+        background-color: var(--blanco);
+        background-position: center center;
+        display: flex;
+        margin: 0 2%;
+        flex-direction: column;
+        justify-content: center;
+        /* border: 3px dotted orange; */
+        border-bottom: var(--azulfuerteclaro) 10px double;
+    }
+
+    .nav {
+        /* color: var(--blanco);  */
+        color: var(--azulfuerteclaro);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 100%;
+        width: 100%;
+        /* border: 3px dotted green; */
+     }
+
+     .nav-link ul {
+        /* border: dashed 3px #55f1ff; */
+        list-style: none;
+        display: flex;
+        flex-wrap: nowrap;
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: space-around;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .nav-link a {
+        /* border: dashed 3px purple; */
+        text-decoration: none;
+        margin: 0 1vw;
+        font-size: 2.5vw;
+        font-weight: bold;
+        color: var(--azulfuerteclaro);
+    }
+
+
+    li a{
+        display: block;
+        padding: 1vw;
+        text-decoration: none;
+
+    }
+
+    li a:hover:not(active){
+        color:var(--Azulmarino);
+    }
+}
+
+/* Pantalla de tablet T4*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .logoH{
+        height: auto;
+        width: 8vh;
+        /* border: dashed 3px red; */
+    }
+
+    .header{
+        height: 11vh;
+        /* background-color: var(--azulfuerteclaro); Color anterior */
+        background-color: var(--blanco);
+        background-position: center center;
+        display: flex;
+        margin: 0 2%;
+        flex-direction: row;
+        justify-content: center;
+        /* border: 3px dotted orange; */
+        border-bottom: var(--azulfuerteclaro) 10px double;
+        height: fit-content;
+
+    }
+
+    .nav {
+        /* color: var(--blanco);  */
+        color: var(--azulfuerteclaro);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 1vh;
+        height: 100%;
+        width: 100%;
+        /* border: 3px dotted green; */
+     }
+
+     .nav-link ul {
+        /* border: dashed 3px #55f1ff; */
+        list-style: none;
+        /* flex-wrap: wrap; */
+        display: flex;
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-link a {
+        /* border: dashed 3px purple; */
+        text-decoration: none;
+        margin: 0 ;
+        font-size: 2vh;
+        font-weight: bold;
+        color: var(--azulfuerteclaro);
+    }
+
+
+    li a{
+        display: block;
+        padding: 1vh;
+        text-decoration: none;
+
+    }
+
+    li a:hover:not(active){
+        color:var(--Azulmarino);
+    }
+}
+
+/* Pantalla de movil T5*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .logoH{
+        height: auto;
+        width: 7vh;
+        /* border: dashed 3px red; */
+    }
+
+    .header{
+        height: 9vh;
+        /* background-color: var(--azulfuerteclaro); Color anterior */
+        background-color: var(--blanco);
+        background-position: center center;
+        display: flex;
+        padding: 0 2%;
+        flex-direction: row;
+        justify-content: center;
+        height: fit-content;
+        /* border: 3px dotted orange; */
+        border-bottom: var(--azulfuerteclaro) 10px double;
+
+    }
+
+    .nav {
+        /* color: var(--blanco);  */
+        color: var(--azulfuerteclaro);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 1vh;
+        height: 100%;
+        width: 100%;
+        /* border: 3px dotted green; */
+     }
+
+     .nav-link ul {
+        /* border: dashed 3px #55f1ff; */
+        list-style: none;
+        display: flex;
+        /* flex-wrap: wrap; */
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-link a {
+        /* border: dashed 3px purple; */
+        text-decoration: none;
+        margin: 0 ;
+        font-size: 2vh;
+        font-weight: bold;
+        color: var(--azulfuerteclaro);
+    }
+
+
+    li a{
+        display: block;
+        padding: 0.5vh;
+        text-decoration: none;
+
+    }
+
+    li a:hover:not(active){
+        color:var(--Azulmarino);
+    }
+}

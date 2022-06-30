@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" href="../../Images/GrupoLiaslogosquare.ico">
+    <title>Grupo LIAS</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+    <script src="../../js/loadFo-He.js"></script>
+    <script src="../../js/InsertDBcomm.js"></script>
+
+    <!-- SwAlert -->
+    <script src="../../lib/SweetAlert/package/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../../lib/SweetAlert/package/dist/sweetalert2.min.css"/>
+
+    <!-- UIKIT -->
+    <link rel="stylesheet" href="../../lib/uikit/css/uikit.min.css"/>
+    <script src="../../lib/uikit/js/uikit.min.js"></script>
+    <script src="../../lib/uikit/js/uikit-icons.min.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>  
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="../../Estilos/Style-Comments.css"/>
+  <head>
+
+  <body>
+    <main>
+      <div id="header"></div>
+      <section class="content">
+        <h2>OPINIONES DE NUESTROS CLIENTES</h2>
+        <div class="carruselComms">
+          <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slider="center: true; finite:true;">
+            <ul class="uk-slider-items uk-grid">
+              <li class="uk-width-3-4">
+                <div class="cardComm uk-card uk-card-default uk-card-hover uk-width-3-2@m uk-margin-medium-bottom">
+                  <div class="uk-card-header">
+                      <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                            <img class="uk-border-circle" width="50" height="50" src="../../Images/commentsUser.512x453.png">
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3 class="uk-card-title uk-margin-remove-bottom">Karla Estrada</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="uk-card-body">
+                    <p>GRUPO LIAS se ha encargado del mantenimiento de mi compañía por años. Ellos se encargan de que que todo
+                      en el edificio funcione correctamente. Confió en ellos plenamente.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="uk-width-3-4">
+                <div class="cardComm uk-card uk-card-default uk-card-hover uk-width-3-2@m uk-margin-medium-bottom">
+                  <div class="uk-card-header">
+                      <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                            <img class="uk-border-circle" width="50" height="50" src="../../Images/commentsUser.512x453.png">
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3 class="uk-card-title uk-margin-remove-bottom">Jorge Ramírez</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="uk-card-body">
+                    <p>Estoy construyendo una casa familiar y Grupo LIAS ha reparado el cableado eléctrico, luces, e incluso
+                      configuró el sistema de seguridad. verdaderos profesionales.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="uk-width-3-4">
+                <div class="cardComm uk-card uk-card-default uk-card-hover uk-width-3-2@m uk-margin-medium-bottom">
+                  <div class="uk-card-header">
+                      <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-auto">
+                            <img class="uk-border-circle" width="50" height="50" src="../../Images/commentsUser.512x453.png">
+                          </div>
+                          <div class="uk-width-expand">
+                            <h3 class="uk-card-title uk-margin-remove-bottom">Iris García</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="uk-card-body">
+                    <p>Nos quedamos fuera de la casa, después de haber sido forzadas nuestras cerraduras por gente extraña.
+                      Contacte a Grupo LIAS a media noche y vinieron inmediatamente resolviendo el problema.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <a class="arrow uk-slidenav-large uk-position-center-left uk-position-small uk-dark" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="arrow uk-slidenav-large uk-position-center-right uk-position-small uk-dark" href="#" uk-slidenav-next uk-slider-item="next"></a>
+          </div>  
+        </div>
+        <p class="boxTitle">Déjanos tus comentarios</p>
+        <div class="box-Img-Comm">
+          <div class="commIMG">
+            <img src="../../Images/christin-hume-Hcfwew744z4-unsplash.jpg" alt="Imagen referente a comentarios" draggable="false">
+          </div>
+          <form>
+            <div class="fieldsContainer">
+              <legend>En Grupo LIAS tu opinión nos interesa mucho para poder seguir mejorando y brindarte un excelente servicio!</legend>
+              <input class="fieldname" type="text" id="fname" placeholder="Nombre" name="fname" required/><br>
+              <textarea class="fieldcomment" id="fcomment" name="fcomment" placeholder="Escribe tu mensaje" required></textarea>
+              <span id="valid"></span>
+              <button type="button" onclick="insertComment()" class="btnSend">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{% load wagtailcore_tags wagtailimages_tags%}
+
+<header class="header">
+    <nav class="nav ">
+      {% image settings.home.header.Logo_barra_de_navegación original as logo_navbar %}
+      <div class="nav-logo"><a href="/" draggable="false"><img id="LogoInicio" class="logoH" src="{{ logo_navbar.url }}" alt="Grupo LIAS logo" draggable="false"></a></div>
+      <div class="nav-link">
+        <ul>
+          <li><a href="/" draggable="false">{{settings.home.header.Navegación_1}}</a></li>
+          <li><a href="/#idServices" draggable="false">{{settings.home.header.Navegación_2}}</a></li>
+          <li><a href="/conócenos" draggable="false">{{settings.home.header.Navegación_3}}</a></li>
+          <li><a href="/contacto" draggable="false">{{settings.home.header.Navegación_4}}</a></li>
+        </ul>
+      </div>
+    </nav>
+</header>

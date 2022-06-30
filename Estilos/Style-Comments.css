@@ -1,0 +1,151 @@
+:root{
+    --Amarillo: 	#feb60c;
+    --Azulmarino: 	#231d89;
+    --Verdeoscuro:	#156171;
+    --Verdeclaro: 	#156171;
+    --Negro: 		#060606;
+    --blanco: #fff;
+    --azulfuerteclaro: #1563AC;
+    --aqua: #00A1A1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.content{
+    height: auto;
+    width: 94.95rem;
+}
+
+
+h2{
+    color: var(--Verdeclaro);
+    text-align: center;
+    margin: 4rem 0rem;
+}
+
+.carruselComms{
+    margin: 2rem 7rem;
+    margin-bottom: 8rem;
+    padding: 4rem;
+    width: 73rem;
+    border-bottom: double var(--Amarillo) 4px;
+    border-top: double var(--Amarillo) 4px;
+}
+
+.cardComm{
+    border: var(--azulfuerteclaro) dashed 2px;    
+}
+
+.arrow{
+    color: var(--Negro)
+}
+
+.boxTitle{
+    text-align: center;
+    list-style-type: none;
+    background-color: var(--azulfuerteclaro);
+    font-family: 'Merriweather', serif;
+    color: #FFFF;
+    padding: 15px;
+    font-size: 2rem;
+}
+
+.box-Img-Comm{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0rem 3rem;
+    margin-top: 9rem;
+    margin-bottom: 1rem;
+    height: 70vh;
+}
+
+.commIMG{
+    width: 50%;
+}
+
+.commIMG img{
+    height: 28rem;
+    width: 32rem;
+    margin-left: 4rem;
+}
+
+.fieldsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 45rem;
+    margin-right: 4.5rem;
+}
+
+legend{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.fieldname{
+    margin-top: 3rem;
+    width: 25rem;
+    height: 1.5rem;
+    font-size: 1.05rem;
+    border-radius: 1vh;
+}
+
+.fieldcomment{
+    width: 45rem;
+    height: 10rem;
+    overflow-y: auto;
+    font-size: 1.05rem;
+    background: #ffffff;
+    max-height: 10px;
+    max-width: 45rem;
+    min-height: 10rem;
+    min-width: 45rem;
+    border-radius: 1vh;
+}
+
+.btnSend{
+    background-color: var(--azulfuerteclaro);
+    color: var(--blanco);
+    margin: 2rem 0rem;
+    padding: 0.4rem 1rem;
+    border: solid;
+    font-size: 1rem;
+    width: 7rem;
+}
+
+.btnSend a{
+    color: var(--blanco);
+}
+
+input, textarea:invalid {
+    background-color: #ffdddd;
+} 
+
+input:valid {
+    background-color: #ddffdd;
+}
+
+textarea:valid {
+    background-color: #ddffdd;
+}
+
+input, textarea:required {
+    border-color: var(--aqua); 
+    border-width: 3px;
+}
+
+input, textarea:required:invalid {
+    border-color: var(--aqua);
+}
+
+#valid{
+    margin-top: .5rem;
+    font-size: 1rem;
+    color: #d83d3d;
+}

@@ -1,0 +1,105 @@
+{% extends "base.html" %} 
+
+{% load wagtailcore_tags wagtailimages_tags%}
+
+{% block body_class %}template-servicios-page{% endblock %}
+
+{% load static %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/Style-Servicios.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/Style-cotSteps-copy.css' %}"/>
+
+
+{% endblock extra_css %}
+
+{% block extra_js %}
+
+<script>
+  function alerta(){
+    Swal.fire({
+      title: '<h1>{{page.Título_de_ventana}}</h1>',
+      icon: 'info',
+      html:
+        '<style> table, td, th{border:2px solid black} table{margin-left:4.2rem; margin-top:1rem;}</style>' +
+        '{{ page.Descripción_1 | richtext }}' +
+        '<table><tr><th>{{page.Título_columna_1}}</th><th>{{page.Título_columna_2}}</th></tr><tr><td>{{page.Texto_1_columna_1}}</td><td>{{page.Texto_1_columna_2}}</td></tr>' +
+        '<tr><td>{{page.Texto_2_columna_1}}</td><td>{{page.Texto_2_columna_2}}</td></tr></table>' +
+        '<br>{{ page.Descripción_2 | richtext}}  ',
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+      confirmButtonText:
+        '<i class="fa fa-thumbs-up"><a style="color: #ffff; text-decoration:none;" href="/contacto">Contactar!</a></i> ',
+      confirmButtonAriaLabel: 'Thumbs up, great!',
+      cancelButtonText:
+        '<i class="fa fa-thumbs-down">Cancelar</i>'
+    })
+  }
+</script>
+    
+{% endblock %}
+
+{% block content %}
+  <section class="service">
+    <div class="about-service">
+      <div class="imgservice">
+        <div class="servicio-header">
+            {% image page.Imagen_principal_del_servicio original class="servicio-bg"  %}
+            <h1 class="title-service">{{page.title}}</h1>
+          </div>
+      </div>
+      <div class="servdesc">
+        <span>
+          {{page.Descripción_servicio | richtext}}
+        </span>
+      </div>
+    </div>
+  </section>
+  <section class="previews">
+    <div class="title-preview">
+      <h2 class="sub-titles">{{ settings.home.Plantilla_servicios.Título_trabajos_hechos }}</h2>
+    </div>
+    <div class="workscontainer">
+      {% for loop_cycle in page.servicios_images.all %}
+      <div class="square-work">
+        {% image loop_cycle.servicios_image original as img %}
+        {% image loop_cycle.image original class="imgwork" draggable="false"  %} 
+    </div>
+  {% endfor %}  
+  </section>
+  <section class="cotizar">
+    <div class="title-cotizar">
+        <h2 class="sub-titles">{{ settings.home.Plantilla_servicios.Título_sección_cotizar }}</h2>
+    </div>
+    <div class="proceso-cot">
+      <div class="square-step">
+        <h3 class="title-step">{{settings.home.Plantilla_servicios.Título_cuadro_1}}</h3>
+        {% image settings.home.Plantilla_servicios.Icono_cuadro_1 original as icon1 %}
+        <img class="iconsteps" src="{{ icon1.url }}" alt="metodos de pago" draggable="false"/>
+        <span>
+            {{settings.home.Plantilla_servicios.Descripción_cuadro_1 | richtext}}
+        </span>
+      </div>
+      <div class="square-step">
+        <h3 class="title-step">{{settings.home.Plantilla_servicios.Título_cuadro_2}}</h3>
+        {% image settings.home.Plantilla_servicios.Icono_cuadro_2 original as icon2 %}
+        <img class="iconsteps" src="{{ icon2.url }}" alt="billete" draggable="false"/>
+        <span>
+            {{settings.home.Plantilla_servicios.Descripción_cuadro_2 | richtext}}
+        </span>
+        <button class="btnstepdollar" onclick="alerta()"><a draggable="false">{{settings.home.Plantilla_servicios.Boton_cuadro_2}}</a></button>
+      </div>
+      <div class="square-step">
+        <h3 class="title-step">{{settings.home.Plantilla_servicios.Título_cuadro_3}}</h3>
+        {% image settings.home.Plantilla_servicios.Icono_cuadro_3 original as icon3 %}
+        <img class="iconsteps" src="{{ icon3.url }}" alt="contacto" draggable="false"/>
+        <span>
+            {{settings.home.Plantilla_servicios.Descripción_cuadro_3 | richtext}}
+        </span>
+        <button class="btncontact"><a href="/contacto" draggable="false">{{settings.home.Plantilla_servicios.Boton_cuadro_3}}</a></button>
+      </div>      
+    </div>
+  </section>
+{% endblock %}

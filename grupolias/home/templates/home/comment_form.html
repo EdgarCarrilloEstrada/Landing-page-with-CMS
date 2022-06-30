@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags%}
+
+{% block body_class %}template-comment-form{% endblock %}
+
+{% load static %}
+
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/Style-Comments.css' %}">
+
+{% endblock extra_css %}
+
+{% block content %}
+
+<section class="content">
+    <h2>OPINIONES DE NUESTROS CLIENTES</h2>
+    <div class="carruselComms">
+      {% include 'home/components/carruselComms.html' %}  
+    </div>
+    <h2><b>Déjanos tus comentarios</b></h2>
+    <div class="box-Img-Comm">
+      <div class="commIMG">
+        {% image page.Image_EComments original as EComments_img %}
+        <img src="{{ EComments_img.url }}" alt="Imagen referente a comentarios" draggable="false">
+      </div>
+      <form action="{% pageurl page %}" method="POST">
+        <div class="fieldsContainer">
+            {% csrf_token %}
+            <legend>{{ self.Text_EComments }}</legend>
+            {{ form.as_p }}
+            <button type="submit" class="btnSend">Enviar</button>
+        </div>
+    </form>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div class="carru uk-width-2-3 uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade; autoplay:true; autoplay-interval:7000">
+  <ul class="uk-slideshow-items">
+    {% for loop_cycle in page.carousel_images.all %}
+      {% image loop_cycle.carousel_image original as img %}
+      <li>
+        {% image loop_cycle.image original class="uk-width-expand"  %} 
+        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+          <h3 class="uk-margin-remove carrutitle">{{ loop_cycle.Titulo_slide }}</h3>
+          <p class="uk-margin-remove carrutext">{{ loop_cycle.Texto_slide }}</p>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+  </div>
+
+
+

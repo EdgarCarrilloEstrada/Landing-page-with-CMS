@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags%}
+
+{% block body_class %}template-preguntas-page{% endblock %}
+
+{% load static %}
+
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/Style-PreguntasFrecuentes.css' %}">
+
+{% endblock extra_css %}
+
+{% block content %}
+
+<h1 class="title">{{ self.Título_principal }}</h1>  
+<div class="content">
+    <!-- <div class="left">  
+        <h3>Acerca de</h3>        
+        <ul>
+            {% for cat in categories %}
+            <li>
+                <a href="#{{cat.nombre}}" onclick="mostrarPreguntas('{{cat.nombre}}')" draggable="false">
+                    {{ cat.nombre }}
+                </a>
+            </li>
+            {% endfor %}
+            <br><br><br><br><br><br><br><br><br>
+        </ul>
+    </div> -->
+    <div class="right">
+        <div class="mainView">
+            <ul uk-accordion>
+                {% for loop_cycle in page.cat_preguntas.all %}
+                <li>
+                    <a class="uk-accordion-title" href="#" draggable="false">{{ loop_cycle.pregunta }}</a>
+                    <div class="uk-accordion-content">
+                        <p>{{ loop_cycle.respuesta }}</p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../Images/GrupoLiaslogosquare.ico">
+    <title>Grupo LIAS</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../js/loadFo-He.js"></script>
+    <script src="../../js/loadMap.js"></script>
+
+    <!-- UIKIT -->
+    <link rel="stylesheet" href="../../lib/uikit/css/uikit.min.css" />
+    <script src="../../lib/uikit/js/uikit.min.js"></script>
+    <script src="../../lib/uikit/js/uikit-icons.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=PT+Serif&family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../Estilos/Style-Conocenos.css" />
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div class="box1">
+      <div class="box1Info">
+        <div class="box1InfoImg">
+          <img
+            id="LogoInicio"
+            class="logo2"
+            src="../../Images/GrupoLiaslogo.png"
+            alt="Grupo LIAS logo"
+            draggable="false"
+          />
+        </div>
+        <p class="box1Texto">
+          Una Empresa 100% Mexicana, especializada en brindar servicios a
+          diferentes empresas y clientes de una manera profesional y
+          personalizada.
+        </p>
+      </div>
+      <div class="box1Mapa">
+        <h3>Encuentra especialistas en donde resides:</h3>
+        <div id="MapIn"></div>
+      </div>
+    </div>
+    <div class="boxLoQueHacemos">
+      <div class="boxLQHTitulo">
+        <strong><p>Nuestro objetivo</p></strong>
+      </div>
+      <div class="boxLQHParrafo">
+        <p>
+          Brindar la mejor atención y servicio a nuestros clientes de una manera
+          seria y profesional, aportándoles ideas y sugerencias adecuadas a su
+          gusto y de acuerdo a su presupuesto, en los proyectos y reparaciones
+          de las diferentes instalaciones u obras a realizar en los espacios de
+          trabajo, vivienda o esparcimiento, desempeñando siempre el mejor de
+          nuestros trabajos.
+        </p>
+      </div>
+    </div>
+    <div class="boxMVV">
+      <div class="boxMVVTexto">
+        <div class="boxMVVTitulo">
+          <strong><p>Misión</p></strong>
+        </div>
+        <div class="boxMVVParrafo">
+          <p>
+            Brindar servicios de calidad mediante un equipo de personal que
+            tenga la capacidad, conocimientos y habilidades, para resolver y
+            dejar un servicio con satisfacción total.
+          </p>
+        </div>
+      </div>
+      <div class="boxMVVImg">
+        <img
+          class="ImgMision"
+          src="../../Images/mision.jpg"
+          alt="Imagen de misión"
+          draggable="false"
+        />
+      </div>
+    </div>
+    <div class="boxMVV">
+      <div class="boxMVVImg">
+        <img
+          class="ImgVision"
+          src="../../Images/Vision.jpg"
+          alt="Imagen de nuestra visión"
+          draggable="false"
+        />
+      </div>
+      <div class="boxMVVTexto">
+        <div class="boxMVVTitulo">
+          <strong><p>Visión</p></strong>
+        </div>
+        <div class="boxMVVParrafo">
+          <p>
+            Grupo LIAS, deberá ser de las mejores empresas en servicios de
+            mantenimiento comercial y recidencial en el país, con los mejores
+            estándares de calidad.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="boxMVV">
+      <div class="boxMVVTexto">
+        <div class="boxMVVTitulo">
+          <strong><p>Ventajas</p></strong>
+        </div>
+        <div class="boxMVVParrafo">
+          <p>
+            Contamos con técnicos profesionales para la realización de cada uno
+            de los servicios que ofrecemos. Además laboramos los 365 días del
+            año.
+          </p>
+        </div>
+      </div>
+      <div class="boxMVVImg">
+        <img
+          class="ImgVentajas"
+          src="../../Images/Ventajas.jpg"
+          alt="Imagen de nuestras ventajas"
+          draggable="false"
+        />
+      </div>
+    </div>
+    <p class="box2doSeparador">Nuestros Colaboradores</p>
+    <div class="box2">
+      <div class="box2Parrafo">
+        <span>
+          Tenemos convenio con diferentes empresas a nivel nacional, lo que
+          garantiza nuestra calidad y confiabilidad en la entrega de nuestros
+          servicios de mantenimiento y reparación.
+        </span>
+      </div>
+      <div class="carruselConv">
+        <div uk-slider="autoplay:true; autoplay-interval: 1000; finite: true">
+          <div class="uk-position-relative">
+            <div class="uk-slider-container uk-dark">
+              <ul
+                class="uk-slider-items uk-child-width-1-3 uk-child-width-1-4@s uk-child-width-1-3@m"
+              >
+                <li>
+                  <img
+                    class="imgslider"
+                    src="../../Images/Telemedic.png"
+                    alt=""
+                    
+                  />
+                </li>
+                <li>
+                  <img
+                    class="imgslider"
+                    src="../../Images/Mexico_asistencia.jfif"
+                    alt=""
+                    
+                  />
+                </li>
+                <li>
+                  <img
+                    class="imgslider"
+                    src="../../Images/IGS.jpg"
+                    alt=""
+                    
+                  />
+                </li>
+                <li>
+                  <img
+                    class="imgslider"
+                    src="../../Images/IKE.svg"
+                    alt=""
+                    
+                  />
+                </li>
+                <li>
+                  <img
+                    class="imgslider"
+                    src="../../Images/SPV.jpg"
+                    alt=""
+                    
+                  />
+                </li>
+                <li>
+                  <img
+                    class="imgslider"
+                    src="../../Images/Addiuva.jfif"
+                    alt=""
+                    
+                  />
+                </li>
+                <li>
+                  <img
+                    class="imgslider"
+                    src="../../Images/escotel.png"
+                    alt=""
+                    
+                  />
+                </li>
+              </ul>
+            </div>
+
+            <div class="uk-hidden@s uk-dark">
+              <a
+                class="uk-position-center-left uk-position-small"
+                href="#"
+                uk-slidenav-previous
+                uk-slider-item="previous"
+              ></a>
+              <a
+                class="uk-position-center-right uk-position-small"
+                href="#"
+                uk-slidenav-next
+                uk-slider-item="next"
+              ></a>
+            </div>
+
+            <div class="uk-visible@s">
+              <a
+                class="uk-position-center-left-out uk-position-small"
+                href="#"
+                uk-slidenav-previous
+                uk-slider-item="previous"
+              ></a>
+              <a
+                class="uk-position-center-right-out uk-position-small"
+                href="#"
+                uk-slidenav-next
+                uk-slider-item="next"
+              ></a>
+            </div>
+          </div>
+
+          <ul class="uk-flex-center uk-margin"></ul>
+        </div>
+      </div>
+      <div class="box2Parrafo-2">
+        <span>
+          Empresas como TELEMEDIC, México Asistencia, IGS y más, son parte de
+          quienes confían en nuestra calidad y seriedad para el trabajo.
+        </span>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>

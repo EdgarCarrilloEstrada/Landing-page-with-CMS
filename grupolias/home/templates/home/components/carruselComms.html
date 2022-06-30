@@ -1,0 +1,28 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slider="center: true; finite:true;">
+    <ul class="uk-slider-items uk-grid">
+    {% for comentario in results %}
+      <li class="uk-width-3-4">
+        <div class="cardComm uk-card uk-card-default uk-card-hover uk-width-3-2@m uk-margin-medium-bottom">
+          <div class="uk-card-header">
+              <div class="uk-grid-small uk-flex-middle" uk-grid>
+                  <div class="uk-width-auto">
+                    {% image page.Imagen_de_comentarios original as cardImg %}
+                    <img class="uk-border-circle" width="50" height="50" src="{{ cardImg.url }}">
+                  </div>
+                  <div class="uk-width-expand">
+                    <h3 class="uk-card-title uk-margin-remove-bottom">{{ comentario.nombre }}</h3>
+                  </div>
+              </div>
+          </div>
+          <div class="uk-card-body">
+            <p>{{ comentario.comentario }}</p>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+    <a class="arrow uk-slidenav-large uk-position-center-left uk-position-small uk-dark" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="arrow uk-slidenav-large uk-position-center-right uk-position-small uk-dark" href="#" uk-slidenav-next uk-slider-item="next"></a>
+</div>

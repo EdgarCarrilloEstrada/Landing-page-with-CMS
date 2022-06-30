@@ -1,0 +1,38 @@
+{% load wagtailcore_tags wagtailimages_tags%}
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-content-container-logo">
+        <a class="menu-item-footer" href="/" draggable="false"><p class="gpoText"> {{ settings.home.footer.Nombre_de_la_empresa }} </p></a>
+        <p class="txt"><a class="menu-item-footer" href="https://www.google.com/maps/place/GRUPO+LIAS/@19.677835,-101.197614,17z/data=!4m5!3m4!1s0x0:0x40f2a314c0cf0326!8m2!3d19.6778347!4d-101.1976141?hl=es" target="_blank" draggable="false">
+          {{ settings.home.footer.Dirección_de_la_empresa }}
+        </a></p>
+      </div>
+
+    <div class="footer-menus">
+      <div class="footer-content-container">
+        <span class="menu-title"> {{ settings.home.footer.Título_sección_izquierda }} </span>
+        <a href="/conócenos" class="menu-item-footer" draggable="false"> {{ settings.home.footer.Enlace_1 }} </a>
+        <a href="/preguntas-frecuentes" class="menu-item-footer" draggable="false"> {{ settings.home.footer.Enlace_2 }} </a>
+        <a href="/comentarios-form" class="menu-item-footer" draggable="false"> {{ settings.home.footer.Enlace_3 }} </a>
+      </div>
+      
+      <div class="footer-content-container">
+        <span class="menu-title"> {{  settings.home.footer.Título_sección_derecha }} </span>
+        <a href="/contacto" class="menu-item-footer" draggable="false"> {{ settings.home.footer.Enlace_4 }} </a>
+        <a href="https://wa.me/{{settings.home.footer.Link_a_celular}}" class="menu-item-footer" draggable="false" target="_blank"> {{  settings.home.footer.Celular }} </a>
+        <a href="tel:{{settings.home.footer.Link_a_teléfono}}" class="menu-item-footer" draggable="false"> {{ settings.home.footer.Teléfono }} </a>
+        <a href="mailto:{{settings.home.footer.Enlace_5}}" class="menu-item-footer" draggable="false" target="_blank"> {{ page.Enlace_7 }} </a>
+      </div>
+    </div>
+    
+    <div class="footer-content-container-rs">
+        <span class="menu-title"> {{ settings.home.footer.Título_sección_de_redes }} </span>
+        {% image settings.home.footer.Logo_red_social1 original as logo_redsocial1 %}
+        {% image settings.home.footer.Logo_red_social2 original as logo_redsocial2 %}
+        <div class="social-container">
+          <a href="{{ settings.home.footer.Link_a_red_social1 }}" target="_blank" draggable="false"><img class="iconsSocial" src="{{ logo_redsocial1.url }}" draggable="false"></a>
+          <a href="{{ settings.home.footer.Link_a_red_social2 }}" target="_blank" draggable="false"><img class="iconsSocial" src="{{ logo_redsocial2.url }}" draggable="false"></a>
+        </div>
+    </div>
+</footer>

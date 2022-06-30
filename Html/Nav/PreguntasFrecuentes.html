@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../../Images/GrupoLiaslogosquare.ico">
+        <title>Grupo LIAS</title>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script src="../../js/loadFo-He.js"></script>
+        <script src="../../js/loadFaq.js"></script>
+        <script src="../../js/faq.js"></script>
+
+        <link rel="stylesheet" href="../../lib/uikit/css/uikit.min.css"/>
+        <script src="../../lib/uikit/js/uikit.min.js"></script>
+        <script src="../../lib/uikit/js/uikit-icons.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=PT+Serif&family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="../../Estilos/Style-PreguntasFrecuentes.css">
+    </head>
+
+    <body>
+        <div id="header"></div>
+        <h1 class="title">Preguntas frecuentes</h1>  
+        <div class="content">
+            <div class="left">  
+                <h3>Acerca de</h3>        
+                <ul>
+                    <li>
+                        <a href="#" onclick="mostrarPreguntas('empresa')" draggable="false">Empresa</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="mostrarPreguntas('servicios', preguntas)" draggable="false">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="mostrarPreguntas('pago', preguntas)" draggable="false">Pagos</a>
+                    </li>
+                    <br><br><br><br><br><br><br><br><br>
+                </ul>
+            </div>
+            <div class="right">
+                <div> </div>
+                <div class="mainView" id="main"><h2>Responde a tu pregunta eligiendo una de las categorías mostradas</h2></div>
+                <div class="faq" id="empresa"></div>
+                <div class="faq" id="servicios"></div>
+                <div class="faq" id="pago"></div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags%}
+
+{% block body_class %}template-home-page{% endblock %}
+
+{% load static %}
+
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/Style-Landing-copy.css' %}">
+
+{% endblock extra_css %}
+
+{% block extra_js %}
+
+<script src="{% static 'js/functsLanding.js' %}"></script>
+    
+{% endblock %}
+
+{% block content %}
+<div class="boxPresentacion"> 
+    {% include 'home/components/carousel.html' %}
+    <div class="boxderecha">
+        {% image page.Imagen_de_bienvenida original as logo_img %}
+        <img class="boxLogoDerecha" src="{{ logo_img.url }}" alt="logo de Grupo LIAS" draggable="false">
+        <p class="boxTextoDerecha">
+            {{ self.Texto_de_bienvenida | richtext }}
+        </p>
+    </div>
+</div>
+<div>
+    <p id="idServices" class="box2doSeparador">{{ self.Separador_servicios }}</p>
+  </div>
+  <div class="boxServicios">
+    <div class="uk-child-width-1-2@m" uk-grid>
+      {% for categoria in categorias%}
+      <div class="uk-card uk-card-default uk-margin-xlarge-bottom">
+        <div class="uk-card-media-top">
+          {% if categoria == "HOGAR"%}
+            {% image page.Imagen_categoría_1 original as img_cat %}
+            <img class="imgServicSize" src="{{ img_cat.url }}" width="1800" height="1200" alt="" draggable="false">
+          {% elif categoria == "ELECTRICIDAD"%}
+            {% image page.Imagen_categoría_2 original as img_cat %}
+            <img class="imgServicSize" src="{{ img_cat.url }}" width="1800" height="1200" alt="" draggable="false">
+          {% elif categoria == "PINTURA"%}
+            {% image page.Imagen_categoría_3 original as img_cat %}
+            <img class="imgServicSize" src="{{ img_cat.url }}" width="1800" height="1200" alt="" draggable="false">
+          {% elif categoria == "CONSTRUCCIÓN"%}
+            {% image page.Imagen_categoría_4 original as img_cat %}
+            <img class="imgServicSize" src="{{ img_cat.url }}" width="1800" height="1200" alt="" draggable="false">
+          {% endif %}
+        </div>
+        <div class="uk-card-hover uk-card-body">
+          <h3 class="uk-card-title">{{ categoria }}</h3>
+          <ul class="boxListaServicio">
+            {%for servicio in servicios%}
+              {%if servicio.specific.category == categoria%}
+                <li><a class="card-text" href="{% pageurl servicio %}" draggable="false">{{servicio}}</a></li>
+              {%endif%}
+            {%endfor%}
+          </ul>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+  <div>
+    <strong><p class="box3erSeparador">{{ self.Separador_anuncios }}</p></strong>
+  </div>
+  <div class="uk-child-width-1-2@m boxfinal" uk-grid>
+    <div class="first-col">
+      <div class="uk-inline">
+        {% image page.Imagen_izq original as img_izq %}
+        <img src="{{ img_izq.url }}" width="1920" height="100" alt="" draggable="false">
+        <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+          <h3 class="imgtitle">{{ self.Titulo_izq }}</h3>
+          <p class="imgtext">{{ self.Texto_izq }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="second-col">
+      <div class="uk-inline">
+        {% image page.Imagen_der original as img_der %}
+        <img src="{{ img_der.url }}" width="1920" height="100" alt="" draggable="false">
+        <div class="uk-overlay uk-overlay-primary uk-position-bottom">
+          <h3 class="imgtitle">{{ self.Titulo_der }}</h3>
+          <p class="imgtext">{{ self.Texto_der }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

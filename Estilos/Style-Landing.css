@@ -1,0 +1,166 @@
+:root{
+    --Amarillo: 	#feb60c;
+    --Azulmarino: 	#231d89;
+    --Verdeoscuro:	#156171;
+    --Verdeclaro: 	#156171;
+    --Negro: 		#060606;
+    --blanco: #fff;
+    --azulfuerteclaro: #1563AC;
+    --aqua: #00A1A1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.card-title{
+    color: var(--Negro);
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-text{
+    color: var(--Negro);
+    font-family: 'Lora', serif;
+    font-weight: 550;
+    font-size: 1.3rem;
+}
+
+.boxPresentacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3.5rem 0rem;
+    margin-left: 3rem;
+    margin-bottom: 5rem;
+}
+
+.boxPresentacion p {
+    font-family: 'Rubik', sans-serif;
+}
+
+body p {
+    font-family: 'Rubik', sans-serif;
+}
+
+body li {
+    font-family: 'Rubik', sans-serif;
+}
+
+.boxderecha{
+    display: flex;
+    flex-direction: column;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    background-color: var(--aqua);
+    color: #FFFF;
+    height: auto;
+    width: 28%;
+    border-radius: 10px;
+    margin-right: 3rem;
+    margin-left: 3.5rem;
+    align-items: center;
+}
+
+.boxLogoDerecha{
+    margin-top: 4rem;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.boxTextoDerecha{
+    text-align: center;
+    padding: 0rem 1rem;
+}
+
+.box2doSeparador{
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: var(--azulfuerteclaro);
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    color: #FFFF;
+    display: block;
+    padding: 15px;
+    font-size: 2rem;
+    margin: 0rem 3rem;
+}
+
+.boxServicios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0rem 3rem;
+    margin-top: 3rem;
+}
+
+.boxListaServicio{
+    list-style: none;
+    margin-left: -2.5rem;
+    color: var(--Negro);
+    font-size: 20px;
+}
+
+.boxListaServicio a{
+    text-decoration: none;
+    color: var(--Negro);
+}
+
+.boxListaServicio a:hover:not(active){
+    color: var(--Azulmarino);
+    font-weight: 600;
+}
+
+.viewM{
+    font-size: 1rem;
+    margin-left: -.5rem;
+}
+
+.box3erSeparador{
+    text-align: center;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #F5C85A;
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    color: #FFFF;
+    display: block;
+    padding: 15px;
+    font-size: 2rem;
+    margin: 0rem 3rem;
+}
+
+.boxFacturacion{
+    width: 100%;
+}
+
+.boxInfoFacturacion{
+    display: flex;
+    flex-direction: column;
+    width: 95.5%;
+    color: var(--Negro);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem;
+    padding: 2%;
+    text-align: center;
+}
+
+.imgServicSize{
+    max-width: 100%;
+    height: 20rem;
+}
+
+.boxfinal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem 3rem 2rem 1rem;
+}

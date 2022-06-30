@@ -1,0 +1,97 @@
+{% extends "base.html" %} 
+
+{% load wagtailcore_tags wagtailimages_tags%}
+
+{% block body_class %}template-contact-page{% endblock %}
+
+{% load static %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/Style-Contacto.css' %}">
+
+{% endblock extra_css %}
+
+{% block content %}
+
+<div>
+    <strong><p class="box1Titulo">SOLICITA TU SERVICIO A TRAVÉS DE: </p></strong>
+  </div>
+  <div class="BoxBody">
+    <div class="BoxContactos">
+      <div class="BoxContactosInnt">
+        <div class="BoxRedSocial uk-box-shadow-hover-xlarge">
+          <div class="BoxRedSocialTitulo">
+            <p><strong>Redes Sociales</strong></p>
+          </div>
+          <div class="BoxRedSocialInstagram">             
+            <div class="BoxInstagramImg">
+              <a href="{{self.Link_a_Red_Social_1}}"  target="_blank" draggable="false"> 
+                {% image page.Imagen_Red_Social_1 original as Insta_img %} 
+                <img class="boxImgInsta" src="{{Insta_img.url}}" alt="Logo de Instagram" draggable="false">
+              </a>
+            </div>
+            <div class="BoxInstagramUsu">
+              <strong><p>{{ self.Usuario_Red_Social_1 | richtext }}</p></strong>
+            </div>
+          </div>
+          <div class="BoxRedSocialFacebook">
+            <div class="BoxFacebookImg">
+              <a href="{{self.Link_a_Red_Social_2}}" target="_blank" draggable="false">
+                {% image page.Imagen_Red_Social_2 original as FB_img %}
+                <img class="boxImgFace" src="{{FB_img.url}}" alt="Logo de Facebook" draggable="false">
+              </a>
+            </div>
+            <div class="BoxFacebookUsu">
+              <strong><p>{{ self.Usuario_Red_Social_2 | richtext }}</p></strong>
+            </div>
+          </div>
+        </div>
+        <div class="BoxTel uk-box-shadow-hover-xlarge">
+          <div class="BoxTelTitulo">
+            <p><strong>Teléfonos</strong></p>
+          </div>
+          <div class="BoxWhatsApp">
+            <div class="BoxWhatsAppImg">
+              <a href="https://wa.me/{{ self.Link_a_Telefono_1 }}" draggable="false" target="_blank">
+                {% image page.Imagen_Telefono_1 original as Tel1_img %}
+                <img class="boxImgWhat" src="{{Tel1_img.url}}" alt="Logo de WhatsApp" draggable="false">
+              </a>
+            </div>
+            <div class="BoxWhatsAppUsu">
+              <strong><p>{{ self.Telefono_1 }}</p></strong>
+            </div>
+          </div>
+          <div class="BoxTelefono">
+            <div class="BoxTelefonoImg">
+              <a href="tel:{{ self.Link_a_Telefono_2 }}" target="_blank" draggable="false">
+                {% image page.Imagen_Telefono_2 original as Tel2_img %}
+                <img class="boxImgTel" src="{{Tel2_img.url}}" alt="Logo de teléfono" draggable="false">
+              </a>
+            </div>
+            <div class="BoxTelefonoUsu">
+              <strong><p>{{ self.Telefono_2 }}</p></strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="BoxEmail uk-box-shadow-hover-xlarge">
+        <div class="BoxEmailTitulo">
+          <p><strong>Correo electrónico</strong></p>
+        </div>
+        <div class="BoxEmailIcon">
+            {% image page.Correo_electronico_img original as CE_img %}
+          <img class="boxImgCE" src="{{CE_img.url}}" alt="imagen de ejemplo correo electronico" draggable="false">
+        </div>
+        <div class="BoxEmailInfo">
+          <a href="mailto:{{self.Correo_electronico }}" target="_blank" draggable="false"><strong><p>{{self.Correo_electronico }}</p></strong></a>
+        </div>
+      </div>
+    </div>
+    <div class="maps">
+          <iframe class="GoogleMaps" src="{{self.Url_Maps}}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+
+{% endblock content %}

@@ -1,0 +1,1767 @@
+:root{
+    --Amarillo: 	#feb60c;
+    --Azulmarino: 	#231d89;
+    --Verdeoscuro:	#156171;
+    --Verdeclaro: 	#156171;
+    --Negro: 		#060606;
+    --blanco: #fff;
+    --azulfuerteclaro: #1563AC;
+    --aqua: #00A1A1;
+}
+
+
+
+/* 
+
+.BoxRedSocial{
+    width: 33%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--Verdeclaro);
+    color: var(--blanco);
+    border: 2px solid #060606;
+}
+
+.BoxTel{
+    width: 33%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Verdeclaro);
+    color: var(--blanco);
+    border: 2px solid #060606;
+}
+
+*/
+
+
+/* Zona de prueba de media queries */
+/* Intentare empezar generando una configuracion global para una pantalla grande */
+/* Despues seguire reduciendo la resolucion para una pantalla de escritorio */
+/* Despues seguire reduciendo la resolucion para una pantalla de laptop */
+/* Despues continuare para una pantalla de tablet */
+/* Y por ultimo seria la resolucion minima para dispositivos moviles */
+/*
+    Resoluciones a utilizar en cada breakpoint
+    Desde: 1201px Hasta: Max
+    Desde: 1025px Hasta: 1200px
+    Desde: 769px Hasta: 1024px
+    Desde: 481px Hasta: 768px
+    Desde: 320px Hasta: 480px
+
+
+    Resoluciones de prueba dentro del navegador:
+    T1: 1920X1080
+    T2: 1200X675
+    T3: 1024X576
+    T4: 540X960
+    T5: 360X640
+*/
+
+/* 4k 3840x2160*/
+@media screen and (min-width: 3840px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 10px 50px;
+        margin-left: 160px;
+        margin-right: 160px;
+        font-size: 110px;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        margin-bottom: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-between;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 45%;
+        margin-right: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxTel{
+        width: 45%;
+        margin-left: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .boxImgInsta{
+        width: 100px;
+    }
+    
+    .boxImgFace{
+        width: 90px;
+    }
+    
+    .boxImgWhat{
+        width: 100px;
+    }
+    
+    .boxImgTel{
+        width: 100px;
+    }
+    
+    .boxImgCE{
+        width: 100px;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 45px;
+        /* margin-top: 5%; */
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 45px;
+        /* margin-top: 5%; */
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 45px;
+        /* margin-top: 5%; */
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 45px;
+        /* margin-top: 5%; */
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 45px;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 60px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 60px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 60px;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 1040px;
+        width: 100% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+}
+
+/* 2k 2560x1440*/
+@media screen and (min-width: 2560px) and (max-width: 3839px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 10px 50px;
+        margin-left: 140px;
+        margin-right: 140px;
+        font-size: 75px;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 10px;
+    }
+
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-between;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 45%;
+        margin-right: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxTel{
+        width: 45%;
+        margin-left: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .boxImgInsta{
+        width: 60px;
+    }
+    
+    .boxImgFace{
+        width: 50px;
+    }
+    
+    .boxImgWhat{
+        width: 60px;
+    }
+    
+    .boxImgTel{
+        width: 60px;
+    }
+    
+    .boxImgCE{
+        width: 60px;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 35px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 35px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 35px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 35px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 35px;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 40px;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 95%;
+        width: 100% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+}
+
+/* FULLHD 1920x1080 */
+@media screen and (min-width: 1920px) and (max-width: 2559px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 10px 50px;
+        margin-left: 120px;
+        margin-right: 120px;
+        font-size: 60px;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 10px;
+    }
+
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-between;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 45%;
+        margin-right: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxTel{
+        width: 45%;
+        margin-left: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .boxImgInsta{
+        width: 60px;
+    }
+    
+    .boxImgFace{
+        width: 50px;
+    }
+    
+    .boxImgWhat{
+        width: 60px;
+    }
+    
+    .boxImgTel{
+        width: 60px;
+    }
+    
+    .boxImgCE{
+        width: 60px;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 23px;
+        margin-top: 15%;
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 23px;
+        margin-top: 15%;
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 23px;
+        margin-top: 15%;
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 23px;
+        margin-top: 15%;
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 23px;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 27px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 27px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 27px;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 95%;
+        width: 100% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+}
+
+/* Pantalla grande T1*/
+@media screen and (min-width: 1201px) and (max-width: 1919px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 10px 50px;
+        font-size: 45px;
+        font-family: 'Merriweather', serif;
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 10px;
+    }
+    
+    
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-between;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 45%;
+        margin-right: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxTel{
+        width: 45%;
+        margin-left: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .boxImgInsta{
+        margin: 5px;
+        width: 40px;
+    }
+    
+    .boxImgFace{
+        margin: 5px;
+        width: 31px;
+    }
+    
+    .boxImgWhat{
+        margin: 5px;
+        width: 40px;
+    }
+    
+    .boxImgTel{
+        margin: 5px;
+        width: 40px;
+    }
+    
+    .boxImgCE{
+        margin: 5px;
+        width: 50px;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 18px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 18px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 18px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 18px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 18px;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 25px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 25px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 25px;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 580px;
+        width: 100% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+
+}
+
+
+/* Pantalla de escritorio T2*/
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 10px 50px;
+        font-size: 30px;
+        font-family: 'Merriweather', serif;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        margin-bottom: 10px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    
+    
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-between;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 45%;
+        margin-right: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxTel{
+        width: 45%;
+        margin-left: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .boxImgInsta{
+        margin: 5px;
+        width: 30px;
+    }
+    
+    .boxImgFace{
+        margin: 5px;
+        width: 22px;
+    }
+    
+    .boxImgWhat{
+        margin: 5px;
+        width: 30px;
+    }
+    
+    .boxImgTel{
+        margin: 5px;
+        width: 30px;
+    }
+    
+    .boxImgCE{
+        margin: 5px;
+        width: 40px;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 13px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 13px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 13px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 13px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 15px;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 30px;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 20px;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 100%;
+        width: 100% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+
+}
+
+/* Pantalla de laptop T3*/
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin-left: 70px;
+        margin-right:70px;
+        font-size: 20px;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        margin-bottom: 10px;
+        margin-left: 60px;
+        margin-right:60px;
+    }
+    
+    
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-between;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 47%;
+        margin-right: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 15px;
+    }
+    
+    .BoxTel{
+        width: 47%;
+        margin-left: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 15px;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .boxImgInsta{
+        margin: 5px;
+        width: 30px;
+    }
+    
+    .boxImgFace{
+        margin: 5px;
+        width: 22px;
+    }
+    
+    .boxImgWhat{
+        margin: 5px;
+        width: 30px;
+    }
+    
+    .boxImgTel{
+        margin: 5px;
+        width: 30px;
+    }
+    
+    .boxImgCE{
+        margin: 5px;
+        width: 40px;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 12px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 12px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 12px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 12px;
+        /* margin-top: 15%; */
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 12px;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 15px;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 16px;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 300px;
+        width: 100% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+}
+
+/* Pantalla de tablet T4*/
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 20px;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        margin-bottom: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-between;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 10px;
+    }
+    
+    .BoxTel{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 10px;
+
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .boxImgInsta{
+        margin: 2.5px;
+        width: 26px;
+    }
+    
+    .boxImgFace{
+        margin: 2.5px;
+        width: 23.5px;
+    }
+    
+    .boxImgWhat{
+        margin: 2.5px;
+        width: 26px;
+    }
+    
+    .boxImgTel{
+        margin: 2.5px;
+        width: 26px;
+    }
+    
+    .boxImgCE{
+        margin: 2.5px;
+        width: 26px;
+    }
+    
+    .BoxFacebookUsu{
+        /* margin-top: 10%; */
+        font-size: 15px;
+    }
+    
+    .BoxInstagramUsu{
+        /* margin-top: 10%; */
+        font-size: 15px;
+    
+    }
+    
+    .BoxWhatsAppUsu{
+        /* margin-top: 10%; */
+        font-size: 15px;
+    }
+    
+    .BoxTelefonoUsu{
+        /* margin-top: 10%; */
+        font-size: 15px;
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 15px;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 10px;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 18px;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 400px;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* Pantalla de movil T5*/
+@media screen and (max-width: 480px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 9.6px 32px;
+        font-size: 20px;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        margin-bottom: 15px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    
+    
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-evenly;
+    
+    }
+    
+    .BoxRedSocial{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 10px;
+    }
+    
+    .BoxTel{
+        margin-top: 14.4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 10px;
+    }
+    
+    .BoxRedSocialInstagram{
+        /*border: purple 3px solid;*/
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .boxImgInsta{
+        width: 35px;
+        margin-right: 2.5px;
+    }
+    
+    .boxImgFace{
+        margin-right: 2.5px;
+        width: 30px;
+    }
+    
+    .boxImgWhat{
+        margin-right: 2.5px;
+        width: 35px;
+    }
+    
+    .boxImgTel{
+        margin-right: 2.5px;
+        width: 35px;
+    }
+    
+    .boxImgCE{
+        margin: 1.6px;
+        width: 35px;
+    }
+    
+    .BoxFacebookUsu{
+        margin-left: 2.5px;
+        margin-top: 25px;
+        font-size: 15px;
+    }
+    
+    .BoxInstagramUsu{
+        margin-top: 25px;
+        font-size: 15px;
+        margin-left: 2.5px;
+    }
+    
+    .BoxWhatsAppUsu{
+        margin-top: 25px;
+        font-size: 15px;
+        margin-left: 2.5px;
+    }
+    
+    .BoxTelefonoUsu{
+        margin-top: 25px;
+        font-size: 15px;
+        margin-left: 2.5px;
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 14.4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 15px;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+        padding: 10px;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 20px;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 100%;
+        height: 270px;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 14.4px;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 300px;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

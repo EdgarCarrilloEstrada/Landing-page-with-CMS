@@ -1,0 +1,106 @@
+:root{
+    --Amarillo: 	#feb60c;
+    --Azulmarino: 	#231d89;
+    --Verdeoscuro:	#156171;
+    --Verdeclaro: 	#156171;
+    --Negro: 		#060606;
+    --blanco: #fff;
+    --azulfuerteclaro: #1563AC;
+    --aqua: #00A1A1;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.cotizar{
+    margin-top: 2.5vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 100%;
+    flex-wrap: wrap;
+    border: dotted 5px red;
+}
+
+.title-cotizar{
+    margin-left: 3vw;
+    margin-right: 3vw;
+    border: fuchsia solid 2px;
+}
+
+.proceso-cot{
+    display: flex;
+    align-content: center;
+    margin-top: 2vh;
+    margin-bottom: 4.8vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    border: dotted 5px forestgreen;    
+}
+
+.square-step{
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 4vw;
+    border: #060606 solid 4px;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: auto;
+    font-size: 1.1vw;
+    margin-left: 0vw;
+    margin-right: 0vw;
+}
+
+.iconsteps{
+    width: 8vw;
+    height: auto;
+    padding: 2vh 5vw;
+    border: dotted 5px aqua;
+
+}
+
+.title-step{
+    margin: .7vh auto;
+    text-decoration: underline;
+    font-size: 1.2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: dotted 5px orange;
+
+}
+
+.btnstepdollar{
+    background-color: var(--azulfuerteclaro);
+    color: var(--blanco);
+    margin: 3rem auto;
+    padding: 0.4rem 1rem;
+    border: solid;
+    font-size: 1rem;
+    border: dotted 5px lavender;
+}
+
+.btncontact{
+    background-color: var(--azulfuerteclaro);
+    color: var(--blanco);
+    margin: 1rem auto;
+    padding: 0.4rem 1rem;
+    border: solid;
+    font-size: 1rem;
+    border: dotted 5px pink;
+}
+
+.square-step a{
+    text-decoration: none;
+    color: var(--blanco);
+    border: dashed 2px firebrick;
+
+}

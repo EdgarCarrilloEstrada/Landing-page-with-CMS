@@ -1,0 +1,787 @@
+:root{
+    --Amarillo: 	#feb60c;
+    --Azulmarino: 	#231d89;
+    --Verdeoscuro:	#156171;
+    --Verdeclaro: 	#156171;
+    --Negro: 		#060606;
+    --blanco: #fff;
+    --azulfuerteclaro: #1563AC;
+    --aqua: #00A1A1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+
+/* 4k 3840x2160*/
+@media screen and (min-width: 3840px){
+    .cotizar{
+        margin-top: 100px;
+        margin-left: 100px;
+        margin-right: 100px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .title-cotizar{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    .proceso-cot{
+        display: flex;
+        align-content: center;
+        margin-top: 60px;
+        margin-bottom: 100px;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .square-step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 25%;
+        font-size: 35px;
+    }
+    
+    .iconsteps{
+        width: 50%;
+        height: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .title-step{
+        margin: 20px auto;
+        font-size: 70px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .btnstepdollar{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 40px auto;
+        padding: 20px 20px;
+        border: solid;
+        font-size: 40px;
+        width: 50%;
+    }
+    
+    .btncontact{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 40px auto;
+        padding: 20px 20px;
+        border: solid;
+        font-size: 40px;
+        width: 50%;
+    }
+    
+    .square-step a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .square-step span{
+        font-family: 'Rubik', sans-serif;
+        font-size: 50px;
+        line-height: 70px;
+        color: black;
+    }
+
+    p{
+        font-size: 50px;
+    }
+}
+
+/* 2k 2560x1440*/
+@media screen and (min-width: 2560px) and (max-width: 3839px){
+    .cotizar{
+        margin-top: 90px;
+        margin-left: 100px;
+        margin-right: 100px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .title-cotizar{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    .proceso-cot{
+        display: flex;
+        align-content: center;
+        margin-top: 50px;
+        margin-bottom: 90px;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .square-step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 25%;
+        font-size: 30px;
+    }
+    
+    .iconsteps{
+        width: 45%;
+        height: auto;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    
+    .title-step{
+        margin: 15px auto;
+        font-size: 60px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .btnstepdollar{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 35px auto;
+        padding: 15px 15px;
+        border: solid;
+        font-size: 35px;
+        width: 50%;
+    }
+    
+    .btncontact{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 35px auto;
+        padding: 15px 15px;
+        border: solid;
+        font-size: 35px;
+        width: 50%;
+    }
+    
+    .square-step a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .square-step span{
+        font-family: 'Rubik', sans-serif;
+        font-size: 40px;
+        line-height: 65px;
+        color: black;
+    }
+
+    p{
+        font-size: 40px;
+    }
+}
+
+/* FULLHD 1920x1080 */
+@media screen and (min-width: 1920px) and (max-width: 2559px){
+    .cotizar{
+        margin-top: 80px;
+        margin-left: 100px;
+        margin-right: 100px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .title-cotizar{
+        margin-left: 180px;
+        margin-right: 180px;
+    }
+    
+    .proceso-cot{
+        display: flex;
+        align-content: center;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .square-step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 25%;
+        font-size: 25px;
+    }
+    
+    .iconsteps{
+        width: 40%;
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .title-step{
+        margin: 10px auto;
+        font-size: 50px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .btnstepdollar{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 30px auto;
+        padding: 10px 10px;
+        border: solid;
+        font-size: 30px;
+        width: 50%;
+    }
+    
+    .btncontact{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 30px auto;
+        padding: 10px 10px;
+        border: solid;
+        font-size: 30px;
+        width: 50%;
+    }
+    
+    .square-step a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .square-step span{
+        font-family: 'Rubik', sans-serif;
+        font-size: 35px;
+        line-height: 60px;
+        color: black;
+    }
+
+    p{
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    li{
+        margin-left: 20px;
+    }
+}
+
+/* HD 1280x720 */
+@media screen and (min-width: 1201px) and (max-width: 1919px){
+    .cotizar{
+        margin-top: 70px;
+        margin-left: 100px;
+        margin-right: 100px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .title-cotizar{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .proceso-cot{
+        display: flex;
+        align-content: center;
+        margin-top: 30px;
+        margin-bottom: 70px;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .square-step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 25%;
+        font-size: 15px;
+    }
+    
+    .iconsteps{
+        width: 40%;
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .title-step{
+        margin: 5px auto;
+        font-size: 30px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+    
+    .btnstepdollar{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 20px auto;
+        padding: 5px 5px;
+        border: solid;
+        font-size: 20px;
+        width: 50%;
+    }
+    
+    .btncontact{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 20px auto;
+        padding: 5px 5px;
+        border: solid;
+        font-size: 20px;
+        width: 50%;
+    }
+    
+    .square-step a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .square-step span{
+        font-family: 'Rubik', sans-serif;
+        font-size: 20px;
+        line-height: 40px;
+        color: black;
+    }
+
+    p{
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    li{
+        margin-left: 20px;
+    }
+}
+
+
+/* SD  352X240 */
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    .cotizar{
+        margin-left: 100px;
+        margin-right: 100px;
+
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        /* align-content: center; */
+        justify-content: center;
+        height: 100%;
+        /* width: 80%; */
+        flex-wrap: wrap;
+        /* margin-left: 25px; */
+    }
+
+    .title-cotizar{
+        margin-bottom: 20px;
+    }
+    
+    .proceso-cot{
+        display: flex;
+        align-content: center;
+        flex-direction: row;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        /* margin-left: 75px; */
+        /* width: 90%; */
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .square-step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        /* width: 98%; */
+        font-size: 10px;
+        padding: 30px 0px;
+    }
+    
+    .iconsteps{
+        width: 30%;
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .title-step{
+        margin: 5px 0;
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+    
+    .btnstepdollar{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 20px 0;
+        padding: 5px 5px;
+        border: solid;
+        font-size: 20px;
+        width: 50%;
+    }
+    
+    .btncontact{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 20px 0;
+        padding: 5px 5px;
+        border: solid;
+        font-size: 20px;
+        width: 50%;
+    }
+    
+    .square-step a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .square-step span{
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        line-height: 40px;
+        color: black;
+    }
+
+    p{
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    li{
+        margin-left: 5px;
+    }
+}
+
+/* minimo */
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .cotizar{
+        margin-left: 50px;
+        margin-right: 50px;
+
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        /* align-content: center; */
+        justify-content: center;
+        height: 100%;
+        /* width: 80%; */
+        flex-wrap: wrap;
+        /* margin-left: 25px; */
+    }
+
+    .title-cotizar{
+        margin-bottom: 20px;
+    }
+    
+    .proceso-cot{
+        display: flex;
+        align-content: center;
+        flex-direction: row;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        /* margin-left: 75px; */
+        /* width: 90%; */
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .square-step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        /* width: 98%; */
+        font-size: 10px;
+        padding: 30px 0px;
+    }
+    
+    .iconsteps{
+        width: 30%;
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .title-step{
+        margin: 5px 0;
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+    
+    .btnstepdollar{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 20px 0;
+        padding: 5px 5px;
+        border: solid;
+        font-size: 20px;
+        width: 50%;
+    }
+    
+    .btncontact{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 20px 0;
+        padding: 5px 5px;
+        border: solid;
+        font-size: 20px;
+        width: 50%;
+    }
+    
+    .square-step a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .square-step span{
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        line-height: 40px;
+        color: black;
+    }
+
+    p{
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    li{
+        margin-left: 5px;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width: 768px){
+    .cotizar{
+        margin-left: 50px;
+        margin-right: 50px;
+
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        /* align-content: center; */
+        justify-content: center;
+        height: 100%;
+        /* width: 80%; */
+        flex-wrap: wrap;
+        /* margin-left: 25px; */
+    }
+
+    .title-cotizar{
+        margin-bottom: 20px;
+    }
+    
+    .proceso-cot{
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        /* margin-left: 75px; */
+        /* width: 90%; */
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .square-step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        /* width: 98%; */
+        font-size: 10px;
+        padding: 30px 0px;
+    }
+    
+    .iconsteps{
+        width: 30%;
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .title-step{
+        margin: 5px 0;
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+    
+    .btnstepdollar{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 20px 0;
+        padding: 5px 5px;
+        border: solid;
+        font-size: 20px;
+        width: 50%;
+    }
+    
+    .btncontact{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 20px 0;
+        padding: 5px 5px;
+        border: solid;
+        font-size: 20px;
+        width: 50%;
+    }
+    
+    .square-step a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .square-step span{
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        line-height: 40px;
+        color: black;
+    }
+
+    p{
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    li{
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .cotizar{
+        margin-left: 20px;
+        margin-right: 20px;
+
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        /* align-content: center; */
+        justify-content: center;
+        height: 100%;
+        /* width: 80%; */
+        flex-wrap: wrap;
+        /* margin-left: 25px; */
+    }
+
+    .title-cotizar{
+        margin-bottom: 0px;
+    }
+    
+    .proceso-cot{
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        /* margin-left: 75px; */
+        /* width: 90%; */
+        height: 100%;
+        justify-content: space-around;
+    }
+    
+    .square-step{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        /* width: 98%; */
+        font-size: 10px;
+        padding: 30px 0px;
+    }
+    
+    .iconsteps{
+        width: 30%;
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .title-step{
+        margin: 5px 0;
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+    
+    .btnstepdollar{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 20px 0;
+        padding: 5px 5px;
+        border: solid;
+        font-size: 20px;
+        width: 50%;
+    }
+    
+    .btncontact{
+        background-color: var(--azulfuerteclaro);
+        color: var(--blanco);
+        margin: 20px 0;
+        padding: 5px 5px;
+        border: solid;
+        font-size: 20px;
+        width: 50%;
+    }
+    
+    .square-step a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .square-step span{
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        line-height: 40px;
+        color: black;
+    }
+
+    p{
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    li{
+        margin-left: 5px;
+    }
+}

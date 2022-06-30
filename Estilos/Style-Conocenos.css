@@ -1,0 +1,853 @@
+:root {
+    --Amarillo: 	#feb60c;
+    --Azulmarino: 	#231d89;
+    --Verdeoscuro:	#156171;
+    --Verdeclaro: 	#156171;
+    --Negro: 		#060606;
+    --blanco: #fff;
+    --azulfuerteclaro: #1563AC;
+    --aqua: #00A1A1;
+}
+
+/* Zona de prueba de media queries */
+/* Intentare empezar generando una configuracion global para una pantalla grande */
+/* Despues seguire reduciendo la resolucion para una pantalla de escritorio */
+/* Despues seguire reduciendo la resolucion para una pantalla de laptop */
+/* Despues continuare para una pantalla de tablet */
+/* Y por ultimo seria la resolucion minima para dispositivos moviles */
+
+
+/*
+    Resoluciones a utilizar en cada breakpoint
+    Desde: 1201px Hasta: Max
+    Desde: 1025px Hasta: 1200px
+    Desde: 769px Hasta: 1024px
+    Desde: 481px Hasta: 768px
+    Desde: 320px Hasta: 480px
+
+
+    Resoluciones de prueba dentro del navegador:
+    T1: 1920X1080
+    T2: 1200X675
+    T3: 1024X576
+    T4: 540X960
+    T5: 360X640
+*/
+
+
+/* Pantalla grande T1*/
+@media screen and (min-width: 1201px){
+    
+    .box1 {
+        border: dashed 6px green;
+        display: flex;
+        height: auto;
+        flex-direction: row;
+        margin-bottom: 1vh;
+        padding: 0 1.5%;
+    }
+    
+    .box1Info {
+        border: dashed 6px orange;
+        display: flex;
+        width: 50%;
+        margin: 1vh 1vw;
+        flex-direction: column;
+        color: #fff;
+        background-color: #1563AC;
+        border-radius: 15px;
+        font-size: 1.5vw;
+        justify-content: space-evenly;
+    }
+    
+    .box1InfoImg {
+        border: dashed 6px violet;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* margin: 1rem 2rem; */
+    }
+    
+    .box1Texto{
+        border: dashed 6px yellow;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0vh;
+
+    }
+    
+    .logo2{
+        border: dashed 6px red;
+        width: 16vw;
+        height: auto;
+        /* height: 20rem; */
+    }
+    
+    
+    .box1Mapa {
+        border: dashed 6px chartreuse;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 1vh 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box1Mapa h3{
+        border: dashed 6px mediumspringgreen;
+        font-family: 'Merriweather';
+        color: var(--Azulmarino);
+        font-size: 1.7vw;
+    }
+
+    .cont{
+        text-align: left;
+        width: 100%;
+        margin: auto;
+       }
+       
+    .texto {
+    width: auto;
+    float:left;
+    }
+    #content_mapa {
+    width: auto;
+    float: left;
+    background-color: #FFFFFF;
+    }
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .uk-tooltip{
+        border: solid black 2px;
+        background-color:var(--aqua) ;
+    }
+    
+    .boxLoQueHacemos{
+        border: solid 6px red;
+        display: flex;
+        flex-direction: column;
+        
+        text-align: center;
+        margin-top: 2vh;
+    }
+    
+    .boxLQHTitulo{
+        border: dashed 6px pink;
+        color: #1563AC;
+        font-size: 1.8vw;
+        justify-content: center;
+        height: 100%;
+        padding: 0 2%;
+    }
+    
+    .boxLQHTitulo p {
+        border: dashed 6px rebeccapurple;
+        font-family: 'Merriweather';
+    }
+    
+    .boxLQHParrafo {
+        border: dashed 6px royalblue;
+        color: var(--Negro);
+        /* width: 100%; */
+        font-size: 1.5vw;
+        padding: 0 2%;
+    }
+    
+    .boxLQHParrafo p {
+        border: dashed 6px darkcyan;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .boxMVV {
+        border: dashed 6px indigo;
+        display: flex;
+        flex-direction: row;
+        padding: 0 1.5%;
+        text-align: center;
+        height: auto;
+    }
+    
+    .boxMVVTexto {
+        border: dashed 6px aquamarine;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+    .boxMVVTitulo {
+        border: dashed 6px plum;
+        display: flex;
+        color: #1563AC;
+        font-size: 1.8vw;
+        justify-content: center;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        margin-bottom: 0rem;
+    }
+    
+    .boxMVVTitulo p {
+        border: dashed 6px saddlebrown;
+        font-family: 'Merriweather';
+    }
+    
+    .boxMVVParrafo {
+        border: dashed 6px darkblue;
+        color: var(--Negro);
+        padding: 2vw;
+        margin: 0vw 1vw;
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    .boxMVVParrafo p {
+        border: dashed 6px teal;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .boxMVVImg {
+        border: dashed 6px turquoise;
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ImgMision{
+        border: dashed 6px red;
+        margin: 0 5vw;
+        width: 85%;
+        height: 85%;
+    }
+    
+    .ImgVision{
+        border: dashed 6px red;
+        margin: 0 5vw;
+        width: 85%;
+        height: 85%;
+    }
+    
+    .ImgVentajas{
+        border: dashed 6px red;
+        width: 85%;
+        height: 85%;
+        margin: 0 5vw;
+    }
+    
+    .box2doSeparador{
+        border: dashed 6px rosybrown;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+        color: #FFFF;
+        display: block;
+        padding: 1% 1.5%;
+        font-size: 1.8vw;
+        margin: 0 2%;
+    }
+    
+
+    
+    .box2Titulo p {
+        border: dashed 6px palevioletred;
+        font-family: 'Merriweather';
+    }
+    
+    .box2Parrafo{
+        border: dashed 6px goldenrod;
+        margin: 0rem 2%;
+        margin-top: 2.5vh;
+        color: var(--Negro);
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    .box2Parrafo span {
+        border: dashed 6px fuchsia;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .carruselConv{
+        border: dashed 6px grey;
+        margin: 2rem 5.5rem;
+        padding: 2rem;
+    }
+    
+    .imgslider{
+        border: dashed 6px khaki;
+        width: 40vh;
+        height: 30vh;
+    }
+    
+    .box2Parrafo-2{
+        border: dashed 6px blue;
+        margin: 0 2%;
+        margin-bottom: 2.5vh;
+        color: var(--Negro);
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    .box2Parrafo-2 span {
+        border: dashed 6px fuchsia;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+
+
+}
+
+/* Pantalla de escritorio T2*/
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    .box1 {
+        border: dashed 6px green;
+        display: flex;
+        height: auto;
+        flex-direction: row;
+        margin-bottom: 1vh;
+        padding: 0 1.5%;
+    }
+    
+    .box1Info {
+        border: dashed 6px orange;
+        display: flex;
+        width: 50%;
+        margin: 1vh 1vw;
+        flex-direction: column;
+        color: #fff;
+        background-color: #1563AC;
+        border-radius: 15px;
+        font-size: 1.5vw;
+        justify-content: space-evenly;
+    }
+    
+    .box1InfoImg {
+        border: dashed 6px violet;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* margin: 1rem 2rem; */
+    }
+    
+    .box1Texto{
+        border: dashed 6px yellow;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0vh;
+
+    }
+    
+    .logo2{
+        border: dashed 6px red;
+        width: 16vw;
+        height: auto;
+        /* height: 20rem; */
+    }
+    
+    
+    .box1Mapa {
+        border: dashed 6px chartreuse;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 1vh 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box1Mapa h3{
+        border: dashed 6px mediumspringgreen;
+        font-family: 'Merriweather';
+        color: var(--Azulmarino);
+        font-size: 1.7vw;
+    }
+
+    .cont{
+        text-align: left;
+        width: 100%;
+        margin: auto;
+       }
+       
+    .texto {
+    width: auto;
+    float:left;
+    }
+    #content_mapa {
+    width: auto;
+    float: left;
+    background-color: #FFFFFF;
+    }
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .uk-tooltip{
+        border: solid black 2px;
+        background-color:var(--aqua) ;
+    }
+    
+    .boxLoQueHacemos{
+        border: solid 6px red;
+        display: flex;
+        flex-direction: column;
+        
+        text-align: center;
+        margin-top: 2vh;
+    }
+    
+    .boxLQHTitulo{
+        border: dashed 6px pink;
+        color: #1563AC;
+        font-size: 1.8vw;
+        justify-content: center;
+        height: 100%;
+        padding: 0 2%;
+    }
+    
+    .boxLQHTitulo p {
+        border: dashed 6px rebeccapurple;
+        font-family: 'Merriweather';
+    }
+    
+    .boxLQHParrafo {
+        border: dashed 6px royalblue;
+        color: var(--Negro);
+        /* width: 100%; */
+        font-size: 1.5vw;
+        padding: 0 2%;
+    }
+    
+    .boxLQHParrafo p {
+        border: dashed 6px darkcyan;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .boxMVV {
+        border: dashed 6px indigo;
+        display: flex;
+        flex-direction: row;
+        padding: 0 1.5%;
+        text-align: center;
+        height: auto;
+    }
+    
+    .boxMVVTexto {
+        border: dashed 6px aquamarine;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+    .boxMVVTitulo {
+        border: dashed 6px plum;
+        display: flex;
+        color: #1563AC;
+        font-size: 1.8vw;
+        justify-content: center;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        margin-bottom: 0rem;
+    }
+    
+    .boxMVVTitulo p {
+        border: dashed 6px saddlebrown;
+        font-family: 'Merriweather';
+    }
+    
+    .boxMVVParrafo {
+        border: dashed 6px darkblue;
+        color: var(--Negro);
+        padding: 2vw;
+        margin: 0vw 1vw;
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    .boxMVVParrafo p {
+        border: dashed 6px teal;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .boxMVVImg {
+        border: dashed 6px turquoise;
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ImgMision{
+        border: dashed 6px red;
+        margin: 0 5vw;
+        width: 85%;
+        height: 85%;
+    }
+    
+    .ImgVision{
+        border: dashed 6px red;
+        margin: 0 5vw;
+        width: 85%;
+        height: 85%;
+    }
+    
+    .ImgVentajas{
+        border: dashed 6px red;
+        width: 85%;
+        height: 85%;
+        margin: 0 5vw;
+    }
+    
+    .box2doSeparador{
+        border: dashed 6px rosybrown;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+        color: #FFFF;
+        display: block;
+        padding: 1% 1.5%;
+        font-size: 1.8vw;
+        margin: 0 2%;
+    }
+    
+
+    
+    .box2Titulo p {
+        border: dashed 6px palevioletred;
+        font-family: 'Merriweather';
+    }
+    
+    .box2Parrafo{
+        border: dashed 6px goldenrod;
+        margin: 0rem 2%;
+        margin-top: 2.5vh;
+        color: var(--Negro);
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    .box2Parrafo span {
+        border: dashed 6px fuchsia;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .carruselConv{
+        border: dashed 6px grey;
+        margin: 2rem 5.5rem;
+        padding: 2rem;
+    }
+    
+    .imgslider{
+        border: dashed 6px khaki;
+        width: 40vh;
+        height: 30vh;
+    }
+    
+    .box2Parrafo-2{
+        border: dashed 6px blue;
+        margin: 0 2%;
+        margin-bottom: 2.5vh;
+        color: var(--Negro);
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    .box2Parrafo-2 span {
+        border: dashed 6px fuchsia;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+}
+
+
+/* Pantalla de laptop T3*/
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .box1 {
+        border: dashed 6px green;
+        display: flex;
+        height: auto;
+        flex-direction: row;
+        margin-bottom: 1vh;
+        padding: 0 1.5%;
+    }
+    
+    .box1Info {
+        border: dashed 6px orange;
+        display: flex;
+        width: 50%;
+        margin: 1vh 1vw;
+        flex-direction: column;
+        color: #fff;
+        background-color: #1563AC;
+        border-radius: 15px;
+        font-size: 1.5vw;
+        justify-content: space-evenly;
+    }
+    
+    .box1InfoImg {
+        border: dashed 6px violet;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* margin: 1rem 2rem; */
+    }
+    
+    .box1Texto{
+        border: dashed 6px yellow;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0vh;
+
+    }
+    
+    .logo2{
+        border: dashed 6px red;
+        width: 16vw;
+        height: auto;
+        /* height: 20rem; */
+    }
+    
+    
+    .box1Mapa {
+        border: dashed 6px chartreuse;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 1vh 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box1Mapa h3{
+        border: dashed 6px mediumspringgreen;
+        font-family: 'Merriweather';
+        color: var(--Azulmarino);
+        font-size: 1.7vw;
+    }
+
+    .cont{
+        text-align: left;
+        width: 100%;
+        margin: auto;
+       }
+       
+    .texto {
+    width: auto;
+    float:left;
+    }
+    #content_mapa {
+    width: auto;
+    float: left;
+    background-color: #FFFFFF;
+    }
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .uk-tooltip{
+        border: solid black 2px;
+        background-color:var(--aqua) ;
+    }
+    
+    .boxLoQueHacemos{
+        border: solid 6px red;
+        display: flex;
+        flex-direction: column;
+        
+        text-align: center;
+        margin-top: 2vh;
+    }
+    
+    .boxLQHTitulo{
+        border: dashed 6px pink;
+        color: #1563AC;
+        font-size: 1.8vw;
+        justify-content: center;
+        height: 100%;
+        padding: 0 2%;
+    }
+    
+    .boxLQHTitulo p {
+        border: dashed 6px rebeccapurple;
+        font-family: 'Merriweather';
+    }
+    
+    .boxLQHParrafo {
+        border: dashed 6px royalblue;
+        color: var(--Negro);
+        /* width: 100%; */
+        font-size: 1.5vw;
+        padding: 0 2%;
+    }
+    
+    .boxLQHParrafo p {
+        border: dashed 6px darkcyan;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .boxMVV {
+        border: dashed 6px indigo;
+        display: flex;
+        flex-direction: row;
+        padding: 0 1.5%;
+        text-align: center;
+        height: auto;
+    }
+    
+    .boxMVVTexto {
+        border: dashed 6px aquamarine;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+    .boxMVVTitulo {
+        border: dashed 6px plum;
+        display: flex;
+        color: #1563AC;
+        font-size: 1.8vw;
+        justify-content: center;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        margin-bottom: 0rem;
+    }
+    
+    .boxMVVTitulo p {
+        border: dashed 6px saddlebrown;
+        font-family: 'Merriweather';
+    }
+    
+    .boxMVVParrafo {
+        border: dashed 6px darkblue;
+        color: var(--Negro);
+        padding: 2vw;
+        margin: 0vw 1vw;
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    .boxMVVParrafo p {
+        border: dashed 6px teal;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .boxMVVImg {
+        border: dashed 6px turquoise;
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ImgMision{
+        border: dashed 6px red;
+        margin: 0 5vw;
+        width: 85%;
+        height: 85%;
+    }
+    
+    .ImgVision{
+        border: dashed 6px red;
+        margin: 0 5vw;
+        width: 85%;
+        height: 85%;
+    }
+    
+    .ImgVentajas{
+        border: dashed 6px red;
+        width: 85%;
+        height: 85%;
+        margin: 0 5vw;
+    }
+    
+    .box2doSeparador{
+        border: dashed 6px rosybrown;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+        color: #FFFF;
+        display: block;
+        padding: 1% 1.5%;
+        font-size: 1.8vw;
+        margin: 0 2%;
+    }
+    
+
+    
+    .box2Titulo p {
+        border: dashed 6px palevioletred;
+        font-family: 'Merriweather';
+    }
+    
+    .box2Parrafo{
+        border: dashed 6px goldenrod;
+        margin: 0rem 2%;
+        margin-top: 2.5vh;
+        color: var(--Negro);
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    .box2Parrafo span {
+        border: dashed 6px fuchsia;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .carruselConv{
+        border: dashed 6px grey;
+        margin: 2rem 5.5rem;
+        padding: 2rem;
+    }
+    
+    .imgslider{
+        border: dashed 6px khaki;
+        width: 40vh;
+        height: 30vh;
+    }
+    
+    .box2Parrafo-2{
+        border: dashed 6px blue;
+        margin: 0 2%;
+        margin-bottom: 2.5vh;
+        color: var(--Negro);
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    .box2Parrafo-2 span {
+        border: dashed 6px fuchsia;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+}
+
+/* Pantalla de tablet T4*/
+@media screen and (min-width: 481px) and (max-width: 768px){
+    
+}
+
+/* Pantalla de movil T5*/
+@media screen and (min-width: 320px) and (max-width: 480px){
+    
+}
+
+

@@ -1,0 +1,61 @@
+{% load static wagtailcore_tags wagtailuserbar %}
+{% load wagtailcore_tags wagtailimages_tags%}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+                {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+                {% wagtail_site as current_site %}
+                {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
+            {% endblock %}
+        </title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {% image settings.home.header.Logo_barra_de_navegación original as logo_navbar %}
+        <link rel="icon" href="{{ logo_navbar.url }}">
+
+        {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/grupolias.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/Style-header-copy-copy.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/Style-footer.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=PT+Serif&family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+        
+        <!-- UIKIT -->
+        <link rel="stylesheet" type="text/css" href="{% static 'lib/uikit/css/uikit.min.css' %}"/>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'lib/SweetAlert/package/dist/sweetalert2.min.css' %}"/>
+        
+        
+        {% block extra_css %}
+        {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        {% wagtailuserbar %}
+        {% include 'grupolias/components/header.html' %}
+        
+        {% block content %}{% endblock %}
+        
+        {% include 'grupolias/components/footer.html' %}
+        {# Global javascript #}
+        <script type="text/javascript" src="{% static 'js/grupolias.js' %}"></script>
+        <script src="{% static 'lib/jquery-3.6.0.js' %}"></script>
+        <script src="{% static 'lib/uikit/js/uikit-icons.min.js' %}"></script>
+        <script src="{% static 'lib/uikit/js/uikit.min.js' %}"></script>
+        <script src="{% static 'lib/SweetAlert/package/dist/sweetalert2.min.js' %}"></script>
+        
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags%}
+
+{% block body_class %}template-comment-form-landing{% endblock %}
+
+{% load static %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/comment-form-landing.css' %}">
+
+{% endblock extra_css %}
+
+{% block content %}
+
+<h1>Tu comentario fue enviado correctamente!</h1>
+<div class="contenedor">
+    <p class="text">{{self.thank_you_text | richtext}}</p>
+</div>
+    
+{% endblock %}

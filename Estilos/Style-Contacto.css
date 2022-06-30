@@ -1,0 +1,1112 @@
+:root{
+    --Amarillo: 	#feb60c;
+    --Azulmarino: 	#231d89;
+    --Verdeoscuro:	#156171;
+    --Verdeclaro: 	#156171;
+    --Negro: 		#060606;
+    --blanco: #fff;
+    --azulfuerteclaro: #1563AC;
+    --aqua: #00A1A1;
+}
+
+
+
+/* 
+
+.BoxRedSocial{
+    width: 33%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--Verdeclaro);
+    color: var(--blanco);
+    border: 2px solid #060606;
+}
+
+.BoxTel{
+    width: 33%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Verdeclaro);
+    color: var(--blanco);
+    border: 2px solid #060606;
+}
+
+*/
+
+
+/* Zona de prueba de media queries */
+/* Intentare empezar generando una configuracion global para una pantalla grande */
+/* Despues seguire reduciendo la resolucion para una pantalla de escritorio */
+/* Despues seguire reduciendo la resolucion para una pantalla de laptop */
+/* Despues continuare para una pantalla de tablet */
+/* Y por ultimo seria la resolucion minima para dispositivos moviles */
+
+
+/*
+    Resoluciones a utilizar en cada breakpoint
+    Desde: 1201px Hasta: Max
+    Desde: 1025px Hasta: 1200px
+    Desde: 769px Hasta: 1024px
+    Desde: 481px Hasta: 768px
+    Desde: 320px Hasta: 480px
+
+
+    Resoluciones de prueba dentro del navegador:
+    T1: 1920X1080
+    T2: 1200X675
+    T3: 1024X576
+    T4: 540X960
+    T5: 360X640
+*/
+
+
+/* Pantalla grande T1*/
+@media screen and (min-width: 1201px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 2vh 10vw;
+        font-size: 2vw;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        padding: 0 3vh;
+        margin-bottom: 2vh;
+    }
+    
+    
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-between;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 40%;
+        /* border: red dotted 3px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxTel{
+        width: 40%;
+        /* border: green dashed 3px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .boxImgInsta{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .boxImgFace{
+        margin: 0.5vw;
+        width: 3.7vw;
+    }
+    
+    .boxImgWhat{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .boxImgTel{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .boxImgCE{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 1vw;
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 1vw;
+    
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 1vw;
+    
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 1vw;
+    
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1vw;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 1vw;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 95%;
+        width: 95% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+
+}
+
+
+/* Pantalla de escritorio T2*/
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 2vh 10vw;
+        font-size: 2vw;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        padding: 0 3vh;
+        margin-bottom: 2vh;
+    }
+    
+    
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-between;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 33%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxTel{
+        width: 33%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .boxImgInsta{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .boxImgFace{
+        margin: 0.5vw;
+        width: 3.7vw;
+    }
+    
+    .boxImgWhat{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .boxImgTel{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .boxImgCE{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 1vw;
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 1vw;
+    
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 1vw;
+    
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 1vw;
+    
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1vw;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 1vw;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 95%;
+        width: 95% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+
+}
+
+/* Pantalla de laptop T3*/
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 2vh 10vw;
+        font-size: 2vw;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        padding: 0 3vh;
+        margin-bottom: 2vh;
+    }
+    
+    
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-between;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 35%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxTel{
+        width: 35%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .boxImgInsta{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .boxImgFace{
+        margin: 0.5vw;
+        width: 3.7vw;
+    }
+    
+    .boxImgWhat{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .boxImgTel{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .boxImgCE{
+        margin: 0.5vw;
+        width: 4vw;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 1vw;
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 1vw;
+    
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 1vw;
+    
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 1vw;
+    
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1vw;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 1vw;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 50%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 95%;
+        width: 95% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+}
+
+/* Pantalla de tablet T4*/
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 2vh 10vw;
+        font-size: 2vw;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        padding: 0 3vh;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        margin-bottom: 2vh;
+    }
+    
+    
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-evenly;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 45%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxTel{
+        width: 45%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .boxImgInsta{
+        margin: 0.5vw;
+        width: 5vw;
+    }
+    
+    .boxImgFace{
+        margin: 0.5vw;
+        width: 4.7vw;
+    }
+    
+    .boxImgWhat{
+        margin: 0.5vw;
+        width: 5vw;
+    }
+    
+    .boxImgTel{
+        margin: 0.5vw;
+        width: 5vw;
+    }
+    
+    .boxImgCE{
+        margin: 0.5vw;
+        width: 5vw;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 2vw;
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 2vw;
+    
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 2vw;
+    
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 2vw;
+    
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vw;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 3vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 3vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 3vw;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 3vh;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 95%;
+        width: 95% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+}
+
+/* Pantalla de movil T5*/
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .box1Titulo{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        color: #1563AC;
+        border-bottom: var(--Amarillo) 4px ridge;
+        margin: 2vh 10vw;
+        font-size: 2vw;
+        font-family: 'Merriweather', serif;
+    }
+    
+    .BoxBody p{
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .BoxBody{
+        display: flex;
+        /* border: red dotted 3px; */
+        padding: 0 3vh;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        margin-bottom: 2vh;
+    }
+    
+    
+    .BoxContactos{
+        /* border: #feb60c 4px solid; */
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    
+    }
+    
+    .BoxContactosInnt{
+        /* border: aqua 4px solid; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        justify-content: space-evenly;
+    
+    }
+    
+    .BoxRedSocial{
+        width: 45%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxTel{
+        width: 45%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxRedSocialInstagram{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxRedSocialFacebook{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxWhatsApp{
+        /* border: purple 3px solid; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .BoxTelefono{
+        /* border: yellow solid 4px; */
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .boxImgInsta{
+        margin: 0.5vw;
+        width: 5vw;
+    }
+    
+    .boxImgFace{
+        margin: 0.5vw;
+        width: 4.7vw;
+    }
+    
+    .boxImgWhat{
+        margin: 0.5vw;
+        width: 5vw;
+    }
+    
+    .boxImgTel{
+        margin: 0.5vw;
+        width: 5vw;
+    }
+    
+    .boxImgCE{
+        margin: 0.5vw;
+        width: 5vw;
+    }
+    
+    .BoxFacebookUsu{
+        font-size: 2vw;
+    }
+    
+    .BoxInstagramUsu{
+        font-size: 2vw;
+    
+    }
+    
+    .BoxWhatsAppUsu{
+        font-size: 2vw;
+    
+    }
+    
+    .BoxTelefonoUsu{
+        font-size: 2vw;
+    
+    }
+    
+    .BoxEmail{
+        /* border: royalblue 3px solid; */
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vw;
+        background-color: var(--Verdeclaro);
+        color: var(--blanco);
+        border: 2px solid #060606;
+    }
+    
+    .BoxRedSocialTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 3vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxTelTitulo{
+        display: flex;
+        width: 99%;
+        height: 20%;
+        font-size: 3vw;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .BoxEmailTitulo{
+        display: flex;
+        width: 99%;
+        /* height: 20%; */
+        font-size: 3vw;
+        justify-content: center;
+    
+    }
+    
+    .BoxEmailInfo a{
+        text-decoration: none;
+        color: var(--blanco);
+    }
+    
+    .maps{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 3vh;
+    }
+    
+    .GoogleMaps{
+        display: flex;
+        border:0; 
+        height: 95%;
+        width: 95% ;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2%;
+    }
+}

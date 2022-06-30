@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" href="../../Images/GrupoLiaslogosquare.ico">
+    <title>Grupo LIAS</title>
+    <script src="../../lib/jquery-3.6.0.js"></script>
+    <script src="../../js/loadFo-He.js"></script>
+
+    <script src="../../js/functsLanding.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=PT+Serif&family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <!-- UIKIT -->
+    <link rel="stylesheet" href="../../lib/uikit/css/uikit.min.css"/>
+    <script src="../../lib/uikit/js/uikit.min.js"></script>
+    <script src="../../lib/uikit/js/uikit-icons.min.js"></script>
+
+    <link rel="stylesheet" href="../../Estilos/Style-Landing.css"/>
+  </head>
+  
+  <body>
+    <div id="header"></div>
+    <div class="boxPresentacion">
+      <div class="boxCarrusel">
+        <div class="uk-width-2-3 uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade; autoplay:true; autoplay-interval:7000">
+          <ul class="uk-slideshow-items">
+            <li>
+              <img src="../../Images/Albañilería1.jpg" alt="" uk-cover draggable="false">
+              <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                <h3 class="uk-margin-remove">Albañilería</h3>
+                <p class="uk-margin-remove">Tenemos los mejores albañiles para el trabajo que necesites</p>
+              </div>
+            </li>
+            <li>
+              <img src="../../Images/plomero 1.png" alt="" uk-cover draggable="false">
+              <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                <h3 class="uk-margin-remove">Plomería</h3>
+                <p class="uk-margin-remove">Reparaciones o nuevas instalaciones de plomería</p>
+              </div>
+            </li>
+            <li>
+              <img src="../../Images/worker-impermeabilizar.jpg" alt="" uk-cover draggable="false">
+              <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                <h3 class="uk-margin-remove">Planea tu casa</h3>
+                <p class="uk-margin-remove">Pregunta por las posibilidades de construir tu propia casa</p>
+              </div>
+            </li>
+          </ul>
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        </div>
+      </div>
+      <div class="boxderecha">
+        <img class="boxLogoDerecha" src="../../Images/GrupoLiaslogo.png" alt="logo de Grupo LIAS" draggable="false">
+        <p class="boxTextoDerecha">
+          Grupo LIAS se complace en presentar un servicio de calidad para su hogar, de acuerdo con los más altos estandares del mercado.
+        </p>
+      </div>
+    </div>
+    <div>
+      <p id="idServices" class="box2doSeparador">Servicios</p>
+    </div>
+    <div class="boxServicios">
+      <div class="uk-child-width-1-2@m" uk-grid>
+        <div>
+          <div class="uk-card uk-card-default uk-margin-xlarge-bottom">
+            <div class="uk-card-media-top">
+              <img class="imgServicSize" src="../../Images/Hogar.png" width="1800" height="1200" alt="" draggable="false">
+            </div>
+            <div class="uk-card-hover uk-card-body">
+              <h3 class="uk-card-title">HOGAR</h3>
+              <ul class="boxListaServicio">
+                <li><a href="../Servicios/ServicioPlomeria.html" draggable="false">Plomería</a></li>
+                <li><a href="../Servicios/ServicioHerreria.html" draggable="false">Herrería</a></li>
+              </ul>
+              <ul uk-accordion>
+                <li>
+                  <div class="uk-accordion-content">
+                    <ul class="boxListaServicio">
+                      <li><a href="../Servicios/ServicioCerrajeria.html" draggable="false">Cerrajería</a></li>
+                      <li><a href="../Servicios/ServicioVidrieria.html" draggable="false">Vidriería</a></li>
+                      <li><a href="../Servicios/ServicioAluminio.html" draggable="false">Aluminio</a></li>
+                    </ul>
+                  </div>
+                  <a id="vMore" class="uk-accordion-title viewM" href="#" onclick="changeText('vMore')" draggable="false">Ver más</a>
+                </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-default uk-margin-xlarge-bottom">
+            <div class="uk-card-media-top">
+              <img class="imgServicSize" src="../../Images/Electricista.png" width="1800" height="1200" alt="" draggable="false">
+            </div>
+            <div class="uk-card-hover uk-card-body">
+              <h3 class="uk-card-title">ELECTRICIDAD</h3>
+              <ul class="boxListaServicio">
+                <li><a href="../Servicios/ServicioElectricidad.html" draggable="false">Electricidad</a></li>
+                <li><a href="../Servicios/ServicioCircuitoCerrado.html" draggable="false">Circuito cerrado</a></li>
+              </ul>
+              <ul uk-accordion>
+                <li>
+                  <div class="uk-accordion-content">
+                    <ul class="boxListaServicio">
+                      <li><a href="../Servicios/ServicioPanelesSolares.html" draggable="false">Paneles solares</a></li>
+                    </ul>
+                  </div>
+                  <a id="vMore2" class="uk-accordion-title viewM" href="#" onclick="changeText('vMore2')" draggable="false">Ver más</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-default uk-margin-xlarge-bottom">
+            <div class="uk-card-media-top">
+              <img class="imgServicSize" src="../../Images/Pintura.png" width="1800" height="1200" alt="" draggable="false">
+            </div>
+            <div class="uk-card-hover uk-card-body">
+              <h3 class="uk-card-title">PINTURA</h3>
+              <ul class="boxListaServicio">
+                <li><a href="../Servicios/ServicioImpermeabilización.html" draggable="false">Impermeabilización</a></li>
+                <li><a href="../Servicios/ServicioPintura.html" draggable="false">Pintura</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-default uk-margin-xlarge-bottom">
+            <div class="uk-card-media-top">
+              <img class="imgServicSize" src="../../Images/Construccion.jpg" width="1800" height="1200" alt="" draggable="false">
+            </div>
+            <div class="uk-card-hover uk-card-body">
+              <h3 class="uk-card-title">CONSTRUCCIÓN</h3>
+              <ul class="boxListaServicio">
+                <li><a href="../Servicios/ServicioAlbañilería.html" draggable="false">Albañilería</a></li>
+                <li><a href="../Servicios/ServicioTablaroca.html" draggable="false">Tablaroca</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <strong><p class="box3erSeparador">Confía en nuestra experiencia</p></strong>
+    </div>
+    <div class="uk-child-width-1-2@m boxfinal" uk-grid>
+      <div >
+        <div class="uk-inline">
+          <img src="../../Images/Facturacion.jpg" width="1800" height="1200" alt="" draggable="false">
+          <div class="uk-overlay uk-overlay-default uk-position-bottom">
+            <h3>Facturacion</h3>
+            <p>Emitimos factura para todos los servicios</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="uk-inline">
+          <img src="../../Images/Garantia.jpg" width="1800" height="1200" alt="" draggable="false">
+          <div class="uk-overlay uk-overlay-default uk-position-bottom">
+            <h3>Garantia</h3>
+            <p>Contamos con 3 meses de garantía en mano de obra</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>

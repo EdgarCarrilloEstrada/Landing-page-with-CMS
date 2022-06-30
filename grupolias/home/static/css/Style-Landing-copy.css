@@ -1,0 +1,1487 @@
+:root{
+    --Amarillo: 	#feb60c;
+    --Azulmarino: 	#231d89;
+    --Verdeoscuro:	#156171;
+    --Verdeclaro: 	#156171;
+    --Negro: 		#060606;
+    --blanco: #fff;
+    --azulfuerteclaro: #1563AC;
+    --aqua: #00A1A1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+/* 4k 3840x2160*/
+@media screen and (min-width: 3840px){
+    .carrutitle{
+        font-size: 70px;
+    }
+
+    .carrutext{
+        font-size: 50px;
+    }
+
+    .uk-card-title{
+        color: var(--Negro);
+        font-family: 'Merriweather', serif;
+        font-size: 60px;
+        font-weight: 600;
+    }
+    
+    .card-text{
+        font-family: 'Lora', serif;
+        font-size: 55px;
+    }
+    
+    .boxPresentacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 100px;
+        /* margin-left: 80px; */
+        margin-bottom: 150px;
+        
+    }
+    
+    .boxPresentacion p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body li {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .boxderecha{
+        display: flex;
+        flex-direction: column;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 45px;
+        background-color: var(--aqua);
+        color: #FFFF;
+        height: auto;
+        width: 28%;
+        border-radius: 90px;
+        align-items: center;
+    }
+    
+    .boxLogoDerecha{
+        margin-top: 200px;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .boxTextoDerecha{
+        text-align: center;
+        padding: 50px 150px;
+    }
+    
+    .box2doSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        margin:100px;
+        font-size: 100px;
+        color: #FFFF;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 40px;
+    }
+    
+    .boxServicios{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 100px 100px 50px 100px;
+        padding-left: 20px;
+    }
+    
+    .boxListaServicio{
+        list-style: none;
+        margin-left: -50px;
+        color: var(--Negro);
+        font-size: 40px;
+    }
+    
+    .boxListaServicio a{
+        text-decoration: none;
+        color: var(--Negro);
+    }
+    
+    .boxListaServicio a:hover:not(active){
+        color: var(--Azulmarino);
+        font-weight: 600;
+    }
+    
+    .viewM{
+        font-size: 50px;
+        margin-left: -.1px;
+    }
+    
+    .box3erSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #F5C85A;
+        font-family: 'Merriweather', serif;
+        margin:100px;
+        font-size: 100px;
+        color: #FFFF;
+        display: block;
+        padding: 40px;
+        
+    }
+    
+    .imgServicSize{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        height: 870px;
+    }
+
+    .uk-card-default{
+        padding-left: 0;
+    }
+    
+    .boxfinal{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 100px;
+    }
+
+    .uk-first-column{
+        padding: 0;
+    }
+
+    .first-col img{
+        padding: 0;
+        width: 48vw;
+        height: 30vw;
+    }
+
+    .second-col img{
+        padding: 0;
+        width: 48vw;
+        height: 30vw;
+    }
+
+    .imgtitle{
+        font-size: 70px;
+    }
+
+    .imgtext{
+        font-size: 50px;
+    }
+}
+
+/* 2k 2560x1440*/
+@media screen and (min-width: 2560px) and (max-width: 3839px){
+    .carrutitle{
+        font-size: 50px;
+    }
+
+    .carrutext{
+        font-size: 30px;
+    }
+
+    .uk-card-title{
+        color: var(--Negro);
+        font-family: 'Merriweather', serif;
+        font-size: 60px;
+        font-weight: 600;
+    }
+    
+    .card-text{
+        font-family: 'Lora', serif;
+        font-size: 50px;
+    }
+    
+    .boxPresentacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 100px;
+        /* margin-left: 80px; */
+        margin-bottom: 100px;
+    }
+    
+    .boxPresentacion p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body li {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .boxderecha{
+        display: flex;
+        flex-direction: column;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 35px;
+        background-color: var(--aqua);
+        color: #FFFF;
+        height: auto;
+        width: 28%;
+        border-radius: 90px;
+        align-items: center;
+    }
+    
+    .boxLogoDerecha{
+        margin-top: 90px;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .boxTextoDerecha{
+        text-align: center;
+        padding: 35px 110px;
+    }
+    
+    .box2doSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        margin: 100px;
+        font-size: 70px;
+        color: #FFFF;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 40px;
+    }
+    
+    .boxServicios{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 100px 100px 50px 120px;
+        padding-left: 20px;
+    }
+    
+    .boxListaServicio{
+        list-style: none;
+        margin-left: -50px;
+        color: var(--Negro);
+        font-size: 40px;
+    }
+    
+    .boxListaServicio a{
+        text-decoration: none;
+        color: var(--Negro);
+        padding-left: 90px;
+    }
+    
+    .boxListaServicio a:hover:not(active){
+        color: var(--Azulmarino);
+        font-weight: 600;
+    }
+    
+    .viewM{
+        font-size: 50px;
+        margin-left: -.1px;
+    }
+    
+    .box3erSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #F5C85A;
+        font-family: 'Merriweather', serif;
+        margin:100px;
+        font-size: 70px;
+        color: #FFFF;
+        display: block;
+        padding: 40px;
+        
+    }
+    
+    .imgServicSize{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        height: 550px;
+    }
+
+    .uk-card-default{
+        padding-left: 0;
+    }
+    
+    .boxfinal{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 100px;
+    }
+
+    .uk-first-column{
+        padding: 0;
+    }
+
+    .first-col img{
+        padding: 0;
+        width: 48vw;
+        height: 28vw;
+    }
+
+    .second-col img{
+        padding: 0;
+        width: 48vw;
+        height: 28vw;
+    }
+
+    .imgtitle{
+        font-size: 60px;
+    }
+
+    .imgtext{
+        font-size: 40px;
+    }
+}
+
+/* FULLHD 1920x1080 */
+@media screen and (min-width: 1920px) and (max-width: 2559px){
+    .carrutitle{
+        font-size: 40px;
+    }
+
+    .carrutext{
+        font-size: 20px;
+    }
+
+    .uk-card-title{
+        color: var(--Negro);
+        font-family: 'Merriweather', serif;
+        font-size: 40px;
+        font-weight: 600;
+    }
+    
+    .card-text{
+        font-family: 'Lora', serif;
+        font-size: 35px;
+    }
+    
+    .boxPresentacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 100px;
+        /* margin-left: 80px; */
+        margin-bottom: 100px;
+    }
+    
+    .boxPresentacion p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body li {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .boxderecha{
+        display: flex;
+        flex-direction: column;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+        background-color: var(--aqua);
+        color: #FFFF;
+        height: auto;
+        width: 28%;
+        border-radius: 90px;
+        align-items: center;
+    }
+    
+    .boxLogoDerecha{
+        margin-top: 60px;
+        margin-bottom: -35px;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .boxTextoDerecha{
+        text-align: center;
+        padding: 35px 80px;
+    }
+    
+    .box2doSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        margin: 100px;
+        font-size: 50px;
+        color: #FFFF;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 30px;
+    }
+    
+    .boxServicios{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 100px 100px 50px 120px;
+        padding-left: 20px;
+    }
+    
+    .boxListaServicio{
+        list-style: none;
+        margin-left: -50px;
+        color: var(--Negro);
+        font-size: 40px;
+    }
+    
+    .boxListaServicio a{
+        text-decoration: none;
+        color: var(--Negro);
+        padding-left: 90px;
+    }
+    
+    .boxListaServicio a:hover:not(active){
+        color: var(--Azulmarino);
+        font-weight: 600;
+    }
+    
+    .viewM{
+        font-size: 50px;
+        margin-left: -.1px;
+    }
+    
+    .box3erSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #F5C85A;
+        font-family: 'Merriweather', serif;
+        margin:100px;
+        font-size: 50px;
+        color: #FFFF;
+        display: block;
+        padding: 30px;
+        
+    }
+    
+    .imgServicSize{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        height: 400px;
+    }
+
+    .uk-card-default{
+        padding-left: 0;
+    }
+    
+    .boxfinal{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 100px;
+    }
+
+    .uk-first-column{
+        padding: 0;
+    }
+
+    .first-col img{
+        padding: 0;
+        width: 48vw;
+        height: 25vw;
+    }
+
+    .second-col img{
+        padding: 0;
+        width: 48vw;
+        height: 25vw;
+    }
+
+    .imgtitle{
+        font-size: 50px;
+    }
+
+    .imgtext{
+        font-size: 30px;
+    }
+}
+
+/* Pantalla grande T1*/
+@media screen and (min-width: 1201px) and (max-width: 1919px) {
+    .carrutitle{
+        font-size: 30px;
+    }
+
+    .carrutext{
+        font-size: 20px;
+    }
+
+    .carru{
+        width: 100%;
+    }
+
+    .uk-card-title{
+        color: var(--Negro);
+        font-family: 'Merriweather', serif;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .card-text{
+        font-family: 'Lora', serif;
+        font-size: 25px;
+    }
+    
+    .boxPresentacion{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 100px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .boxPresentacion p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body li {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .boxderecha{
+        display: flex;
+        flex-direction: column;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+        background-color: var(--aqua);
+        color: #FFFF;
+        height: auto;
+        margin-bottom: 30px;
+        border-radius: 90px;
+        align-items: center;
+        
+    }
+    
+    .boxLogoDerecha{
+        margin-top: 15px;
+        margin-bottom: -35px;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .boxTextoDerecha{
+        text-align: center;
+        padding: 15px 80px;
+    }
+    
+    .box2doSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        margin: 100px;
+        margin-top: 30px;
+        font-size: 30px;
+        color: #FFFF;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 15px;
+    }
+    
+    .boxServicios{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 30px 100px 30px 120px;
+        padding-left: 20px;
+    }
+    
+    .boxListaServicio{
+        list-style: none;
+        margin-left: -50px;
+        color: var(--Negro);
+        font-size: 40px;
+    }
+    
+    .boxListaServicio a{
+        text-decoration: none;
+        color: var(--Negro);
+        padding-left: 90px;
+    }
+    
+    .boxListaServicio a:hover:not(active){
+        color: var(--Azulmarino);
+        font-weight: 600;
+    }
+    
+    .viewM{
+        font-size: 50px;
+        margin-left: -.1px;
+    }
+    
+    .box3erSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #F5C85A;
+        font-family: 'Merriweather', serif;
+        margin:100px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 30px;
+        color: #FFFF;
+        display: block;
+        padding: 15px;
+        
+    }
+    
+    .imgServicSize{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        height: 400px;
+    }
+
+    .uk-card-default{
+        padding-left: 0;
+    }
+    
+    .boxfinal{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 100px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .uk-first-column{
+        padding: 0;
+    }
+
+    .first-col img{
+        padding: 0;
+        width: 48vw;
+        height: 25vw;
+    }
+
+    .second-col img{
+        padding: 0;
+        width: 48vw;
+        height: 25vw;
+    }
+
+    .imgtitle{
+        font-size: 30px;
+    }
+
+    .imgtext{
+        font-size: 15px;
+    }
+}
+
+/* Pantalla grande T2*/
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .carrutitle{
+        font-size: 40px;
+    }
+
+    .carrutext{
+        font-size: 20px;
+    }
+
+    .carru{
+        width: 100%;
+    }
+
+    .uk-card-title{
+        color: var(--Negro);
+        font-family: 'Merriweather', serif;
+        font-size: 35px;
+        font-weight: 600;
+    }
+    
+    .card-text{
+        font-family: 'Lora', serif;
+        font-size: 30px;
+    }
+    
+    .boxPresentacion{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 70px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .boxPresentacion p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body li {
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .boxCarrusel{
+        display: flex;
+    }
+    
+    .boxderecha{
+        display: flex;
+        flex-direction: column;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+        background-color: var(--aqua);
+        color: #FFFF;
+        height: auto;
+        margin-bottom: 30px;
+        border-radius: 90px;
+        align-items: center;
+    }
+    
+    .boxLogoDerecha{
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .boxTextoDerecha{
+        text-align: center;
+        padding: 35px 70px;
+    }
+    
+    .box2doSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        margin: 70px;
+        font-size: 40px;
+        color: #FFFF;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 15px;
+    }
+    
+    .boxServicios{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 70px 70px 70px 80px;
+        padding-left: 20px;
+    }
+    
+    .boxListaServicio{
+        list-style: none;
+        margin-left: -50px;
+        color: var(--Negro);
+        font-size: 40px;
+    }
+    
+    .boxListaServicio a{
+        text-decoration: none;
+        color: var(--Negro);
+        padding-left: 90px;
+    }
+    
+    .boxListaServicio a:hover:not(active){
+        color: var(--Azulmarino);
+        font-weight: 600;
+    }
+    
+    .viewM{
+        font-size: 50px;
+        margin-left: -.1px;
+    }
+    
+    .box3erSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #F5C85A;
+        font-family: 'Merriweather', serif;
+        margin: 70px;
+        font-size: 40px;
+        color: #FFFF;
+        display: block;
+        padding: 15px;
+        
+    }
+    
+    .imgServicSize{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        height: 220px;
+    }
+
+    .uk-card-default{
+        padding-left: 0;
+    }
+    
+    .boxfinal{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 70px;
+    }
+
+    .uk-first-column{
+        padding: 0;
+    }
+
+    .first-col img{
+        padding: 0;
+        width: 48vw;
+        height: 22vw;
+    }
+
+    .second-col img{
+        padding: 0;
+        width: 48vw;
+        height: 22vw;
+    }
+
+    .imgtitle{
+        font-size: 30px;
+    }
+
+    .imgtext{
+        font-size: 15px;
+    }
+}
+
+/* Pantalla de laptop T3*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .carrutitle{
+        font-size: 20px;
+    }
+
+    .carrutext{
+        font-size: 10px;
+    }
+
+    .carru{
+        width: 100%;
+    }
+
+    .uk-card-title{
+        color: var(--Negro);
+        font-family: 'Merriweather', serif;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .card-text{
+        font-family: 'Lora', serif;
+        font-size: 25px;
+    }
+    
+    .boxPresentacion{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 55px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .boxPresentacion p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body li {
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .boxCarrusel{
+        display: flex;
+    }
+    
+    .boxderecha{
+        display: flex;
+        flex-direction: row;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        background-color: var(--aqua);
+        color: #FFFF;
+        height: auto;
+        width: 100%;
+        border-radius: 70px;
+        margin-bottom: 30px;
+        align-items: center;
+        margin-top: 30px;
+    }
+    
+    .boxLogoDerecha{
+        /* margin-top: 10px;
+        margin-left: 10px; */
+        width: 170px;
+        height: 170px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .boxTextoDerecha{
+        text-align: center;
+        padding: 35px 65px;
+    }
+    
+    .box2doSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        margin: 55px;
+        font-size: 35px;
+        color: #FFFF;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 12px;
+    }
+    
+    .boxServicios{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 55px 55px 55px 65px;
+        padding-left: 20px;
+    }
+    
+    .boxListaServicio{
+        list-style: none;
+        margin-left: -50px;
+        color: var(--Negro);
+        font-size: 40px;
+    }
+    
+    .boxListaServicio a{
+        text-decoration: none;
+        color: var(--Negro);
+        padding-left: 70px;
+    }
+    
+    .boxListaServicio a:hover:not(active){
+        color: var(--Azulmarino);
+        font-weight: 600;
+    }
+    
+    .viewM{
+        font-size: 50px;
+        margin-left: -.1px;
+    }
+    
+    .box3erSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #F5C85A;
+        font-family: 'Merriweather', serif;
+        margin: 55px;
+        font-size: 35px;
+        color: #FFFF;
+        display: block;
+        padding: 12px;
+        
+    }
+    
+    .imgServicSize{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        height: 270px;
+    }
+
+    .uk-card-default{
+        padding-left: 0;
+    }
+    
+    .boxfinal{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 55px;
+        height: auto;
+    }
+
+    .uk-first-column{
+        padding: 0;
+    }
+
+    .first-col img{
+        padding: 0;
+        width: 100vw;
+        height: 45vw;
+    }
+
+    .second-col img{
+        padding: 0;
+        width: 100vw;
+        height: 45vw;
+    }
+
+    .imgtitle{
+        font-size: 30px;
+    }
+
+    .imgtext{
+        font-size: 15px;
+    }
+}
+
+/* Pantalla de tablet T4*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .carrutitle{
+        font-size: 20px;
+    }
+
+    .carrutext{
+        font-size: 10px;
+    }
+
+    .carru{
+        width: 100%;
+    }
+
+    .uk-card-title{
+        color: var(--Negro);
+        font-family: 'Merriweather', serif;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    .card-text{
+        font-family: 'Lora', serif;
+        font-size: 20px;
+    }
+    
+    .boxPresentacion{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .boxPresentacion p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body li {
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .boxCarrusel{
+        display: flex;
+    }
+    
+    .boxderecha{
+        display: flex;
+        flex-direction: column;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        background-color: var(--aqua);
+        color: #FFFF;
+        height: auto;
+        width: 100%;
+        border-radius: 70px;
+        margin-bottom: 30px;
+        align-items: center;
+        margin-top: 30px;
+    }
+    
+    .boxLogoDerecha{
+        /* margin-top: 20px;
+        margin-bottom: -25px; */
+        width: 170px;
+        height: 170px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .boxTextoDerecha{
+        text-align: center;
+        padding: 0px 20px;
+    }
+    
+    .box2doSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        margin: 40px;
+        font-size: 25px;
+        color: #FFFF;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .boxServicios{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 40px 40px 0px 50px;
+        padding-left: 20px;
+    }
+    
+    .boxListaServicio{
+        list-style: none;
+        margin-left: -50px;
+        color: var(--Negro);
+        font-size: 40px;
+    }
+    
+    .boxListaServicio a{
+        text-decoration: none;
+        color: var(--Negro);
+        padding-left: 50px;
+    }
+    
+    .boxListaServicio a:hover:not(active){
+        color: var(--Azulmarino);
+        font-weight: 600;
+    }
+    
+    .viewM{
+        font-size: 50px;
+        margin-left: -.1px;
+    }
+    
+    .box3erSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #F5C85A;
+        font-family: 'Merriweather', serif;
+        margin: 40px;
+        font-size: 25px;
+        color: #FFFF;
+        display: block;
+        padding: 10px;
+        
+    }
+    
+    .imgServicSize{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        height: 200px;
+    }
+
+    .uk-card-default{
+        padding-left: 0;
+    }
+    
+    .boxfinal{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 40px;
+        height: auto;
+    }
+
+    .uk-first-column{
+        padding: 0;
+    }
+
+    .first-col img{
+        padding: 0;
+        width: 100vw;
+        height: 50vw;
+    }
+
+    .second-col img{
+        padding: 0;
+        width: 100vw;
+        height: 50vw;
+    }
+
+    .imgtitle{
+        font-size: 25px;
+    }
+
+    .imgtext{
+        font-size: 15px;
+    }
+}
+
+/* Pantalla de movil T5*/
+@media screen and  (max-width: 480px) {
+    .carrutitle{
+        font-size: 20px;
+    }
+
+    .carrutext{
+        font-size: 10px;
+    }
+
+    .carru{
+        width: 100%;
+    }
+
+    .uk-card-title{
+        color: var(--Negro);
+        font-family: 'Merriweather', serif;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .card-text{
+        font-family: 'Lora', serif;
+        font-size: 15px;
+    }
+    
+    .boxPresentacion{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 25px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .boxPresentacion p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body p {
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    body li {
+        font-family: 'Rubik', sans-serif;
+    }
+
+    .boxCarrusel{
+        display: flex;
+    }
+    
+    .boxderecha{
+        display: flex;
+        flex-direction: column;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        background-color: var(--aqua);
+        color: #FFFF;
+        height: auto;
+        width: 94%;
+        border-radius: 70px;
+        margin-bottom: 15px;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .boxLogoDerecha{
+        margin-top: 20px;
+        margin-bottom: -25px;
+        width: 170px;
+        height: 170px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .boxTextoDerecha{
+        text-align: center;
+        padding: 0px 20px;
+    }
+    
+    .box2doSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: var(--azulfuerteclaro);
+        font-family: 'Merriweather', serif;
+        margin: 25px;
+        font-size: 20px;
+        color: #FFFF;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 7px;
+    }
+    
+    .boxServicios{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 25px 25px 0px 33px;
+        padding-left: 20px;
+    }
+    
+    .boxListaServicio{
+        list-style: none;
+        margin-left: -50px;
+        color: var(--Negro);
+        font-size: 40px;
+    }
+    
+    .boxListaServicio a{
+        text-decoration: none;
+        color: var(--Negro);
+        padding-left: 40px;
+    }
+    
+    .boxListaServicio a:hover:not(active){
+        color: var(--Azulmarino);
+        font-weight: 600;
+    }
+    
+    .viewM{
+        font-size: 50px;
+        margin-left: -.1px;
+    }
+    
+    .box3erSeparador{
+        text-align: center;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #F5C85A;
+        font-family: 'Merriweather', serif;
+        margin: 25px;
+        margin-top: 0px;
+        font-size: 20px;
+        color: #FFFF;
+        display: block;
+        padding: 7px;
+        
+    }
+    
+    .imgServicSize{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        height: 150px;
+    }
+
+    .uk-card-default{
+        padding-left: 0;
+    }
+    
+    .boxfinal{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 25px;
+        height: auto;
+    }
+
+    .uk-first-column{
+        padding: 0;
+    }
+
+    .first-col img{
+        padding: 0;
+        width: 100vw;
+        height: 50vw;
+    }
+
+    .second-col img{
+        padding: 0;
+        width: 100vw;
+        height: 50vw;
+    }
+
+    .imgtitle{
+        font-size: 17px;
+    }
+
+    .imgtext{
+        font-size: 10px;
+    }
+}
