@@ -2,22 +2,21 @@ from dataclasses import Field
 from email.policy import default
 from django import forms
 from django.db import models
-from wagtail.core.models import Page
-from wagtail.core.fields import RichTextField
-from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel, FieldRowPanel
-from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.models import Page
+from wagtail.fields import RichTextField
+from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel, FieldRowPanel
 from modelcluster.fields import ParentalKey, ParentalManyToManyField
-from wagtail.core.models import Page, Orderable
+from wagtail.models import Page, Orderable
 from wagtail.search import index
 from django.core.validators import MaxLengthValidator
 from django.core import validators
 from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
 from wagtail.snippets.models import register_snippet
-from wagtail.contrib.settings.models import BaseSetting, register_setting
+from wagtail.contrib.settings.models import BaseSiteSetting , register_setting
 
 
 @register_setting
-class header(BaseSetting):
+class header(BaseSiteSetting ):
     id = models.AutoField(primary_key=True)
     Logo_barra_de_navegación = models.ForeignKey(
         "wagtailimages.Image",
@@ -32,7 +31,7 @@ class header(BaseSetting):
     Navegación_4 = models.CharField(max_length=11, blank=False, null=False, default="Contáctanos")
 
     panels = [
-        ImageChooserPanel("Logo_barra_de_navegación"),
+        FieldPanel("Logo_barra_de_navegación"),
         FieldPanel("Navegación_1"),
         FieldPanel("Navegación_2"),
         FieldPanel("Navegación_3"),
@@ -40,7 +39,7 @@ class header(BaseSetting):
     ]
 
 @register_setting
-class footer(BaseSetting):
+class footer(BaseSiteSetting ):
     id = models.AutoField(primary_key=True)
     Nombre_de_la_empresa = models.CharField(max_length=15, blank=False, null=False, default="Grupo LIAS")
     Dirección_de_la_empresa = models.CharField(max_length=100, blank=False, null=False, default="C. Pisperama 180-interior. 6, Vista Bella, 58090 Morelia, Mich.")
@@ -95,19 +94,19 @@ class footer(BaseSetting):
         FieldPanel("Enlace_5"),
         FieldPanel("Título_sección_de_redes"),
         MultiFieldPanel([
-            ImageChooserPanel("Logo_red_social1"),
+            FieldPanel("Logo_red_social1"),
             FieldPanel("Link_a_red_social1")
             ], heading="Red social 1"
         ),
         MultiFieldPanel([
-            ImageChooserPanel("Logo_red_social2"),
+            FieldPanel("Logo_red_social2"),
             FieldPanel("Link_a_red_social2")
             ], heading="Red social 2"
         ),
     ]
 
 @register_setting
-class Plantilla_servicios(BaseSetting):
+class Plantilla_servicios(BaseSiteSetting ):
     id = models.AutoField(primary_key=True)
     Título_trabajos_hechos = models.CharField(max_length=40, blank=False, null=False, default="")
 
@@ -151,14 +150,14 @@ class Plantilla_servicios(BaseSetting):
             FieldPanel("Título_sección_cotizar"),
             MultiFieldPanel([
                 FieldPanel("Título_cuadro_1"),
-                ImageChooserPanel("Icono_cuadro_1"),
+                FieldPanel("Icono_cuadro_1"),
                 FieldPanel("Descripción_cuadro_1", classname="full"),
                 ],
                 heading= "Cuadro 1",
             ),
             MultiFieldPanel([
                 FieldPanel("Título_cuadro_2"),
-                ImageChooserPanel("Icono_cuadro_2"),
+                FieldPanel("Icono_cuadro_2"),
                 FieldPanel("Descripción_cuadro_2", classname="full"),
                 FieldPanel("Boton_cuadro_2"),
                 ],
@@ -166,7 +165,7 @@ class Plantilla_servicios(BaseSetting):
             ),
             MultiFieldPanel([
                 FieldPanel("Título_cuadro_3"),
-                ImageChooserPanel("Icono_cuadro_3"),
+                FieldPanel("Icono_cuadro_3"),
                 FieldPanel("Descripción_cuadro_3", classname="full"),
                 FieldPanel("Boton_cuadro_3"),
                 ],
@@ -270,15 +269,15 @@ class HomePage(Page):
             heading="Carousel Images",
         ),
         MultiFieldPanel([
-            ImageChooserPanel("Imagen_de_bienvenida"),
+            FieldPanel("Imagen_de_bienvenida"),
             FieldPanel("Texto_de_bienvenida"),],
             heading="Descripcion del cuadro de bienvenida",
         ),
         MultiFieldPanel([
-            ImageChooserPanel("Imagen_categoría_1"),
-            ImageChooserPanel("Imagen_categoría_2"),
-            ImageChooserPanel("Imagen_categoría_3"),
-            ImageChooserPanel("Imagen_categoría_4"),],
+            FieldPanel("Imagen_categoría_1"),
+            FieldPanel("Imagen_categoría_2"),
+            FieldPanel("Imagen_categoría_3"),
+            FieldPanel("Imagen_categoría_4"),],
             heading = "Imágenes de los cuadros de categorías"
         ),
         MultiFieldPanel([
@@ -288,14 +287,14 @@ class HomePage(Page):
         MultiFieldPanel([
             FieldPanel("Separador_anuncios"),
             MultiFieldPanel([
-                ImageChooserPanel("Imagen_izq"),
+                FieldPanel("Imagen_izq"),
                 FieldPanel("Titulo_izq"),
                 FieldPanel("Texto_izq"),
                 ],
                 heading= "Imagen Izquierda",
             ),
             MultiFieldPanel([
-                ImageChooserPanel("Imagen_der"),
+                FieldPanel("Imagen_der"),
                 FieldPanel("Titulo_der"),
                 FieldPanel("Texto_der"),
                 ],
@@ -324,7 +323,7 @@ class HomePageCarouselImages(Orderable):
     Texto_slide = models.CharField (max_length=150, blank = False, null = False)
 
     panels = [
-        ImageChooserPanel('image'),
+        FieldPanel('image'),
         FieldPanel('Titulo_slide'),
         FieldPanel('Texto_slide'),
     ]
@@ -373,7 +372,7 @@ class ServiciosPage(Page):
     Descripción_2 = RichTextField(blank=False, features=['bold' ,'italic'], default="*Si aceptan la cotización/el servicio, se descuenta el precio de visita")    
 
     content_panels = Page.content_panels + [
-        ImageChooserPanel("Imagen_principal_del_servicio"),
+        FieldPanel("Imagen_principal_del_servicio"),
         FieldPanel('Descripción_servicio', classname="full"),
         FieldPanel("category", widget=forms.Select),
         MultiFieldPanel(
@@ -404,7 +403,7 @@ class ServiciosImages(Orderable):
     )
 
     panels = [
-        ImageChooserPanel('image'),
+        FieldPanel('image'),
     ]
 
 class ConocenosPage(Page):
@@ -462,7 +461,7 @@ class ConocenosPage(Page):
 
     content_panels = Page.content_panels + [
         MultiFieldPanel([
-            ImageChooserPanel("Logo_en_el_cuadro"),
+            FieldPanel("Logo_en_el_cuadro"),
             FieldPanel("Texto_del_cuadro"),],
             heading="Cuadro de conocenos",
         ),
@@ -478,21 +477,21 @@ class ConocenosPage(Page):
         MultiFieldPanel([
             FieldPanel("Primer_título"),
             FieldPanel("Texto_1er_título", classname="full"),
-            ImageChooserPanel("Imagen_1er_título"),
+            FieldPanel("Imagen_1er_título"),
             ],
             heading="Primer apartado",
         ),
         MultiFieldPanel([
             FieldPanel("Segundo_título"),
             FieldPanel("Texto_2ndo_título", classname="full"),
-            ImageChooserPanel("Imagen_2ndo_título"),
+            FieldPanel("Imagen_2ndo_título"),
             ],
             heading="Segundo apartado",
         ),
         MultiFieldPanel([
             FieldPanel("Tercer_título"),
             FieldPanel("Texto_3er_título", classname="full"),
-            ImageChooserPanel("Imagen_3er_título"),
+            FieldPanel("Imagen_3er_título"),
             ],
             heading="Tercer apartado",
         ),
@@ -518,7 +517,7 @@ class ConocenosPageSlider(Orderable):
     )
 
     panels = [
-        ImageChooserPanel('image'),
+        FieldPanel('image'),
     ]
     
 class ContactPage(Page):
@@ -574,10 +573,10 @@ class ContactPage(Page):
 
     content_panels = Page.content_panels + [
         MultiFieldPanel(
-            [ImageChooserPanel("Imagen_Red_Social_1"), 
+            [FieldPanel("Imagen_Red_Social_1"), 
             FieldPanel("Usuario_Red_Social_1"),
             FieldPanel("Link_a_Red_Social_1"),
-            ImageChooserPanel("Imagen_Red_Social_2"),
+            FieldPanel("Imagen_Red_Social_2"),
             FieldPanel("Usuario_Red_Social_2"),
             FieldPanel("Link_a_Red_Social_2"),
             
@@ -586,10 +585,10 @@ class ContactPage(Page):
         ),
         
         MultiFieldPanel(
-            [ImageChooserPanel("Imagen_Telefono_1"), 
+            [FieldPanel("Imagen_Telefono_1"), 
             FieldPanel("Telefono_1"),
             FieldPanel("Link_a_Telefono_1"),
-            ImageChooserPanel("Imagen_Telefono_2"),
+            FieldPanel("Imagen_Telefono_2"),
             FieldPanel("Telefono_2"),
             FieldPanel("Link_a_Telefono_2"),
             ],
@@ -597,7 +596,7 @@ class ContactPage(Page):
         ),
         
         MultiFieldPanel(
-            [ImageChooserPanel("Correo_electronico_img"), 
+            [FieldPanel("Correo_electronico_img"), 
             FieldPanel("Correo_electronico"),
             ],
             heading="Seccion 3",
@@ -664,9 +663,9 @@ class CommentPage(AbstractEmailForm):
     Texto_de_agradecimiento = RichTextField(blank = True)
 
     content_panels = AbstractEmailForm.content_panels + [
-        ImageChooserPanel("Imagen_de_comentarios"),
+        FieldPanel("Imagen_de_comentarios"),
         MultiFieldPanel([
-            ImageChooserPanel("Image_EComments"),
+            FieldPanel("Image_EComments"),
             FieldPanel("Text_EComments"),
             ],
             heading="Enviar comentarios"
