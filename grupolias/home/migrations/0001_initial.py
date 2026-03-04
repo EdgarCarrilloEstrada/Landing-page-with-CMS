@@ -4,7 +4,7 @@ import django.core.validators
 from django.db import migrations, models
 import django.db.models.deletion
 import modelcluster.fields
-import wagtail.core.fields
+import wagtail.fields
 
 
 class Migration(migrations.Migration):
@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
                 ('from_address', models.CharField(blank=True, max_length=255, verbose_name='from address')),
                 ('subject', models.CharField(blank=True, max_length=255, verbose_name='subject')),
                 ('Text_EComments', models.TextField(default='')),
-                ('Texto_de_agradecimiento', wagtail.core.fields.RichTextField(blank=True)),
+                ('Texto_de_agradecimiento', wagtail.fields.RichTextField(blank=True)),
                 ('Image_EComments', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='wagtailimages.image')),
                 ('Imagen_de_comentarios', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='wagtailimages.image')),
             ],
@@ -41,16 +41,16 @@ class Migration(migrations.Migration):
                 ('Texto_del_cuadro', models.CharField(default='', max_length=150)),
                 ('Título_del_mapa', models.CharField(default='', max_length=60)),
                 ('Título_principal', models.CharField(default='', max_length=40)),
-                ('Texto_principal', wagtail.core.fields.RichTextField()),
+                ('Texto_principal', wagtail.fields.RichTextField()),
                 ('Primer_título', models.CharField(default='', max_length=40)),
-                ('Texto_1er_título', wagtail.core.fields.RichTextField()),
+                ('Texto_1er_título', wagtail.fields.RichTextField()),
                 ('Segundo_título', models.CharField(default='', max_length=40)),
-                ('Texto_2ndo_título', wagtail.core.fields.RichTextField()),
+                ('Texto_2ndo_título', wagtail.fields.RichTextField()),
                 ('Tercer_título', models.CharField(default='', max_length=40)),
-                ('Texto_3er_título', wagtail.core.fields.RichTextField()),
+                ('Texto_3er_título', wagtail.fields.RichTextField()),
                 ('Separador_colab', models.CharField(default='', max_length=50)),
-                ('Texto1', wagtail.core.fields.RichTextField()),
-                ('Texto2', wagtail.core.fields.RichTextField(default='')),
+                ('Texto1', wagtail.fields.RichTextField()),
+                ('Texto2', wagtail.fields.RichTextField(default='')),
                 ('Imagen_1er_título', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='wagtailimages.image')),
                 ('Imagen_2ndo_título', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='wagtailimages.image')),
                 ('Imagen_3er_título', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='wagtailimages.image')),
@@ -100,17 +100,17 @@ class Migration(migrations.Migration):
             name='ServiciosPage',
             fields=[
                 ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.page')),
-                ('Descripción_servicio', wagtail.core.fields.RichTextField(default='')),
+                ('Descripción_servicio', wagtail.fields.RichTextField(default='')),
                 ('category', models.TextField(choices=[('HOGAR', 'HOGAR'), ('ELECTRICIDAD', 'ELECTRICIDAD'), ('PINTURA', 'PINTURA'), ('CONSTRUCCIÓN', 'CONSTRUCCIÓN')], default='HOGAR', max_length=12)),
                 ('Título_de_ventana', models.CharField(default='COTIZACIONES', max_length=25)),
-                ('Descripción_1', wagtail.core.fields.RichTextField(default='Es posible que el precio cambie dependiendo del tipo de trabajo que se requiera, estos son solo precios de referencia')),
+                ('Descripción_1', wagtail.fields.RichTextField(default='Es posible que el precio cambie dependiendo del tipo de trabajo que se requiera, estos son solo precios de referencia')),
                 ('Título_columna_1', models.CharField(default='Actividad', max_length=15)),
                 ('Texto_1_columna_1', models.CharField(default='Visita', max_length=35)),
                 ('Texto_2_columna_1', models.CharField(default='Servicios de mano de obra', max_length=35)),
                 ('Título_columna_2', models.CharField(default='Precio', max_length=15)),
                 ('Texto_1_columna_2', models.CharField(default='$200', max_length=35)),
                 ('Texto_2_columna_2', models.CharField(default='$400', max_length=12)),
-                ('Descripción_2', wagtail.core.fields.RichTextField(default='*Si aceptan la cotización/el servicio, se descuenta el precio de visita')),
+                ('Descripción_2', wagtail.fields.RichTextField(default='*Si aceptan la cotización/el servicio, se descuenta el precio de visita')),
                 ('Imagen_principal_del_servicio', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='wagtailimages.image')),
             ],
             options={
@@ -152,12 +152,12 @@ class Migration(migrations.Migration):
                 ('Título_trabajos_hechos', models.CharField(default='', max_length=40)),
                 ('Título_sección_cotizar', models.CharField(default='', max_length=40)),
                 ('Título_cuadro_1', models.CharField(default='', max_length=24)),
-                ('Descripción_cuadro_1', wagtail.core.fields.RichTextField(validators=[django.core.validators.MaxLengthValidator(280)])),
+                ('Descripción_cuadro_1', wagtail.fields.RichTextField(validators=[django.core.validators.MaxLengthValidator(280)])),
                 ('Título_cuadro_2', models.CharField(default='', max_length=24)),
-                ('Descripción_cuadro_2', wagtail.core.fields.RichTextField(validators=[django.core.validators.MaxLengthValidator(130)])),
+                ('Descripción_cuadro_2', wagtail.fields.RichTextField(validators=[django.core.validators.MaxLengthValidator(130)])),
                 ('Boton_cuadro_2', models.CharField(default='', max_length=15)),
                 ('Título_cuadro_3', models.CharField(default='', max_length=24)),
-                ('Descripción_cuadro_3', wagtail.core.fields.RichTextField(validators=[django.core.validators.MaxLengthValidator(130)])),
+                ('Descripción_cuadro_3', wagtail.fields.RichTextField(validators=[django.core.validators.MaxLengthValidator(130)])),
                 ('Boton_cuadro_3', models.CharField(default='', max_length=15)),
                 ('Icono_cuadro_1', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='wagtailimages.image')),
                 ('Icono_cuadro_2', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='wagtailimages.image')),
