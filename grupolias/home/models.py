@@ -50,7 +50,7 @@ class footer(BaseSiteSetting ):
     Título_sección_derecha = models.CharField(max_length=20, blank=False, null=False, default="CONTACTO")
     Enlace_4 = models.CharField(max_length=20, blank=False, null=False, default="Contáctanos")
     Celular = models.CharField(max_length=16, blank=False, null=False, default="443-471-4356")
-    Link_a_celular = models.CharField(max_length=13, blank=False, null=False, default="4434714356")
+    Link_a_celular = models.CharField(max_length=13, blank=False, null=False, default="+524434714356")
     Teléfono = models.CharField(max_length=16, blank=False, null=False, default="554-833-5729")
     Link_a_teléfono = models.CharField(max_length=13, blank=False, null=False, default="+525548335729")
     Enlace_5 = models.CharField(max_length=40, blank=False, null=False, default="grupolias@hotmail.com")
@@ -181,7 +181,7 @@ class Plantilla_servicios(BaseSiteSetting ):
 #     id = models.AutoField(primary_key=True)
 #     nombre= models.CharField(max_length=50)
 #     Identificador= models.SlugField(verbose_name="Identificador", allow_unicode=True, max_length=50, help_text="Nombre para identificar a esta categoria", null= True)
-    
+
 #     panels = [
 #         FieldPanel("nombre"),
 #         FieldPanel("Identificador")
@@ -345,7 +345,7 @@ class ServiciosPage(Page):
         ELECTRICIDAD = "ELECTRICIDAD", "ELECTRICIDAD"
         PINTURA = "PINTURA", "PINTURA"
         CONSTRUCCION = "CONSTRUCCIÓN", "CONSTRUCCIÓN"
-        
+
 
     category = models.TextField(
         max_length=12,
@@ -358,18 +358,18 @@ class ServiciosPage(Page):
     ]
 
     Título_de_ventana = models.CharField(max_length=25, blank=False, null=False, default="COTIZACIONES")
-    
+
     Descripción_1 = RichTextField(blank=False, features=['bold' ,'italic'], default="Es posible que el precio cambie dependiendo del tipo de trabajo que se requiera, estos son solo precios de referencia")
-    
+
     Título_columna_1 = models.CharField(max_length=15, blank=False, null=False, default="Actividad")
     Texto_1_columna_1 = models.CharField(max_length=35, blank=False, null=False, default="Visita")
     Texto_2_columna_1 = models.CharField(max_length=35, blank=False, null=False, default="Servicios de mano de obra")
-    
+
     Título_columna_2 = models.CharField(max_length=15, blank=False, null=False, default="Precio")
     Texto_1_columna_2 = models.CharField(max_length=35, blank=False, null=False, default="$200")
     Texto_2_columna_2 = models.CharField(max_length=12, blank=False, null=False, default="$400")
-    
-    Descripción_2 = RichTextField(blank=False, features=['bold' ,'italic'], default="*Si aceptan la cotización/el servicio, se descuenta el precio de visita")    
+
+    Descripción_2 = RichTextField(blank=False, features=['bold' ,'italic'], default="*Si aceptan la cotización/el servicio, se descuenta el precio de visita")
 
     content_panels = Page.content_panels + [
         FieldPanel("Imagen_principal_del_servicio"),
@@ -419,9 +419,9 @@ class ConocenosPage(Page):
         related_name="+"
     )
     Texto_del_cuadro = models.CharField(max_length=150, blank=False, null=False, default="")
-    
+
     Título_del_mapa = models.CharField(max_length=60, blank=False, null=False, default="")
-    
+
     Título_principal = models.CharField(max_length=40, blank=False, null=False, default="")
     Texto_principal = RichTextField(blank=False, features=['bold' ,'italic', 'ol', 'ul', 'hr'])
 
@@ -454,7 +454,7 @@ class ConocenosPage(Page):
         on_delete=models.SET_NULL,
         related_name="+"
     )
-    
+
     Separador_colab = models.CharField (max_length=50, blank=False, null=False, default="")
     Texto1 = RichTextField(blank=False, features=['bold' ,'italic', 'ol', 'ul', 'hr'])
     Texto2 = RichTextField(blank=False, features=['bold' ,'italic', 'ol', 'ul', 'hr'], null= False, default="")
@@ -519,12 +519,12 @@ class ConocenosPageSlider(Orderable):
     panels = [
         FieldPanel('image'),
     ]
-    
+
 class ContactPage(Page):
     max_count=1
 
     subpage_types = []
-    
+
     Imagen_Red_Social_1 = models.ForeignKey(
         "wagtailimages.Image",
         null= True,
@@ -573,19 +573,19 @@ class ContactPage(Page):
 
     content_panels = Page.content_panels + [
         MultiFieldPanel(
-            [FieldPanel("Imagen_Red_Social_1"), 
+            [FieldPanel("Imagen_Red_Social_1"),
             FieldPanel("Usuario_Red_Social_1"),
             FieldPanel("Link_a_Red_Social_1"),
             FieldPanel("Imagen_Red_Social_2"),
             FieldPanel("Usuario_Red_Social_2"),
             FieldPanel("Link_a_Red_Social_2"),
-            
+
             ],
             heading="Seccion 1",
         ),
-        
+
         MultiFieldPanel(
-            [FieldPanel("Imagen_Telefono_1"), 
+            [FieldPanel("Imagen_Telefono_1"),
             FieldPanel("Telefono_1"),
             FieldPanel("Link_a_Telefono_1"),
             FieldPanel("Imagen_Telefono_2"),
@@ -594,16 +594,16 @@ class ContactPage(Page):
             ],
             heading="Seccion 2",
         ),
-        
+
         MultiFieldPanel(
-            [FieldPanel("Correo_electronico_img"), 
+            [FieldPanel("Correo_electronico_img"),
             FieldPanel("Correo_electronico"),
             ],
             heading="Seccion 3",
         ),
         FieldPanel("Url_Maps"),
     ]
-    
+
 class PreguntasPage(Page):
     max_count=1
 
@@ -618,8 +618,8 @@ class PreguntasPage(Page):
             heading="Preguntas",
         ),
     ]
-    
-    
+
+
     # def get_context(self, request):
     #     context = super().get_context(request)
     #     context['categories'] = PreguntasCategory.objects.all()
@@ -629,7 +629,7 @@ class PreguntasPage(Page):
 class PlantPregunta(Orderable):
     id = models.AutoField(primary_key=True)
     page = ParentalKey(PreguntasPage, on_delete=models.CASCADE, related_name='cat_preguntas')
-    pregunta = models.CharField(max_length=100, blank=False, null=False, default="") 
+    pregunta = models.CharField(max_length=100, blank=False, null=False, default="")
     respuesta = models.CharField(max_length=200, blank=False, null=False, default="")
     # categoría = models.CharField(max_length=40, blank=False, null= False, default="")
 
@@ -638,12 +638,12 @@ class PlantPregunta(Orderable):
         FieldPanel("respuesta"),
         # FieldPanel("categoría"),
     ]
-        
+
 class FormField(AbstractFormField):
     id = models.AutoField(primary_key=True)
     page = ParentalKey('CommentPage', on_delete = models.CASCADE, related_name = 'form_fields')
-    
-    
+
+
 class CommentPage(AbstractEmailForm):
     max_count=1
 
@@ -659,7 +659,7 @@ class CommentPage(AbstractEmailForm):
         on_delete = models.SET_NULL,
         related_name = "+"
     )
-    
+
     Texto_de_agradecimiento = RichTextField(blank = True)
 
     content_panels = AbstractEmailForm.content_panels + [
@@ -706,3 +706,112 @@ class CommentPage(AbstractEmailForm):
         })
         print(context)
         return context
+
+
+class ServiceRequest(models.Model):
+
+    SERVICE_TYPE_CHOICES = [
+        ('plomeria', 'Plomería'),
+        ('electricidad', 'Electricidad'),
+        ('vidrio y aluminio', 'Vidro y aluminio'),
+        ('herreria', 'Herrería'),
+        ('levantamiento de informacion', 'Levantamiento de información'),
+        ('carpinteria', 'Carpintería'),
+        ('impermeabilizacion', 'Impermeabilización'),
+        ('pintura', 'Pintura'),
+        ('remodelacion', 'Remodelación'),
+        ('ampliacion', 'Ampliación'),
+        ('aire acondicionado', 'Aire acondicionado'),
+        ('cerrajería', 'Cerrajería'),
+        ('diseño', 'Diseño'),
+        ('proyecto', 'Proyecto'),
+    ]
+
+    PAYMENT_STATUS_CHOICES = [
+        ('pendiente', 'Pendiente'),
+        ('pagado', 'Pagado'),
+        ('parcial', 'Parcial'),
+        ('retrasado', 'Retrasado'),
+        ('cancelado', 'Cancelado'),
+        ('reembolsado', 'Reembolsado'),
+    ]
+
+    STATE_CHOICES = [
+        ('AGU', 'Aguascalientes'),
+        ('BCN', 'Baja California'),
+        ('BCS', 'Baja California Sur'),
+        ('CAM', 'Campeche'),
+        ('CHP', 'Chiapas'),
+        ('CHH', 'Chihuahua'),
+        ('CDMX', 'Ciudad de México'),
+        ('COA', 'Coahuila'),
+        ('COL', 'Colima'),
+        ('DUR', 'Durango'),
+        ('GUA', 'Guanajuato'),
+        ('GRO', 'Guerrero'),
+        ('HID', 'Hidalgo'),
+        ('JAL', 'Jalisco'),
+        ('MEX', 'Estado de México'),
+        ('MIC', 'Michoacán'),
+        ('MOR', 'Morelos'),
+        ('NAY', 'Nayarit'),
+        ('NLE', 'Nuevo León'),
+        ('OAX', 'Oaxaca'),
+        ('PUE', 'Puebla'),
+        ('QUE', 'Querétaro'),
+        ('ROO', 'Quintana Roo'),
+        ('SLP', 'San Luis Potosí'),
+        ('SIN', 'Sinaloa'),
+        ('SON', 'Sonora'),
+        ('TAB', 'Tabasco'),
+        ('TAM', 'Tamaulipas'),
+        ('TLA', 'Tlaxcala'),
+        ('VER', 'Veracruz'),
+        ('YUC', 'Yucatán'),
+        ('ZAC', 'Zacatecas'),
+    ]
+
+    # Información general
+    client_name = models.CharField(max_length=255)
+    service_type = models.CharField(max_length=50, choices=SERVICE_TYPE_CHOICES)
+    service_description = models.TextField()
+
+    # Personal involucrado
+    technician_name = models.CharField(max_length=255)
+    operator_responsible = models.CharField(max_length=255)
+    assigned_by = models.CharField(max_length=255)  # arquitecto o ingeniero
+
+    # Fechas y horas
+    request_date = models.DateField()
+    request_time = models.TimeField()
+
+    execution_date = models.DateField(null=True, blank=True)
+    completion_date = models.DateField(null=True, blank=True)
+
+    payment_date = models.DateField(null=True, blank=True)
+
+    # Ubicación
+    place_name = models.CharField(max_length=255)
+    place_manager_name = models.CharField(max_length=255)
+    address = models.TextField()
+    state = models.CharField(max_length=5, choices=STATE_CHOICES)
+
+    # Resultados del servicio
+    work_description = models.TextField()
+
+    # Costos
+    technician_cost = models.DecimalField(max_digits=10, decimal_places=2)
+    company_cost = models.DecimalField(max_digits=10, decimal_places=2)
+
+    # Pago
+    payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES)
+
+    # Extras
+    general_observations = models.TextField(blank=True, null=True)
+
+    # Control interno
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.client_name} - {self.service_type} - {self.request_date}"
