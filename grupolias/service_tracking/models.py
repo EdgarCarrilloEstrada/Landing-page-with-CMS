@@ -130,7 +130,7 @@ class ServiceRequest(ClusterableModel):
 
 
     def __str__(self):
-        return f"{self.client_name} - {self.service_type} - {self.request_date}"
+        return f"{self.client_name} - {self.service_type} - {self.request_datetime}"
     
 class ServiceRequestImage(models.Model):
     service_request = ParentalKey(
