@@ -1,4 +1,4 @@
-from django import models
+from django.db import models
 
 class States(models.TextChoices):
     AGUASCALIENTES = "AGU", "Aguascalientes"
