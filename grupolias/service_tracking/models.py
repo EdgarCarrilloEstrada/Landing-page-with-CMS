@@ -1,12 +1,23 @@
 from django.db import models
+import uuid
 
 from shared.enums.services import Services
 from shared.enums.states import States
 from shared.enums.payment_status import PaymentStatus
 
+from wagtail.images import get_image_model_string
+from modelcluster.fields import ParentalKey
+
+from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
+from modelcluster.models import ClusterableModel
+
 # Create your models here.
 
-class ServiceRequest(models.Model):
+
+def service_request_image_upload_to(instance, filename):
+    return f"service-tracking/{instance.service_request.id}/{uuid.uuid4()}-{filename}"
+
+class ServiceRequest(ClusterableModel):
 
     # Información general
     client_name = models.CharField(max_length=255, verbose_name="Nombre del cliente")
@@ -49,6 +60,85 @@ class ServiceRequest(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    panels = [
+        MultiFieldPanel(
+            [
+                FieldPanel(field_name="client_name"),
+                FieldPanel(field_name="service_type"),
+                FieldPanel(field_name="service_description"),
+            ],
+            heading="Información general",
+        ),
+        MultiFieldPanel(
+            [
+                FieldPanel(field_name="technician_name"),
+                FieldPanel(field_name="operator_responsible"),
+                FieldPanel(field_name="assigned_by"),
+            ],
+            heading="Personal involucrado",
+        ),
+        MultiFieldPanel(
+            [
+                FieldPanel(field_name="request_datetime"),
+                FieldPanel(field_name="execution_date"),
+                FieldPanel(field_name="completion_date"),
+                FieldPanel(field_name="payment_date"),
+            ],
+            heading="Fechas y horas",
+        ),
+        MultiFieldPanel(
+            [
+                FieldPanel(field_name="place_name"),
+                FieldPanel(field_name="place_manager_name"),
+                FieldPanel(field_name="address"),
+                FieldPanel(field_name="state"),
+            ],
+            heading="Ubicación",
+        ),
+        MultiFieldPanel(
+            [
+                FieldPanel(field_name="work_description"),
+            ],
+            heading="Resultados del servicio",
+        ),
+        MultiFieldPanel(
+            [
+                FieldPanel(field_name="technician_cost"),
+                FieldPanel(field_name="company_cost"),
+            ],
+            heading="Costos",
+        ),
+        MultiFieldPanel(
+            [
+                FieldPanel(field_name="payment_status"),
+            ],
+            heading="Pago",
+        ),
+        MultiFieldPanel(
+            [
+                FieldPanel(field_name="general_observations"),
+                InlinePanel(
+                    "service_result_images",
+                    heading="Imágenes del trabajo realizado",
+                    label="Imagen",
+                    max_num=3
+                ),
+            ],
+            heading="Extras",
+        ),
+    ]
+
 
     def __str__(self):
         return f"{self.client_name} - {self.service_type} - {self.request_date}"
+    
+class ServiceRequestImage(models.Model):
+    service_request = ParentalKey(
+        "ServiceRequest",
+        related_name="service_result_images",
+        on_delete=models.CASCADE,
+    )
+
+    image = models.ImageField(
+        upload_to=service_request_image_upload_to,
+    )
