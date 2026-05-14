@@ -15,6 +15,7 @@ html5lib==1.1
 idna==3.11
 l18n==2021.3
 openpyxl==3.1.5
+pandas==2.3.3
 Pillow==12.1.1
 psycopg[binary]==3.2.*
 pytz==2025.2
