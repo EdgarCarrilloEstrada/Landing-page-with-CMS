@@ -33,10 +33,10 @@ class ServiceRequest(ClusterableModel):
     # Fechas y horas
     request_datetime = models.DateTimeField(verbose_name="Fecha y hora de solicitud")
 
-    execution_date = models.DateField(null=True, verbose_name="Fecha de realización")
-    completion_date = models.DateField(null=True, verbose_name="Fecha de termino")
+    execution_date = models.DateField(blank=True, null=True, verbose_name="Fecha de realización")
+    completion_date = models.DateField(blank=True, null=True, verbose_name="Fecha de termino")
 
-    payment_date = models.DateField(null=True, verbose_name="Fecha de pago")
+    payment_date = models.DateField(blank=True, null=True, verbose_name="Fecha de pago")
 
     # Ubicación
     place_name = models.CharField(max_length=255, verbose_name="Nombre del lugar")
@@ -45,17 +45,17 @@ class ServiceRequest(ClusterableModel):
     state = models.CharField(max_length=5, choices=States.choices, verbose_name="Estado")
 
     # Resultados del servicio
-    work_description = models.TextField(verbose_name="Descripción de lo que se realizó")
+    work_description = models.TextField(blank=True, null=True, verbose_name="Descripción de lo que se realizó")
 
     # Costos
-    technician_cost = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Costo del técnico")
+    technician_cost = models.DecimalField(blank=True, null=True, max_digits=10, decimal_places=2, verbose_name="Costo del técnico")
     company_cost = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Costo de Grupo LIAS")
 
     # Pago
     payment_status = models.CharField(max_length=20, choices=PaymentStatus.choices, default=PaymentStatus.PENDING, verbose_name="Estado del pago")
 
     # Extras
-    general_observations = models.TextField(blank=True, verbose_name="Observaciones")
+    general_observations = models.TextField(blank=True, null=True, verbose_name="Observaciones")
 
     # Control interno
     created_at = models.DateTimeField(auto_now_add=True)
