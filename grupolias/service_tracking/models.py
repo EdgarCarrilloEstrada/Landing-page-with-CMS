@@ -6,7 +6,6 @@ from shared.enums.states import States
 from shared.enums.payment_status import PaymentStatus
 from shared.enums.service_status import ServiceStatus
 
-from wagtail.images import get_image_model_string
 from modelcluster.fields import ParentalKey
 
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
