@@ -4,6 +4,7 @@ import uuid
 from shared.enums.services import Services
 from shared.enums.states import States
 from shared.enums.payment_status import PaymentStatus
+from shared.enums.service_status import ServiceStatus
 
 from wagtail.images import get_image_model_string
 from modelcluster.fields import ParentalKey
@@ -23,6 +24,7 @@ class ServiceRequest(ClusterableModel):
     client_name = models.CharField(max_length=255, verbose_name="Nombre del cliente")
     service_type = models.CharField(max_length=50, choices=Services.choices, verbose_name="Tipo de servicio")
     service_description = models.TextField(verbose_name="Tema a realizar o resolver")
+    service_status = models.CharField(max_length=20, choices=ServiceStatus.choices, default=ServiceStatus.PENDING, verbose_name="Estado del servicio")
 
     # Personal involucrado
     technician_name = models.CharField(max_length=255, verbose_name="Nombre del técnico")
@@ -66,6 +68,7 @@ class ServiceRequest(ClusterableModel):
                 FieldPanel(field_name="client_name"),
                 FieldPanel(field_name="service_type"),
                 FieldPanel(field_name="service_description"),
+                FieldPanel(field_name="service_status"),
             ],
             heading="Información general",
         ),
