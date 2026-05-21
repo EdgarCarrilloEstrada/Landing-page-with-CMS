@@ -1,0 +1,406 @@
+{% extends "wagtailadmin/base.html" %}
+
+{% load static %}
+
+{% block titletag %}
+Dashboard de seguimiento
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .charts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .chart-container {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .chart-container canvas {
+        width: 100% !important;
+        height: 350px !important;
+    }
+
+    .w-panel {
+        overflow: hidden;
+    }
+
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .dashboard-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 700px;
+    }
+
+    .dashboard-table th,
+    .dashboard-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+</style>
+
+<div class="nice-padding">
+
+    <h1 style="margin-bottom:30px;">
+        Dashboard de seguimiento
+    </h1>
+
+    <!-- KPI CARDS -->
+
+    <div class="dashboard-grid">
+
+        <div class="w-panel">
+            <h3>Total servicios</h3>
+            <h1>{{ total_services }}</h1>
+        </div>
+
+        <div class="w-panel">
+            <h3>Pendientes</h3>
+            <h1>{{ pending_services }}</h1>
+        </div>
+
+        <div class="w-panel">
+            <h3>Asignados</h3>
+            <h1>{{ assigned_services }}</h1>
+        </div>
+
+        <div class="w-panel">
+            <h3>En proceso</h3>
+            <h1>{{ in_progress_services }}</h1>
+        </div>
+
+        <div class="w-panel">
+            <h3>Completados</h3>
+            <h1>{{ completed_services }}</h1>
+        </div>
+
+        <div class="w-panel">
+            <h3>Cancelados</h3>
+            <h1>{{ cancelled_services }}</h1>
+        </div>
+
+        <div class="w-panel">
+            <h3>Servicios activos</h3>
+            <h1>{{ active_services }}</h1>
+        </div>
+
+        <div class="w-panel">
+            <h3>Tiempo promedio</h3>
+            <h1>{{ avg_completion_days }} días</h1>
+        </div>
+
+        <div class="w-panel">
+            <h3>Ingresos</h3>
+            <h1>${{ total_income|floatformat:2 }}</h1>
+        </div>
+
+        <div class="w-panel">
+            <h3>Ganancia estimada</h3>
+            <h1>${{ estimated_profit|floatformat:2 }}</h1>
+        </div>
+
+        <div class="w-panel">
+            <h3>Técnico principal</h3>
+            <h2>{{ top_technician }}</h2>
+        </div>
+
+        <div class="w-panel">
+            <h3>Estado principal</h3>
+            <h2>{{ top_state }}</h2>
+        </div>
+
+    </div>
+
+    <!-- CHARTS -->
+
+    <div class="charts-grid">
+
+        <div class="w-panel">
+
+            <h2>Servicios por Estado</h2>
+
+            <div class="chart-container">
+                <canvas id="statesChart"></canvas>
+            </div>
+
+        </div>
+
+        <div class="w-panel">
+
+            <h2>Distribución de Estados</h2>
+
+            <div class="chart-container">
+                <canvas id="statusChart"></canvas>
+            </div>
+
+        </div>
+
+        <div class="w-panel">
+
+            <h2>Servicios por Tipo</h2>
+
+            <div class="chart-container">
+                <canvas id="servicesChart"></canvas>
+            </div>
+
+        </div>
+
+        <div class="w-panel">
+
+            <h2>Top Técnicos</h2>
+
+            <div class="chart-container">
+                <canvas id="techniciansChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MONTHLY -->
+
+    <div class="w-panel" style="margin-bottom:40px;">
+
+        <h2>Servicios por Mes</h2>
+
+        <div class="chart-container">
+            <canvas id="monthlyChart"></canvas>
+        </div>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="w-panel">
+
+        <h2>Últimos Servicios</h2>
+
+        <div class="table-wrapper">
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Servicio</th>
+                        <th>Estado</th>
+                        <th>Técnico</th>
+                        <th>Estado República</th>
+                        <th>Fecha</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for service in latest_services %}
+
+                    <tr>
+
+                        <td>{{ service.client_name }}</td>
+
+                        <td>{{ service.get_service_type_display }}</td>
+
+                        <td>{{ service.get_service_status_display }}</td>
+
+                        <td>{{ service.technician_name }}</td>
+
+                        <td>{{ service.get_state_display }}</td>
+
+                        <td>{{ service.request_datetime }}</td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            // =====================================
+            // DATA
+            // =====================================
+
+            const statesLabels = JSON.parse(
+                '{{ states_labels|default:"[]"|escapejs }}'
+            );
+
+            const statesData = JSON.parse(
+                '{{ states_data|default:"[]"|escapejs }}'
+            );
+
+            const servicesLabels = JSON.parse(
+                '{{ services_labels|default:"[]"|escapejs }}'
+            );
+
+            const servicesData = JSON.parse(
+                '{{ services_data|default:"[]"|escapejs }}'
+            );
+
+            const statusLabels = JSON.parse(
+                '{{ status_labels|default:"[]"|escapejs }}'
+            );
+
+            const statusData = JSON.parse(
+                '{{ status_data|default:"[]"|escapejs }}'
+            );
+
+            const monthlyLabels = JSON.parse(
+                '{{ monthly_labels|default:"[]"|escapejs }}'
+            );
+
+            const monthlyData = JSON.parse(
+                '{{ monthly_data|default:"[]"|escapejs }}'
+            );
+
+            const techniciansLabels = JSON.parse(
+                '{{ technicians_labels|default:"[]"|escapejs }}'
+            );
+
+            const techniciansData = JSON.parse(
+                '{{ technicians_data|default:"[]"|escapejs }}'
+            );
+
+            // =====================================
+            // CHARTS
+            // =====================================
+
+            new Chart(
+                document.getElementById(
+                    "statesChart"
+                ),
+                {
+                    type: "bar",
+                    data: {
+                        labels: statesLabels,
+                        datasets: [{
+                            label: "Servicios",
+                            data: statesData
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                    }
+                }
+            );
+
+            new Chart(
+                document.getElementById(
+                    "statusChart"
+                ),
+                {
+                    type: "doughnut",
+                    data: {
+                        labels: statusLabels,
+                        datasets: [{
+                            data: statusData
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                    }
+                }
+            );
+
+            new Chart(
+                document.getElementById(
+                    "servicesChart"
+                ),
+                {
+                    type: "pie",
+                    data: {
+                        labels: servicesLabels,
+                        datasets: [{
+                            data: servicesData
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                    }
+                }
+            );
+
+            new Chart(
+                document.getElementById(
+                    "techniciansChart"
+                ),
+                {
+                    type: "bar",
+                    data: {
+                        labels: techniciansLabels,
+                        datasets: [{
+                            label: "Servicios",
+                            data: techniciansData
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                    }
+                }
+            );
+
+            new Chart(
+                document.getElementById(
+                    "monthlyChart"
+                ),
+                {
+                    type: "line",
+                    data: {
+                        labels: monthlyLabels,
+                        datasets: [{
+                            label: "Servicios",
+                            data: monthlyData
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                    }
+                }
+            );
+
+        }
+    );
+
+</script>
+
+{% endblock %}
