@@ -43,5 +43,5 @@ def register_service_dashboard_menu_item():
         "Dashboard",
         reverse("service_dashboard"),
         icon_name="tasks",
-        order=200,
+        order=801,
     )

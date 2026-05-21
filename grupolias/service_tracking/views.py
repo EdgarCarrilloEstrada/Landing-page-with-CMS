@@ -1,5 +1,9 @@
 import json
 import pandas as pd
+from shared.enums.payment_status import PaymentStatus
+from shared.enums.service_status import ServiceStatus
+from shared.enums.services import Services
+from shared.enums.states import States
 
 from django.shortcuts import render
 from django.db.models import Count, Sum
@@ -20,6 +24,8 @@ class ServiceTrackingViewSet(ModelViewSet):
     menu_label = "Seguimiento de servicios"
     menu_name = "Seguimiento de servicios"
 
+    menu_order = 800
+
     exclude_form_fields = ["created_at", "updated_at"]
     icon = "history"
 
@@ -27,16 +33,16 @@ class ServiceTrackingViewSet(ModelViewSet):
     inspect_view_enabled = True
 
     list_display = [
-        "request_datetime", 
+        "request_datetime",
         "service_type_label",
         "service_status_label",
-        "state_label", 
+        "state_label",
         "payment_status_label",
     ]
 
     list_filter = [
-        "request_datetime", 
-        "service_type", 
+        "request_datetime",
+        "service_type",
         "service_status",
         "state",
         "payment_status",
@@ -50,18 +56,46 @@ class ServiceTrackingViewSet(ModelViewSet):
 
 service_tracking_viewset = ServiceTrackingViewSet("service_tracking")
 
+
+# =========================
+# DASHBOARD
+# =========================
+
 def service_dashboard(request):
 
     queryset = ServiceRequest.objects.all()
 
+    # =====================================
+    # KPIs
+    # =====================================
+
     total_services = queryset.count()
 
-    completed_services = queryset.exclude(
-        completion_date=None
+    completed_services = queryset.filter(
+        service_status="completed"
     ).count()
 
     pending_services = queryset.filter(
-        completion_date=None
+        service_status="pending"
+    ).count()
+
+    assigned_services = queryset.filter(
+        service_status="assigned"
+    ).count()
+
+    in_progress_services = queryset.filter(
+        service_status="in_progress"
+    ).count()
+
+    cancelled_services = queryset.filter(
+        service_status="cancelled"
+    ).count()
+
+    active_services = queryset.exclude(
+        service_status__in=[
+            "completed",
+            "cancelled",
+        ]
     ).count()
 
     total_income = (
@@ -87,6 +121,7 @@ def service_dashboard(request):
     values = queryset.values(
         "id",
         "service_type",
+        "service_status",
         "technician_name",
         "state",
         "request_datetime",
@@ -108,9 +143,9 @@ def service_dashboard(request):
 
     if not df.empty:
 
-        # =========================
+        # =====================================
         # FECHAS
-        # =========================
+        # =====================================
 
         df["request_datetime"] = pd.to_datetime(
             df["request_datetime"]
@@ -120,9 +155,9 @@ def service_dashboard(request):
             df["completion_date"]
         )
 
-        # =========================
+        # =====================================
         # SERVICIOS POR MES
-        # =========================
+        # =====================================
 
         monthly = (
             df.groupby(
@@ -136,9 +171,9 @@ def service_dashboard(request):
 
         monthly_data = monthly["total"].tolist()
 
-        # =========================
+        # =====================================
         # TIEMPO PROMEDIO
-        # =========================
+        # =====================================
 
         completed_df = df.dropna(
             subset=["completion_date"]
@@ -156,9 +191,9 @@ def service_dashboard(request):
                 1
             )
 
-        # =========================
+        # =====================================
         # TOP TÉCNICO
-        # =========================
+        # =====================================
 
         tech_series = (
             df["technician_name"]
@@ -168,9 +203,9 @@ def service_dashboard(request):
         if not tech_series.empty:
             top_technician = tech_series.index[0]
 
-        # =========================
+        # =====================================
         # TOP ESTADO
-        # =========================
+        # =====================================
 
         state_series = (
             df["state"]
@@ -178,7 +213,13 @@ def service_dashboard(request):
         )
 
         if not state_series.empty:
-            top_state = state_series.index[0]
+
+            top_state_key = state_series.index[0]
+
+            top_state = dict(States.choices).get(
+                top_state_key,
+                top_state_key
+            )
 
     # =====================================
     # DJANGO ORM CHARTS
@@ -196,6 +237,12 @@ def service_dashboard(request):
         .order_by("-total")
     )
 
+    services_by_status = (
+        queryset.values("service_status")
+        .annotate(total=Count("id"))
+        .order_by("-total")
+    )
+
     top_technicians = (
         queryset.values("technician_name")
         .annotate(total=Count("id"))
@@ -206,21 +253,38 @@ def service_dashboard(request):
         "-request_datetime"
     )[:10]
 
+    # =====================================
+    # CONTEXT
+    # =====================================
+
     context = {
 
         # KPIs
         "total_services": total_services,
-        "completed_services": completed_services,
         "pending_services": pending_services,
+        "assigned_services": assigned_services,
+        "in_progress_services": in_progress_services,
+        "completed_services": completed_services,
+        "cancelled_services": cancelled_services,
+        "active_services": active_services,
+
         "total_income": total_income,
         "estimated_profit": estimated_profit,
+
         "avg_completion_days": avg_completion_days,
+
         "top_technician": top_technician,
         "top_state": top_state,
 
-        # Charts
+        # =====================================
+        # CHARTS
+        # =====================================
+
         "states_labels": json.dumps([
-            item["state"]
+            dict(States.choices).get(
+                item["state"],
+                item["state"]
+            )
             for item in services_by_state
         ]),
 
@@ -230,13 +294,31 @@ def service_dashboard(request):
         ]),
 
         "services_labels": json.dumps([
-            item["service_type"]
+            dict(Services.choices).get(
+                item["service_type"],
+                item["service_type"]
+            )
             for item in services_by_type
         ]),
+
+
 
         "services_data": json.dumps([
             item["total"]
             for item in services_by_type
+        ]),
+
+        "status_labels": json.dumps([
+            dict(ServiceStatus.choices).get(
+                item["service_status"],
+                item["service_status"]
+            )
+            for item in services_by_status
+        ]),
+
+        "status_data": json.dumps([
+            item["total"]
+            for item in services_by_status
         ]),
 
         "monthly_labels": json.dumps(
@@ -257,7 +339,10 @@ def service_dashboard(request):
             for item in top_technicians
         ]),
 
-        # Table
+        # =====================================
+        # TABLE
+        # =====================================
+
         "latest_services": latest_services,
     }
 
