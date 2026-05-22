@@ -134,24 +134,29 @@ class ServiceRequest(ClusterableModel):
 
     def __str__(self):
         return f"{self.client_name} - {self.service_type} - {self.request_datetime}"
-    
+
     # FORMAT TABLE LABEL - VALUES
     @admin.display(description="Tipo de servicio")
     def service_type_label(self):
         return self.get_service_type_display()
-    
+
     @admin.display(description="Estado del servicio")
     def service_status_label(self):
         return self.get_service_status_display()
-    
+
     @admin.display(description="Estado")
     def state_label(self):
         return self.get_state_display()
-    
+
     @admin.display(description="Estado del pago")
     def payment_status_label(self):
         return self.get_payment_status_display()
-    
+
+    class Meta:
+        permissions = [
+            ("view_dashboard", "Can view dashboard"),
+        ]
+
 class ServiceRequestImage(models.Model):
     service_request = ParentalKey(
         "ServiceRequest",
