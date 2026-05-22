@@ -4,6 +4,8 @@ from shared.enums.payment_status import PaymentStatus
 from shared.enums.service_status import ServiceStatus
 from shared.enums.services import Services
 from shared.enums.states import States
+from datetime import timedelta
+from django.utils import timezone
 
 from django.shortcuts import render
 from django.db.models import Count, Sum
@@ -64,6 +66,138 @@ service_tracking_viewset = ServiceTrackingViewSet("service_tracking")
 def service_dashboard(request):
 
     queryset = ServiceRequest.objects.all()
+
+    # =====================================
+    # FILTERS
+    # =====================================
+
+    selected_service = request.GET.get(
+        "service_type",
+        ""
+    )
+
+    selected_status = request.GET.get(
+        "service_status",
+        ""
+    )
+
+    selected_period = request.GET.get(
+        "period",
+        ""
+    )
+
+    selected_state = request.GET.get(
+        "state",
+        ""
+    )
+
+    selected_payment_status = request.GET.get(
+        "payment_status",
+        ""
+    )
+
+    start_date = request.GET.get(
+        "start_date",
+        ""
+    )
+
+    end_date = request.GET.get(
+        "end_date",
+        ""
+    )
+
+    # =====================================
+    # SERVICE TYPE
+    # =====================================
+
+    if selected_service:
+
+        queryset = queryset.filter(
+            service_type=selected_service
+        )
+
+    # =====================================
+    # STATUS
+    # =====================================
+
+    if selected_status:
+
+        queryset = queryset.filter(
+            service_status=selected_status
+        )
+
+    # =====================================
+    # STATE
+    # =====================================
+
+    if selected_state:
+
+        queryset = queryset.filter(
+            state=selected_state
+        )
+
+    # =====================================
+    # PAYMENT STATUS
+    # =====================================
+
+    if selected_payment_status:
+
+        queryset = queryset.filter(
+            payment_status=selected_payment_status
+        )
+    # =====================================
+    # PERIOD
+    # =====================================
+
+    # =====================================
+    # CUSTOM DATE RANGE
+    # =====================================
+
+    if start_date:
+
+        queryset = queryset.filter(
+            request_datetime__date__gte=start_date
+        )
+
+    if end_date:
+
+        queryset = queryset.filter(
+            request_datetime__date__lte=end_date
+        )
+
+    now = timezone.now()
+
+    if selected_period == "1m":
+
+        queryset = queryset.filter(
+            request_datetime__gte=(
+                now - timedelta(days=30)
+            )
+        )
+
+    elif selected_period == "3m":
+
+        queryset = queryset.filter(
+            request_datetime__gte=(
+                now - timedelta(days=90)
+            )
+        )
+
+    elif selected_period == "6m":
+
+        queryset = queryset.filter(
+            request_datetime__gte=(
+                now - timedelta(days=180)
+            )
+        )
+
+    elif selected_period == "1y":
+
+        queryset = queryset.filter(
+            request_datetime__gte=(
+                now - timedelta(days=365)
+            )
+        )
 
     # =====================================
     # KPIs
@@ -276,6 +410,31 @@ def service_dashboard(request):
         "top_technician": top_technician,
         "top_state": top_state,
 
+        # =====================================
+        # FILTER OPTIONS
+        # =====================================
+
+        "service_options": Services.choices,
+
+        "status_options": ServiceStatus.choices,
+
+        "state_options": States.choices,
+
+        "selected_service": selected_service,
+
+        "selected_status": selected_status,
+
+        "selected_state": selected_state,
+
+        "selected_payment_status": selected_payment_status,
+
+        "selected_period": selected_period,
+
+        "start_date": start_date,
+
+        "end_date": end_date,
+
+        "payment_status_options": PaymentStatus.choices,
         # =====================================
         # CHARTS
         # =====================================

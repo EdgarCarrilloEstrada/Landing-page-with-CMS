@@ -64,6 +64,221 @@ Dashboard de seguimiento
     <h1 style="margin-bottom:30px;">
         Dashboard de seguimiento
     </h1>
+    <form method="GET" style="
+        margin-bottom:30px;
+        display:flex;
+        gap:15px;
+        flex-wrap:wrap;
+        align-items:end;
+    ">
+
+        <!-- SERVICIO -->
+
+        <div>
+
+            <label>Servicio</label>
+
+            <select
+                name="service_type"
+                class="w-input"
+            >
+
+                <option value="">
+                    Todos
+                </option>
+
+                {% for value, label in service_options %}
+
+                    <option
+                        value="{{ value }}"
+                        {% if selected_service == value %}
+                            selected
+                        {% endif %}
+                    >
+                        {{ label }}
+                    </option>
+
+                {% endfor %}
+
+            </select>
+
+        </div>
+
+        <!-- STATUS -->
+
+        <div>
+
+            <label>Estado</label>
+
+            <select
+                name="service_status"
+                class="w-input"
+            >
+
+                <option value="">
+                    Todos
+                </option>
+
+                {% for value, label in status_options %}
+
+                    <option
+                        value="{{ value }}"
+                        {% if selected_status == value %}
+                            selected
+                        {% endif %}
+                    >
+                        {{ label }}
+                    </option>
+
+                {% endfor %}
+
+            </select>
+
+        </div>
+        <!-- STATE -->
+
+        <div>
+
+            <label>Estado de la República</label>
+
+            <select
+                name="state"
+                class="w-input"
+            >
+
+                <option value="">
+                    Todos
+                </option>
+
+                {% for value, label in state_options %}
+
+                    <option
+                        value="{{ value }}"
+                        {% if selected_state == value %}
+                            selected
+                        {% endif %}
+                    >
+                        {{ label }}
+                    </option>
+
+                {% endfor %}
+
+            </select>
+
+        </div>
+
+        <!-- PAYMENT STATUS -->
+
+        <div>
+
+            <label>Estado de Pago</label>
+
+            <select
+                name="payment_status"
+                class="w-input"
+            >
+
+                <option value="">
+                    Todos
+                </option>
+
+                {% for value, label in payment_status_options %}
+
+                    <option
+                        value="{{ value }}"
+                        {% if selected_payment_status == value %}
+                            selected
+                        {% endif %}
+                    >
+                        {{ label }}
+                    </option>
+
+                {% endfor %}
+
+            </select>
+
+        </div>
+
+        <!-- PERIOD -->
+
+        <div>
+
+            <label>Periodo</label>
+
+            <select
+                name="period"
+                class="w-input"
+            >
+
+                <option value="">
+                    Todo
+                </option>
+
+                <option
+                    value="1m"
+                    {% if selected_period == "1m" %}
+                        selected
+                    {% endif %}
+                >
+                    Último mes
+                </option>
+
+                <option
+                    value="3m"
+                    {% if selected_period == "3m" %}
+                        selected
+                    {% endif %}
+                >
+                    Últimos 3 meses
+                </option>
+
+                <option
+                    value="6m"
+                    {% if selected_period == "6m" %}
+                        selected
+                    {% endif %}
+                >
+                    Últimos 6 meses
+                </option>
+
+                <option
+                    value="1y"
+                    {% if selected_period == "1y" %}
+                        selected
+                    {% endif %}
+                >
+                    Último año
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- START DATE -->
+
+        <div> <label>Fecha Inicio</label> <input type="date" name="start_date" value="{{ start_date }}" class="w-input" > </div> <!-- END DATE --> <div> <label>Fecha Fin</label> <input type="date" name="end_date" value="{{ end_date }}" class="w-input" > </div>
+
+        <!-- BUTTONS -->
+
+        <div>
+
+            <button
+                type="submit"
+                class="button button-primary"
+            >
+                Filtrar
+            </button>
+
+            <a
+                href="{% url 'service_dashboard' %}"
+                class="button button-secondary"
+            >
+                Limpiar
+            </a>
+
+        </div>
+
+    </form>
 
     <!-- KPI CARDS -->
 
