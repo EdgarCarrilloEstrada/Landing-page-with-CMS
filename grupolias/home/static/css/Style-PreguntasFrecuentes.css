@@ -19,37 +19,26 @@
 @media screen and (min-width: 3840px){
     .title{
         color: #1563AC;
-        /* width: 100%; */
         margin-top: 85px;
-        /* margin-bottom: 60px; */
         margin-left: 100px;
         margin-right: 100px;
-        /* padding-left: 32vh; */
         font-family: 'Merriweather', serif;
         font-size: 120px;
         border-bottom: var(--Amarillo) 11px ridge;
-
         text-align: center;
     }
     
     .content{
         display: flex;
         flex-direction: row;
-        /* margin-left: 12vh; */
         font-family: 'Rubik', sans-serif;
         margin-left: 400px;
         margin-right: 400px;
-        /* border-top: var(--Amarillo) 11px ridge; */
-        /* border-bottom: var(--Amarillo) 11px ridge; */
-
     }
     
     .mainView{
-        /* width: 604.2px; */
-        /* text-align: center; */
         align-items: center;
         width: 100%;
-        /* margin-top: 40px; */
     }
     
     .mainView h2{
@@ -71,61 +60,44 @@
         font-family: 'Merriweather', serif;
         color: black;
     }
-   
 
     .uk-accordion-content{
         font-size: 60px;
         font-family: 'Rubik', sans-serif;
         color: black;
-
     }
-
     
     .right{
         display: flex;
-        /* margin-left: 40.5px; */
         justify-content: center;
         width: 100%;
-        /* margin-top: 2rem; */
     }
-    
 }
 
 /* 2k 2560x1440*/
 @media screen and (min-width: 2560px) and (max-width: 3839px){
     .title{
         color: #1563AC;
-        /* width: 100%; */
         margin-top: 65px;
-        /* margin-bottom: 60px; */
         margin-left: 100px;
         margin-right: 100px;
-        /* padding-left: 32vh; */
         font-family: 'Merriweather', serif;
         font-size: 100px;
         border-bottom: var(--Amarillo) 11px ridge;
-
         text-align: center;
     }
     
     .content{
         display: flex;
         flex-direction: row;
-        /* margin-left: 12vh; */
         font-family: 'Rubik', sans-serif;
         margin-left: 300px;
         margin-right: 300px;
-        /* border-top: var(--Amarillo) 11px ridge; */
-        /* border-bottom: var(--Amarillo) 11px ridge; */
-
     }
     
     .mainView{
-        /* width: 604.2px; */
-        /* text-align: center; */
         align-items: center;
         width: 100%;
-        /* margin-top: 40px; */
     }
     
     .mainView h2{
@@ -147,22 +119,17 @@
         font-family: 'Merriweather', serif;
         color: black;
     }
-   
 
     .uk-accordion-content{
         font-size: 50px;
         font-family: 'Rubik', sans-serif;
         color: black;
-
     }
-
     
     .right{
         display: flex;
-        /* margin-left: 40.5px; */
         justify-content: center;
         width: 100%;
-        /* margin-top: 2rem; */
     }
 }
 
@@ -170,37 +137,26 @@
 @media screen and (min-width: 1920px) and (max-width: 2559px){
     .title{
         color: #1563AC;
-        /* width: 100%; */
         margin-top: 65px;
-        /* margin-bottom: 60px; */
         margin-left: 100px;
         margin-right: 100px;
-        /* padding-left: 32vh; */
         font-family: 'Merriweather', serif;
         font-size: 80px;
         border-bottom: var(--Amarillo) 11px ridge;
-
         text-align: center;
     }
     
     .content{
         display: flex;
         flex-direction: row;
-        /* margin-left: 12vh; */
         font-family: 'Rubik', sans-serif;
         margin-left: 200px;
         margin-right: 200px;
-        /* border-top: var(--Amarillo) 11px ridge; */
-        /* border-bottom: var(--Amarillo) 11px ridge; */
-
     }
     
     .mainView{
-        /* width: 604.2px; */
-        /* text-align: center; */
         align-items: center;
         width: 100%;
-        /* margin-top: 40px; */
     }
     
     .mainView h2{
@@ -223,21 +179,16 @@
         color: black;
     }
    
-
     .uk-accordion-content{
         font-size: 30px;
         font-family: 'Rubik', sans-serif;
         color: black;
-
     }
-
     
     .right{
         display: flex;
-        /* margin-left: 40.5px; */
         justify-content: center;
         width: 100%;
-        /* margin-top: 2rem; */
     }
 }
 
@@ -245,37 +196,26 @@
 @media screen and (min-width: 1201px) and (max-width: 1919px){
     .title{
         color: #1563AC;
-        /* width: 100%; */
         margin-top: 35px;
-        /* margin-bottom: 60px; */
         margin-left: 100px;
         margin-right: 100px;
-        /* padding-left: 32vh; */
         font-family: 'Merriweather', serif;
         font-size: 35px;
         border-bottom: var(--Amarillo) 11px ridge;
-
         text-align: center;
     }
     
     .content{
         display: flex;
         flex-direction: row;
-        /* margin-left: 12vh; */
         font-family: 'Rubik', sans-serif;
         margin-left: 180px;
         margin-right: 180px;
-        /* border-top: var(--Amarillo) 11px ridge; */
-        /* border-bottom: var(--Amarillo) 11px ridge; */
-
     }
     
     .mainView{
-        /* width: 604.2px; */
-        /* text-align: center; */
         align-items: center;
         width: 100%;
-        /* margin-top: 40px; */
     }
     
     .mainView h2{
@@ -297,22 +237,17 @@
         font-family: 'Merriweather', serif;
         color: black;
     }
-   
 
     .uk-accordion-content{
         font-size: 20px;
         font-family: 'Rubik', sans-serif;
         color: black;
-
     }
-
     
     .right{
         display: flex;
-        /* margin-left: 40.5px; */
         justify-content: center;
         width: 100%;
-        /* margin-top: 2rem; */
     }
 }
 
@@ -320,37 +255,26 @@
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
     .title{
         color: #1563AC;
-        /* width: 100%; */
         margin-top: 35px;
-        /* margin-bottom: 60px; */
         margin-left: 70px;
         margin-right: 70px;
-        /* padding-left: 32vh; */
         font-family: 'Merriweather', serif;
         font-size: 50px;
         border-bottom: var(--Amarillo) 11px ridge;
-
         text-align: center;
     }
     
     .content{
         display: flex;
         flex-direction: row;
-        /* margin-left: 12vh; */
         font-family: 'Rubik', sans-serif;
         margin-left: 130px;
         margin-right: 130px;
-        /* border-top: var(--Amarillo) 11px ridge; */
-        /* border-bottom: var(--Amarillo) 11px ridge; */
-
     }
     
     .mainView{
-        /* width: 604.2px; */
-        /* text-align: center; */
         align-items: center;
         width: 100%;
-        /* margin-top: 40px; */
     }
     
     .mainView h2{
@@ -372,22 +296,17 @@
         font-family: 'Merriweather', serif;
         color: black;
     }
-   
 
     .uk-accordion-content{
         font-size: 22px;
         font-family: 'Rubik', sans-serif;
         color: black;
-
     }
-
     
     .right{
         display: flex;
-        /* margin-left: 40.5px; */
         justify-content: center;
         width: 100%;
-        /* margin-top: 2rem; */
     }
 }
 
@@ -395,37 +314,26 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .title{
         color: #1563AC;
-        /* width: 100%; */
         margin-top: 20px;
-        /* margin-bottom: 60px; */
         margin-left: 70px;
         margin-right: 70px;
-        /* padding-left: 32vh; */
         font-family: 'Merriweather', serif;
         font-size: 40px;
         border-bottom: var(--Amarillo) 11px ridge;
-
         text-align: center;
     }
     
     .content{
         display: flex;
         flex-direction: row;
-        /* margin-left: 12vh; */
         font-family: 'Rubik', sans-serif;
         margin-left: 90px;
         margin-right: 90px;
-        /* border-top: var(--Amarillo) 11px ridge; */
-        /* border-bottom: var(--Amarillo) 11px ridge; */
-
     }
     
     .mainView{
-        /* width: 604.2px; */
-        /* text-align: center; */
         align-items: center;
         width: 100%;
-        /* margin-top: 40px; */
     }
     
     .mainView h2{
@@ -447,22 +355,17 @@
         font-family: 'Merriweather', serif;
         color: black;
     }
-   
 
     .uk-accordion-content{
         font-size: 18px;
         font-family: 'Rubik', sans-serif;
         color: black;
-
     }
-
     
     .right{
         display: flex;
-        /* margin-left: 40.5px; */
         justify-content: center;
         width: 100%;
-        /* margin-top: 2rem; */
     }
 }
 
@@ -470,37 +373,26 @@
 @media screen and (min-width: 481px) and (max-width: 768px) {
     .title{
         color: #1563AC;
-        /* width: 100%; */
         margin-top: 20px;
-        /* margin-bottom: 60px; */
         margin-left: 40px;
         margin-right: 40px;
-        /* padding-left: 32vh; */
         font-family: 'Merriweather', serif;
         font-size: 40px;
         border-bottom: var(--Amarillo) 11px ridge;
-
         text-align: center;
     }
     
     .content{
         display: flex;
         flex-direction: row;
-        /* margin-left: 12vh; */
         font-family: 'Rubik', sans-serif;
         margin-left: 80px;
         margin-right: 80px;
-        /* border-top: var(--Amarillo) 11px ridge; */
-        /* border-bottom: var(--Amarillo) 11px ridge; */
-
     }
     
     .mainView{
-        /* width: 604.2px; */
-        /* text-align: center; */
         align-items: center;
         width: 100%;
-        /* margin-top: 40px; */
     }
     
     .mainView h2{
@@ -522,22 +414,17 @@
         font-family: 'Merriweather', serif;
         color: black;
     }
-   
 
     .uk-accordion-content{
         font-size: 18px;
         font-family: 'Rubik', sans-serif;
         color: black;
-
     }
-
     
     .right{
         display: flex;
-        /* margin-left: 40.5px; */
         justify-content: center;
         width: 100%;
-        /* margin-top: 2rem; */
     }
 }
 
@@ -545,37 +432,26 @@
 @media screen and (max-width: 480px) {
     .title{
         color: #1563AC;
-        /* width: 100%; */
         margin-top: 20px;
-        /* margin-bottom: 60px; */
         margin-left: 25px;
         margin-right: 25px;
-        /* padding-left: 32vh; */
         font-family: 'Merriweather', serif;
         font-size: 28px;
         border-bottom: var(--Amarillo) 11px ridge;
-
         text-align: center;
     }
     
     .content{
         display: flex;
         flex-direction: row;
-        /* margin-left: 12vh; */
         font-family: 'Rubik', sans-serif;
         margin-left: 40px;
         margin-right: 40px;
-        /* border-top: var(--Amarillo) 11px ridge; */
-        /* border-bottom: var(--Amarillo) 11px ridge; */
-
     }
     
     .mainView{
-        /* width: 604.2px; */
-        /* text-align: center; */
         align-items: center;
         width: 100%;
-        /* margin-top: 40px; */
     }
     
     .mainView h2{
@@ -597,21 +473,16 @@
         font-family: 'Merriweather', serif;
         color: black;
     }
-   
 
     .uk-accordion-content{
         font-size: 16px;
         font-family: 'Rubik', sans-serif;
         color: black;
-
     }
-
     
     .right{
         display: flex;
-        /* margin-left: 40.5px; */
         justify-content: center;
         width: 100%;
-        /* margin-top: 2rem; */
     }
 }
