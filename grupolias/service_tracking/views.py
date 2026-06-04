@@ -6,12 +6,9 @@ from shared.enums.services import Services
 from shared.enums.states import States
 from datetime import timedelta
 from django.utils import timezone
-
 from django.shortcuts import render
 from django.db.models import Count, Sum
-
 from wagtail.admin.viewsets.model import ModelViewSet
-
 from .models import ServiceRequest
 
 

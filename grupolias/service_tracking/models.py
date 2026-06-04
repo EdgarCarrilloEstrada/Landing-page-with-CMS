@@ -1,16 +1,12 @@
 from django.db import models
 import uuid
-
 from shared.enums.services import Services
 from shared.enums.states import States
 from shared.enums.payment_status import PaymentStatus
 from shared.enums.service_status import ServiceStatus
-
 from modelcluster.fields import ParentalKey
-
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel, InlinePanel
 from modelcluster.models import ClusterableModel
-
 from django.contrib import admin
 
 # Create your models here.

@@ -1,13 +1,10 @@
 from django.urls import path, reverse
-
 from wagtail import hooks
 from wagtail.admin.menu import MenuItem
-
 from .views import (
     service_tracking_viewset,
     service_dashboard,
 )
-
 from django.contrib.auth.decorators import permission_required
 
 
