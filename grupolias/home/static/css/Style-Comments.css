@@ -13,17 +13,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
 
 /* 4k 3840x2160*/
 @media screen and (min-width: 3840px){
     .content{
         height: auto;
-        
-        /* border: 3px solid darkolivegreen; */
     }
-    
     
     h2{
         color: var(--azulfuerteclaro);
@@ -32,7 +28,6 @@
         font-size: 100px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        /* border: 3px solid sandybrown; */
     }
 
     /*carrusel comms*/
@@ -40,7 +35,6 @@
     .carruselComms{
         margin: 30px 100px;
         padding: 40px;
-        /* width: 73rem; */
         border-bottom: ridge var(--Amarillo) 4px;
         border-top: ridge var(--Amarillo) 4px;
     }
@@ -61,19 +55,12 @@
         font-size: 50px;
     }
 
-    /*FIN carrusel comms*/
-    
-
-    
     .box-Img-Comm{
         display: flex;
         flex-direction: row;
         overflow: hidden;
         margin: 0 100px;
-        /* margin-top: 11vh; */
         margin-bottom: 20px;
-        /* height: 70vh; */
-        /* border: 3px solid darkmagenta; */
     }
     
     .commIMG{
@@ -82,14 +69,10 @@
         justify-content: center;
         align-self: center;
         text-align: center;
-        /* border: 3px solid darkorange; */
     }
     
     .commIMG img{
         width: 1200px;
-        /* height: 40vh; */
-        /* width: 70vh; */
-        /* border: 3px solid darkorchid; */
     }
     
     .fieldsContainer{
@@ -99,7 +82,6 @@
         font-size: 60px;
         margin-left: 100px;
         height: 1000px;
-        /* border: 3px solid sienna; */
         align-content: center;
         justify-content: center;
     }
@@ -109,8 +91,6 @@
         font-weight: bold;
         text-align: center;
     }
-    
-    
     
     .btnSend{
         background-color: var(--azulfuerteclaro);
@@ -138,15 +118,14 @@
         background-color: #f3fdf3;
         width: 1500px;
         display: flex;
-
     }
     
     textarea:valid {
         background-color: #f3fdf3;
         width: 1500px;
         display: flex;
-
     }
+
     input{
         height: 70px;
         font-size: 50px;
@@ -154,7 +133,6 @@
     
     input, textarea:required {
         border-color: var(--aqua); 
-        /* border-width: .4vh; */
         border-radius: 15px;
     }
 
@@ -163,12 +141,9 @@
         font-size: 50px;
     }
     
-    
-    
     #valid{
         margin-top: 100px;
         font-size: 30px;
-        /* color: #d83d3d; */
     }
 }
 
@@ -176,10 +151,7 @@
 @media screen and (min-width: 2560px) and (max-width: 3839px){
     .content{
         height: auto;
-        
-        /* border: 3px solid darkolivegreen; */
     }
-    
     
     h2{
         color: var(--azulfuerteclaro);
@@ -188,7 +160,6 @@
         font-size: 80px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        /* border: 3px solid sandybrown; */
     }
     
     /*carrusel comms*/
@@ -196,7 +167,6 @@
     .carruselComms{
         margin: 30px 100px;
         padding: 40px;
-        /* width: 73rem; */
         border-bottom: ridge var(--Amarillo) 4px;
         border-top: ridge var(--Amarillo) 4px;
     }
@@ -216,18 +186,13 @@
     .uk-card-body{
         font-size: 45px;
     }
-
-    /*FIN carrusel comms*/
     
     .box-Img-Comm{
         display: flex;
         flex-direction: row;
         overflow: hidden;
         margin: 0 100px;
-        /* margin-top: 11vh; */
         margin-bottom: 100px;
-        /* height: 70vh; */
-        /* border: 3px solid darkmagenta; */
     }
     
     .commIMG{
@@ -236,14 +201,10 @@
         justify-content: center;
         align-self: center;
         text-align: center;
-        /* border: 3px solid darkorange; */
     }
     
     .commIMG img{
         width: 1200px;
-        /* height: 40vh; */
-        /* width: 70vh; */
-        /* border: 3px solid darkorchid; */
     }
     
     .fieldsContainer{
@@ -253,7 +214,6 @@
         font-size: 47px;
         margin-left: 100px;
         height: 1000px;
-        /* border: 3px solid sienna; */
         align-content: center;
         justify-content: center;
     }
@@ -263,8 +223,6 @@
         font-weight: bold;
         text-align: center;
     }
-    
-    
     
     .btnSend{
         background-color: var(--azulfuerteclaro);
@@ -285,22 +243,20 @@
         background-color: #f3fdf3;
         width: 1200px;
         display: flex;
-
     } 
     
     input:valid {
         background-color: #f3fdf3;
         width: 1200px;
         display: flex;
-
     }
     
     textarea:valid {
         background-color: #f3fdf3;
         width: 1200px;
         display: flex;
-
     }
+
     input{
         height: 65px;
         font-size: 45px;
@@ -308,7 +264,6 @@
     
     input, textarea:required {
         border-color: var(--aqua); 
-        /* border-width: .4vh; */
         border-radius: 15px;
     }
 
@@ -317,12 +272,9 @@
         font-size: 45px;
     }
     
-    
-    
     #valid{
         margin-top: 100px;
         font-size: 30px;
-        /* color: #d83d3d; */
     }
 }
 
@@ -330,10 +282,7 @@
 @media screen and (min-width: 1920px) and (max-width: 2559px){
     .content{
         height: auto;
-        
-        /* border: 3px solid darkolivegreen; */
     }
-    
     
     h2{
         color: var(--azulfuerteclaro);
@@ -342,7 +291,6 @@
         font-size: 57px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        /* border: 3px solid sandybrown; */
     }
 
     /*carrusel comms*/
@@ -350,7 +298,6 @@
     .carruselComms{
         margin: 30px 100px;
         padding: 40px;
-        /* width: 73rem; */
         border-bottom: ridge var(--Amarillo) 4px;
         border-top: ridge var(--Amarillo) 4px;
     }
@@ -370,18 +317,13 @@
     .uk-card-body{
         font-size: 35px;
     }
-
-    /*FIN carrusel comms*/
     
     .box-Img-Comm{
         display: flex;
         flex-direction: row;
         overflow: hidden;
         margin: 0 100px;
-        /* margin-top: 11vh; */
         margin-bottom: 100px;
-        /* height: 70vh; */
-        /* border: 3px solid darkmagenta; */
     }
     
     .commIMG{
@@ -390,14 +332,10 @@
         justify-content: center;
         align-self: center;
         text-align: center;
-        /* border: 3px solid darkorange; */
     }
     
     .commIMG img{
         width: 900px;
-        /* height: 40vh; */
-        /* width: 70vh; */
-        /* border: 3px solid darkorchid; */
     }
     
     .fieldsContainer{
@@ -407,7 +345,6 @@
         font-size: 35px;
         margin-left: 100px;
         height: 1000px;
-        /* border: 3px solid sienna; */
         align-content: center;
         justify-content: center;
     }
@@ -418,8 +355,6 @@
         text-align: center;
     }
     
-    
-    
     .btnSend{
         background-color: var(--azulfuerteclaro);
         color: var(--blanco);
@@ -439,25 +374,20 @@
         background-color: #f3fdf3;
         width: 950px;
         display: flex;
-        /* font-size: 500px; */
-
     } 
     
     input:valid {
         background-color: #f3fdf3;
         width: 950px;
         display: flex;
-        /* font-size: 500px; */
-
     }
     
     textarea:valid {
         background-color: #f3fdf3;
         width: 950px;
         display: flex;
-        /* font-size: 500px; */
-
     }
+
     input{
         height: 60px;
         font-size: 30px;
@@ -465,9 +395,7 @@
     
     input, textarea:required {
         border-color: var(--aqua); 
-        /* border-width: .4vh; */
         border-radius: 15px;
-        /* font-size: 500px; */
     }
 
     textarea{
@@ -475,12 +403,8 @@
         font-size: 30px;
     }
     
-    
-    
     #valid{
         margin-top: 100px;
-        /* font-size: 30px; */
-        /* color: #d83d3d; */
     }
 }
 
@@ -488,10 +412,7 @@
 @media screen and (min-width: 1201px) and (max-width: 1919px) {
     .content{
         height: auto;
-        
-        /* border: 3px solid darkolivegreen; */
     }
-    
     
     h2{
         color: var(--azulfuerteclaro);
@@ -500,7 +421,6 @@
         font-size: 35px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        /* border: 3px solid sandybrown; */
     }
     
     /*carrusel comms*/
@@ -508,7 +428,6 @@
     .carruselComms{
         margin: 30px 100px;
         padding: 20px;
-        /* width: 73rem; */
         border-bottom: ridge var(--Amarillo) 4px;
         border-top: ridge var(--Amarillo) 4px;
     }
@@ -528,44 +447,31 @@
     .uk-card-body{
         font-size: 25px;
     }
-
-    /*FIN carrusel comms*/
-
     
     .box-Img-Comm{
         display: flex;
         flex-direction: row;
         overflow: hidden;
         margin: 0 100px;
-        /* margin-top: 11vh; */
         margin-bottom: 100px;
-        /* height: 70vh; */
-        /* border: 3px solid darkmagenta; */
     }
     
     .commIMG{
-        /* width: 50%; */
         display: flex;
         justify-content: center;
         align-self: center;
         text-align: center;
-        /* border: 3px solid darkorange; */
     }
     
     .commIMG img{
         width: 600px;
-        /* height: 40vh; */
-        /* width: 70vh; */
-        /* border: 3px solid darkorchid; */
     }
     
     .fieldsContainer{
         display: flex;
         flex-direction: column;
-
         font-size: 25px;
         margin-left: 100px;
-        /* border: 3px solid sienna; */
         align-content: center;
         justify-content: center;
     }
@@ -577,8 +483,6 @@
         width: 100%;
     }
     
-    
-    
     .btnSend{
         background-color: var(--azulfuerteclaro);
         color: var(--blanco);
@@ -598,22 +502,20 @@
         background-color: #f3fdf3;
         width: 600px;
         display: flex;
-
     } 
     
     input:valid {
         background-color: #f3fdf3;
         width: 600px;
         display: flex;
-
     }
     
     textarea:valid {
         background-color: #f3fdf3;
         width: 600px;
         display: flex;
-
     }
+
     input{
         height: 45px;
         font-size: 25px;
@@ -621,7 +523,6 @@
     
     input, textarea:required {
         border-color: var(--aqua); 
-        /* border-width: .4vh; */
         border-radius: 15px;
     }
 
@@ -630,12 +531,8 @@
         font-size: 25px;
     }
     
-    
-    
     #valid{
         margin-top: 100px;
-        /* font-size: 30px; */
-        /* color: #d83d3d; */
     }
 }
 
@@ -644,9 +541,7 @@
     .content{
         height: auto;
         width: 99%;
-        /* border: 3px solid darkolivegreen; */
     }
-    
     
     h2{
         color: var(--azulfuerteclaro);
@@ -654,7 +549,6 @@
         margin: 0px 70px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        /* border: 3px solid sandybrown; */
     }
 
     /*carrusel comms*/
@@ -662,7 +556,6 @@
     .carruselComms{
         margin: 30px 70px;
         padding: 20px;
-        /* width: 73rem; */
         border-bottom: ridge var(--Amarillo) 4px;
         border-top: ridge var(--Amarillo) 4px;
     }
@@ -683,8 +576,6 @@
         font-size: 25px;
     }
 
-    /*FIN carrusel comms*/
-    
     .boxTitle{
         text-align: center;
         list-style-type: none;
@@ -693,7 +584,6 @@
         color: #FFFF;
         padding: 15px;
         font-size: 2vh;
-        /* border: 3px solid greenyellow; */
     }
     
     .box-Img-Comm{
@@ -701,24 +591,12 @@
         flex-direction: column;
         align-items: center;
         margin: 0px 70px;
-        /* overflow: hidden; */
-        /* margin: 0vh 1vh; */
-        /* margin-top: 11vh; */
         margin-bottom: 1vh;
-        /* height: 70vh; */
-        /* border: 3px solid darkmagenta; */
     }
     
     .commIMG{
         width: 50%;
         text-align: center;
-        /* border: 3px solid darkorange; */
-    }
-    
-    .commIMG img{
-        /* height: 40vh; */
-        /* width: 70vh; */
-        /* border: 3px solid darkorchid; */
     }
     
     .fieldsContainer{
@@ -726,9 +604,6 @@
         flex-direction: column;
         width: 90%;
         font-size: 25px;
-        /* width: 70vh; */
-        /* margin-left: 7vh; */
-        /* border: 3px solid sienna; */
     }
     
     legend{
@@ -738,8 +613,6 @@
         width: 100%;
     }
     
-    
-    
     .btnSend{
         background-color: var(--azulfuerteclaro);
         color: var(--blanco);
@@ -759,22 +632,20 @@
         background-color: #f3fdf3;
         width: 600px;
         display: flex;
-
     } 
     
     input:valid {
         background-color: #f3fdf3;
         width: 600px;
         display: flex;
-
     }
     
     textarea:valid {
         background-color: #f3fdf3;
         width: 600px;
         display: flex;
-
     }
+
     input{
         height: 45px;
         font-size: 25px;
@@ -782,7 +653,6 @@
     
     input, textarea:required {
         border-color: var(--aqua); 
-        /* border-width: .4vh; */
         border-radius: 15px;
     }
 
@@ -791,12 +661,8 @@
         font-size: 25px;
     }
     
-    
-    
     #valid{
         margin-top: 100px;
-        /* font-size: 30px; */
-        /* color: #d83d3d; */
     }
 }
 
@@ -805,9 +671,7 @@
     .content{
         height: auto;
         width: 99%;
-        /* border: 3px solid darkolivegreen; */
     }
-    
     
     h2{
         color:var(--azulfuerteclaro);
@@ -816,7 +680,6 @@
         font-weight: bold;
         font-size: 35px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        /* border: 3px solid sandybrown; */
     }
 
     /*carrusel comms*/
@@ -824,7 +687,6 @@
     .carruselComms{
         margin: 30px 60px;
         padding: 20px;
-        /* width: 73rem; */
         border-bottom: ridge var(--Amarillo) 4px;
         border-top: ridge var(--Amarillo) 4px;
     }
@@ -844,8 +706,6 @@
     .uk-card-body{
         font-size: 25px;
     }
-
-    /*FIN carrusel comms*/
     
     .boxTitle{
         text-align: center;
@@ -855,7 +715,6 @@
         color: #FFFF;
         padding: 15px;
         font-size: 2vh;
-        /* border: 3px solid greenyellow; */
     }
     
     .box-Img-Comm{
@@ -863,24 +722,12 @@
         flex-direction: column;
         align-items: center;
         margin: 0px 60px;
-        /* overflow: hidden; */
-        /* margin: 0vh 1vh; */
-        /* margin-top: 11vh; */
         margin-bottom: 1vh;
-        /* height: 70vh; */
-        /* border: 3px solid darkmagenta; */
     }
     
     .commIMG{
         width: 50%;
         text-align: center;
-        /* border: 3px solid darkorange; */
-    }
-    
-    .commIMG img{
-        /* height: 40vh; */
-        /* width: 70vh; */
-        /* border: 3px solid darkorchid; */
     }
     
     .fieldsContainer{
@@ -890,9 +737,6 @@
         font-size: 25px;
         justify-content: center;
         align-items: center;
-        /* width: 70vh; */
-        /* margin-left: 7vh; */
-        /* border: 3px solid sienna; */
     }
     
     legend{
@@ -901,8 +745,6 @@
         text-align: center;
         width: 100%;
     }
-    
-    
     
     .btnSend{
         background-color: var(--azulfuerteclaro);
@@ -923,22 +765,20 @@
         background-color: #f3fdf3;
         width: 600px;
         display: flex;
-
     } 
     
     input:valid {
         background-color: #f3fdf3;
         width: 600px;
         display: flex;
-
     }
     
     textarea:valid {
         background-color: #f3fdf3;
         width: 600px;
         display: flex;
-
     }
+
     input{
         height: 50px;
         font-size: 30px;
@@ -946,7 +786,6 @@
     
     input, textarea:required {
         border-color: var(--aqua); 
-        /* border-width: .4vh; */
         border-radius: 15px;
     }
 
@@ -955,12 +794,8 @@
         font-size: 30px;
     }
     
-    
-    
     #valid{
         margin-top: 100px;
-        /* font-size: 30px; */
-        /* color: #d83d3d; */
     }
 }
 
@@ -969,9 +804,7 @@
     .content{
         height: auto;
         width: 99%;
-        /* border: 3px solid darkolivegreen; */
     }
-    
     
     h2{
         color: var(--azulfuerteclaro);
@@ -980,7 +813,6 @@
         font-weight: bold;
         font-size: 35px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        /* border: 3px solid sandybrown; */
     }
 
     /*carrusel comms*/
@@ -988,7 +820,6 @@
     .carruselComms{
         margin: 30px 40px;
         padding: 20px;
-        /* width: 73rem; */
         border-bottom: ridge var(--Amarillo) 4px;
         border-top: ridge var(--Amarillo) 4px;
     }
@@ -1008,8 +839,6 @@
     .uk-card-body{
         font-size: 25px;
     }
-
-    /*FIN carrusel comms*/
     
     .boxTitle{
         text-align: center;
@@ -1019,7 +848,6 @@
         color: #FFFF;
         padding: 15px;
         font-size: 2vh;
-        /* border: 3px solid greenyellow; */
     }
     
     .box-Img-Comm{
@@ -1027,24 +855,12 @@
         flex-direction: column;
         align-items: center;
         margin: 0px 40px;
-        /* overflow: hidden; */
-        /* margin: 0vh 1vh; */
-        /* margin-top: 11vh; */
         margin-bottom: 1vh;
-        /* height: 70vh; */
-        /* border: 3px solid darkmagenta; */
     }
     
     .commIMG{
         width: 50%;
         text-align: center;
-        /* border: 3px solid darkorange; */
-    }
-    
-    .commIMG img{
-        /* height: 40vh; */
-        /* width: 70vh; */
-        /* border: 3px solid darkorchid; */
     }
     
     .fieldsContainer{
@@ -1053,7 +869,6 @@
         width: 90%;
         font-size: 25px;
         align-items: center;
-
     }
     
     legend{
@@ -1062,8 +877,6 @@
         text-align: center;
         width: 100%;
     }
-    
-    
     
     .btnSend{
         background-color: var(--azulfuerteclaro);
@@ -1084,22 +897,20 @@
         background-color: #f3fdf3;
         width: 460px;
         display: flex;
-
     } 
     
     input:valid {
         background-color: #f3fdf3;
         width: 460px;
         display: flex;
-
     }
     
     textarea:valid {
         background-color: #f3fdf3;
         width: 460px;
         display: flex;
-
     }
+
     input{
         height: 45px;
         font-size: 25px;
@@ -1107,7 +918,6 @@
     
     input, textarea:required {
         border-color: var(--aqua); 
-        /* border-width: .4vh; */
         border-radius: 15px;
     }
 
@@ -1116,12 +926,9 @@
         font-size: 25px;
     }
     
-    
-    
     #valid{
         margin-top: 100px;
         font-size: 30px;
-        /* color: #d83d3d; */
     }
 }
 
@@ -1130,9 +937,7 @@
     .content{
         height: auto;
         width: 99%;
-        /* border: 3px solid darkolivegreen; */
     }
-    
     
     h2{
         color: var(--azulfuerteclaro);
@@ -1141,16 +946,13 @@
         font-weight: bold;
         font-size: 30px;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        /* border: 3px solid sandybrown; */
     }
-    
 
     /*carrusel comms*/
 
     .carruselComms{
         margin: 10px 25px;
         padding: 10px;
-        /* width: 73rem; */
         border-bottom: ridge var(--Amarillo) 4px;
         border-top: ridge var(--Amarillo) 4px;
     }
@@ -1171,7 +973,6 @@
         font-size: 16px;
     }
 
-    /*FIN carrusel comms*/
     .boxTitle{
         text-align: center;
         list-style-type: none;
@@ -1180,7 +981,6 @@
         color: #FFFF;
         padding: 15px;
         font-size: 20px;
-        /* border: 3px solid greenyellow; */
     }
     
     .box-Img-Comm{
@@ -1189,24 +989,12 @@
         align-items: center;
         justify-content: center;
         margin: 0px 25px;
-        /* overflow: hidden; */
-        /* margin: 0vh 1vh; */
-        /* margin-top: 11vh; */
         margin-bottom: 15px;
-        /* height: 70vh; */
-        /* border: 3px solid darkmagenta; */
     }
     
     .commIMG{
         width: 70%;
         text-align: center;
-        /* border: 3px solid darkorange; */
-    }
-    
-    .commIMG img{
-        /* height: 40vh; */
-        /* width: 70vh; */
-        /* border: 3px solid darkorchid; */
     }
     
     .fieldsContainer{
@@ -1215,9 +1003,6 @@
         width: 90%;
         align-items: center;
         font-size: 20px;
-        /* width: 70vh; */
-        /* margin-left: 7vh; */
-        /* border: 3px solid sienna; */
     }
     
     legend{
@@ -1226,8 +1011,6 @@
         text-align: center;
         width: 100%;
     }
-    
-    
     
     .btnSend{
         background-color: var(--azulfuerteclaro);
@@ -1248,22 +1031,20 @@
         background-color: #f3fdf3;
         width: 220px;
         display: flex;
-
     } 
     
     input:valid {
         background-color: #f3fdf3;
         width: 220px;
         display: flex;
-
     }
     
     textarea:valid {
         background-color: #f3fdf3;
         width: 220px;
         display: flex;
-
     }
+
     input{
         height: 40px;
         font-size: 20px;
@@ -1271,7 +1052,6 @@
     
     input, textarea:required {
         border-color: var(--aqua); 
-        /* border-width: .4vh; */
         border-radius: 15px;
     }
 
@@ -1280,11 +1060,8 @@
         font-size: 20px;
     }
     
-    
-    
     #valid{
         margin-top: 100px;
         font-size: 30px;
-        /* color: #d83d3d; */
     }
 }
