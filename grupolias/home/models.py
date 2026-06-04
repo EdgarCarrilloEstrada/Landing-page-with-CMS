@@ -14,6 +14,8 @@ from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
 from wagtail.snippets.models import register_snippet
 from wagtail.contrib.settings.models import BaseSiteSetting , register_setting
 from turnstile.fields import TurnstileField
+from django_ratelimit.core import is_ratelimited
+from django.template.response import TemplateResponse
 
 @register_setting
 class header(BaseSiteSetting ):
@@ -713,3 +715,50 @@ class CommentPage(AbstractEmailForm):
         })
         print(context)
         return context
+    
+    def serve(self, request, *args, **kwargs):
+
+        if request.method == "POST":
+
+            limited = is_ratelimited(
+                request=request,
+                group="comment_form",
+                key="ip",
+                rate="3/1h",
+                method="POST",
+                increment=True,
+            )
+
+            if limited:
+
+                form = self.get_form(
+                    request.POST,
+                    page=self,
+                    user=request.user,
+                )
+
+                form.add_error(
+                    None,
+                    "Has enviado demasiados comentarios. Intenta nuevamente más tarde.",
+                )
+
+                context = self.get_context(
+                    request,
+                    *args,
+                    **kwargs,
+                )
+
+                context["form"] = form
+
+                return TemplateResponse(
+                    request,
+                    self.template,
+                    context,
+                    status=429,
+                )
+            
+        return super().serve(
+            request,
+            *args,
+            **kwargs,
+        )
