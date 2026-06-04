@@ -50,7 +50,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'turnstile',
 ]
+
+TURNSTILE_DEFAULT_CONFIG = {
+    'theme': 'auto',
+    'appearance': 'interaction-only'
+}
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
