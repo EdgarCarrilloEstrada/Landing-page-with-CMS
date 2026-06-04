@@ -41,6 +41,9 @@ LOGGING = {
     },
 }
 
+TURNSTILE_SITEKEY = os.getenv("TURNSTILE_SITEKEY")
+TURNSTILE_SECRET = os.getenv("TURNSTILE_SECRET")
+
 try:
     from .local import *
 except ImportError:
