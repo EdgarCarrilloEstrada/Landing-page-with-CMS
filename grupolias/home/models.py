@@ -1,17 +1,13 @@
-from dataclasses import Field
-from email.policy import default
 from django import forms
 from django.db import models
 from wagtail.models import Page
 from wagtail.fields import RichTextField
-from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel, FieldRowPanel
-from modelcluster.fields import ParentalKey, ParentalManyToManyField
+from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel
+from modelcluster.fields import ParentalKey
 from wagtail.models import Page, Orderable
 from wagtail.search import index
 from django.core.validators import MaxLengthValidator
-from django.core import validators
 from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
-from wagtail.snippets.models import register_snippet
 from wagtail.contrib.settings.models import BaseSiteSetting , register_setting
 from turnstile.fields import TurnstileField
 from django_ratelimit.core import is_ratelimited
@@ -178,27 +174,6 @@ class Plantilla_servicios(BaseSiteSetting ):
         ),
     ]
 
-# class PreguntasCategory(models.Model):
-
-#     id = models.AutoField(primary_key=True)
-#     nombre= models.CharField(max_length=50)
-#     Identificador= models.SlugField(verbose_name="Identificador", allow_unicode=True, max_length=50, help_text="Nombre para identificar a esta categoria", null= True)
-
-#     panels = [
-#         FieldPanel("nombre"),
-#         FieldPanel("Identificador")
-#     ]
-
-#     class Meta:
-#         verbose_name="Categoria pregunta"
-#         verbose_name_plural="Categoria preguntas"
-#         ordering = ["nombre"]
-
-#     def __str__(self):
-#         return self.nombre
-
-# register_snippet(PreguntasCategory)
-
 class HomePage(Page):
     max_count=1
 
@@ -347,7 +322,6 @@ class ServiciosPage(Page):
         ELECTRICIDAD = "ELECTRICIDAD", "ELECTRICIDAD"
         PINTURA = "PINTURA", "PINTURA"
         CONSTRUCCION = "CONSTRUCCIÓN", "CONSTRUCCIÓN"
-
 
     category = models.TextField(
         max_length=12,
@@ -510,7 +484,6 @@ class ConocenosPage(Page):
         ),
     ]
 
-
 class ConocenosPageSlider(Orderable):
     id = models.AutoField(primary_key=True)
     page = ParentalKey(ConocenosPage, on_delete=models.CASCADE, related_name='slider_images')
@@ -621,30 +594,20 @@ class PreguntasPage(Page):
         ),
     ]
 
-
-    # def get_context(self, request):
-    #     context = super().get_context(request)
-    #     context['categories'] = PreguntasCategory.objects.all()
-    #     return context
-
-
 class PlantPregunta(Orderable):
     id = models.AutoField(primary_key=True)
     page = ParentalKey(PreguntasPage, on_delete=models.CASCADE, related_name='cat_preguntas')
     pregunta = models.CharField(max_length=100, blank=False, null=False, default="")
     respuesta = models.CharField(max_length=200, blank=False, null=False, default="")
-    # categoría = models.CharField(max_length=40, blank=False, null= False, default="")
 
     panels = [
         FieldPanel("pregunta"),
         FieldPanel("respuesta"),
-        # FieldPanel("categoría"),
     ]
 
 class FormField(AbstractFormField):
     id = models.AutoField(primary_key=True)
     page = ParentalKey('CommentPage', on_delete = models.CASCADE, related_name = 'form_fields')
-
 
 class CommentPage(AbstractEmailForm):
     max_count=1
@@ -698,11 +661,6 @@ class CommentPage(AbstractEmailForm):
         # you may need check request.method
 
         results = []
-        # Get information about form fields
-        data_fields = [
-            (field.clean_name, field.label)
-            for field in self.get_form_fields()
-        ]
 
         # Get all submissions for current page
         submissions = self.get_submission_class().objects.all()
@@ -713,7 +671,6 @@ class CommentPage(AbstractEmailForm):
         context.update({
             'results': results,
         })
-        print(context)
         return context
     
     def serve(self, request, *args, **kwargs):
