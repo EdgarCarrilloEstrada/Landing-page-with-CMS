@@ -31,6 +31,9 @@
             {% csrf_token %}
             <legend>{{ self.Text_EComments }}</legend>
             {{ form.as_p }}
+            
+            <div class="cf-turnstile"></div>
+
             <button type="submit" class="btnSend">Enviar</button>
         </div>
     </form>

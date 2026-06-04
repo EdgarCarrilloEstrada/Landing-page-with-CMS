@@ -13,7 +13,7 @@ from django.core import validators
 from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
 from wagtail.snippets.models import register_snippet
 from wagtail.contrib.settings.models import BaseSiteSetting , register_setting
-
+from turnstile.fields import TurnstileField
 
 @register_setting
 class header(BaseSiteSetting ):
@@ -681,6 +681,13 @@ class CommentPage(AbstractEmailForm):
         on_delete = models.SET_NULL,
         related_name = "+"
     )
+
+    def get_form(self, *args, **kwargs):
+        form = super().get_form(*args, **kwargs)
+
+        form.fields["turnstile"] = TurnstileField(label="")
+
+        return form
 
     def get_context(self, request, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
