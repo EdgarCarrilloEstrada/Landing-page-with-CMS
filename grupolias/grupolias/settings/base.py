@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'turnstile',
+    'django.contrib.postgres',
 ]
 
 TURNSTILE_DEFAULT_CONFIG = {
