@@ -6,8 +6,6 @@ RUN useradd wagtail
 # Use /app folder as a directory where the source code is stored.
 WORKDIR /app
 
-RUN chown wagtail:wagtail /app
-
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1 
 
@@ -32,9 +30,13 @@ RUN pip install -r ./requirements.txt
 # Copy the source code of the project into the container.
 COPY --chown=wagtail:wagtail . .
 
-# Use user "wagtail" to run the build commands below and the server itself.
+RUN mkdir -p /app/static \
+    && mkdir -p /app/media
+
+RUN chmod +x /app/entrypoint.sh \
+    && chown -R wagtail:wagtail /app
+
+# Ejecutar como usuario no privilegiado
 USER wagtail
 
-# entrypoint shell scripts to be executed
-COPY entrypoint.sh .
 ENTRYPOINT ["sh", "/app/entrypoint.sh"]
