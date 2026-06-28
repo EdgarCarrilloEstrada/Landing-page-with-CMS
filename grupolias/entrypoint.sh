@@ -1,14 +1,6 @@
 #!/bin/sh
 set -e
 
-echo "Setting permissions..."
-
-mkdir -p /app/static
-mkdir -p /app/media
-
-chown -R wagtail:wagtail /app/static
-chown -R wagtail:wagtail /app/media
-
 echo "Running migrations..."
 python manage.py migrate --noinput
 
