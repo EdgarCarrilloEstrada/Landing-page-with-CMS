@@ -11,8 +11,7 @@ services:
     environment:
       DJANGO_SETTINGS_MODULE: grupolias.settings.production
     volumes:
-      - /var/www/grupolias/static:/app/static
-      - /var/www/grupolias/media:/app/media
+      - media_data:/app/media
 
   db:
     image: postgres:15
